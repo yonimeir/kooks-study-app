@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-study-50: #fdfbf7;
   --color-study-100: #f6f1e3;
@@ -7,13 +9,14 @@
   --color-study-300: #dac794;
   --color-study-400: #cbab6a;
   --color-study-500: #bd8f48;
-  --color-study-650: #a27237;
   --color-study-600: #a7753c;
+  --color-study-650: #a27237;
   --color-study-700: #8b5a32;
+  --color-study-750: #332014;
   --color-study-800: #71482b;
-  --color-study-850: #291a10;
-  --color-study-900: #1d110a;
-  --color-study-950: #130a05;
+  --color-study-850: #1e140d;
+  --color-study-900: #160d08;
+  --color-study-950: #0d0704;
   
   --font-serif: "David", "Frank Ruhl Libre", "Georgia", serif;
 }
@@ -27,9 +30,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #fdfbf7;
   color: #1a1a1a;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.dark body {
-  background-color: #130a05;
+html.dark body {
+  background-color: #0d0704;
   color: #f6f1e3;
 }
