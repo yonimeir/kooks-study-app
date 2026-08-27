@@ -21,11 +21,11 @@ export const Header: React.FC<HeaderProps> = ({
     <header className="bg-study-100 dark:bg-study-900 border-b border-study-200 dark:border-study-800 transition-colors duration-200">
       <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         {/* Title and Logo */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3.5">
           <img 
-            src="/logo.jpg" 
-            alt="Logo" 
-            className="w-11 h-11 rounded-xl shadow-md object-cover border border-study-300 dark:border-study-700" 
+            src="/logo.png" 
+            alt="לוגו עיקרי משנת הראי״ה" 
+            className="w-12 h-12 rounded-xl shadow-sm object-contain bg-white dark:bg-study-800 p-1 border border-study-200 dark:border-study-700" 
           />
           <div>
             <h1 className="text-xl md:text-2xl font-bold text-study-800 dark:text-study-200 font-serif">
