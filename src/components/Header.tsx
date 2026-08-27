@@ -11,6 +11,8 @@ interface HeaderProps {
   siteTitle: string;
   siteSubtitle: string;
   logoUrl: string;
+  logoSize?: number;
+  logoPosition?: 'right' | 'left' | 'top' | 'hide';
   onOpenAdmin: () => void;
 }
 
@@ -23,25 +25,41 @@ export const Header: React.FC<HeaderProps> = ({
   siteTitle,
   siteSubtitle,
   logoUrl,
+  logoSize = 60,
+  logoPosition = 'right',
   onOpenAdmin
 }) => {
+  const showLogo = logoPosition !== 'hide' && !!logoUrl;
+
   return (
     <header className="bg-study-100 dark:bg-study-900 border-b border-study-200 dark:border-study-800 transition-colors duration-200">
       <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-        {/* Title and Logo */}
-        <div className="flex items-center gap-3.5">
-          <img 
-            src={logoUrl || "/logo.png"} 
-            alt={siteTitle} 
-            className="h-13 md:h-15 w-auto object-contain shrink-0" 
-          />
+        
+        {/* Title and Logo Container */}
+        <div className={`flex ${
+          logoPosition === 'top' 
+            ? 'flex-col items-center text-center' 
+            : logoPosition === 'left'
+            ? 'flex-row-reverse items-center gap-3.5'
+            : 'flex-row items-center gap-3.5'
+        }`}>
+          {showLogo && (
+            <img 
+              src={logoUrl || "/logo.png"} 
+              alt={siteTitle} 
+              style={{ height: `${logoSize}px` }}
+              className="w-auto object-contain shrink-0 transition-all duration-200" 
+            />
+          )}
           <div>
             <h1 className="text-xl md:text-2xl font-bold text-study-800 dark:text-study-200 font-serif leading-tight">
               {siteTitle}
             </h1>
-            <p className="text-xs text-study-600 dark:text-study-400 mt-0.5">
-              {siteSubtitle}
-            </p>
+            {siteSubtitle && (
+              <p className="text-xs text-study-600 dark:text-study-400 mt-0.5">
+                {siteSubtitle}
+              </p>
+            )}
           </div>
         </div>
 

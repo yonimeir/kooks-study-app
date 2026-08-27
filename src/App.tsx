@@ -103,9 +103,11 @@ export const App: React.FC = () => {
         todayHebDate={todayHebDate}
         darkMode={darkMode}
         setDarkMode={setDarkMode}
-        siteTitle={siteConfig.siteTitle || "עיקרי משנת הראי\"ה"}
-        siteSubtitle={siteConfig.siteSubtitle || "תוכנית לימוד יומית תלת-שנתית בכתבי הרב קוק זצ\"ל"}
+        siteTitle={siteConfig.siteTitle || "עיקרי משנת הראי״ה"}
+        siteSubtitle={siteConfig.siteSubtitle || "תוכנית לימוד יומית תלת-שנתית בכתבי הרב קוק זצ״ל"}
         logoUrl={siteConfig.logoUrl || "/logo.png"}
+        logoSize={siteConfig.logoSize || 60}
+        logoPosition={siteConfig.logoPosition || "right"}
         onOpenAdmin={() => setIsAdminOpen(true)}
       />
 

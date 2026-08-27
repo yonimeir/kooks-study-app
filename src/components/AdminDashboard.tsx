@@ -403,17 +403,26 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                     />
                   </div>
 
-                  <div className="border-t border-study-200 dark:border-study-800 pt-4">
-                    <label className="block text-xs font-bold text-study-700 dark:text-study-300 mb-2">
+                  <div className="border-t border-study-200 dark:border-study-800 pt-4 space-y-4">
+                    <label className="block text-xs font-bold text-study-700 dark:text-study-300">
                       לוגו האתר:
                     </label>
-                    <div className="flex items-center gap-4">
-                      <img
-                        src={configDraft.logoUrl || '/logo.png'}
-                        alt="Preview"
-                        className="h-16 w-auto object-contain bg-study-100 dark:bg-study-800 p-2 rounded-xl border border-study-300 dark:border-study-700 shadow-xs"
-                      />
-                      <div className="space-y-2 flex-1">
+                    
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-4 bg-study-50 dark:bg-study-800/60 p-4 rounded-xl border border-study-300 dark:border-study-700">
+                      <div className="flex items-center justify-center bg-study-100 dark:bg-study-900 p-3 rounded-xl border border-study-200 dark:border-study-750 shrink-0 min-w-[100px] min-h-[100px]">
+                        {configDraft.logoPosition !== 'hide' && configDraft.logoUrl ? (
+                          <img
+                            src={configDraft.logoUrl || '/logo.png'}
+                            alt="Preview"
+                            style={{ height: `${configDraft.logoSize || 60}px` }}
+                            className="w-auto object-contain transition-all duration-200"
+                          />
+                        ) : (
+                          <span className="text-xs text-study-400">לוגו מוסתר</span>
+                        )}
+                      </div>
+
+                      <div className="space-y-3 flex-1">
                         <label className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-study-800 border border-study-300 dark:border-study-700 rounded-xl text-xs font-semibold hover:bg-study-50 dark:hover:bg-study-750 cursor-pointer shadow-xs">
                           <Upload className="w-4 h-4 text-study-500" />
                           <span>העלה תמונת לוגו חדשה מהמחשב/טלפון</span>
@@ -424,8 +433,58 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                           value={configDraft.logoUrl || ''}
                           onChange={(e) => setConfigDraft({ ...configDraft, logoUrl: e.target.value })}
                           placeholder="או הזן נתיב תמונה / URL..."
-                          className="w-full px-3 py-1.5 bg-study-50 dark:bg-study-800 border border-study-300 dark:border-study-700 rounded-lg text-xs"
+                          className="w-full px-3 py-1.5 bg-white dark:bg-study-850 border border-study-300 dark:border-study-700 rounded-lg text-xs"
                         />
+                      </div>
+                    </div>
+
+                    {/* Logo Size and Position Controls */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-study-50/70 dark:bg-study-800/40 p-4 rounded-xl border border-study-200 dark:border-study-750">
+                      <div>
+                        <div className="flex items-center justify-between mb-1.5">
+                          <label className="text-xs font-bold text-study-700 dark:text-study-300">
+                            גודל לוגו:
+                          </label>
+                          <span className="text-xs font-mono font-bold text-study-600 dark:text-study-400">
+                            {configDraft.logoSize || 60}px
+                          </span>
+                        </div>
+                        <input
+                          type="range"
+                          min="30"
+                          max="130"
+                          step="2"
+                          value={configDraft.logoSize || 60}
+                          onChange={(e) => setConfigDraft({
+                            ...configDraft,
+                            logoSize: parseInt(e.target.value, 10)
+                          })}
+                          className="w-full accent-study-500 cursor-pointer"
+                        />
+                        <div className="flex justify-between text-[10px] text-study-400 mt-1">
+                          <span>קטן (30px)</span>
+                          <span>בינוני (60px)</span>
+                          <span>גדול (130px)</span>
+                        </div>
+                      </div>
+
+                      <div>
+                        <label className="block text-xs font-bold text-study-700 dark:text-study-300 mb-1.5">
+                          מיקום הלוגו:
+                        </label>
+                        <select
+                          value={configDraft.logoPosition || 'right'}
+                          onChange={(e) => setConfigDraft({
+                            ...configDraft,
+                            logoPosition: e.target.value
+                          })}
+                          className="w-full px-3 py-2 bg-white dark:bg-study-850 border border-study-300 dark:border-study-700 rounded-xl text-xs font-semibold"
+                        >
+                          <option value="right">מימין לכותרת (ברירת מחדל)</option>
+                          <option value="left">משמאל לכותרת</option>
+                          <option value="top">מעל הכותרת (מרכזי ובולט)</option>
+                          <option value="hide">הסתר לוגו</option>
+                        </select>
                       </div>
                     </div>
                   </div>
