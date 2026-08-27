@@ -1,0 +1,601 @@
+{
+  "errors": [
+    {
+      "month": "Tishrei",
+      "day": 13,
+      "heTitle": "לחיזוק דברי תורה",
+      "ref": "Orot_HaTorah.14.1",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Tishrei",
+      "day": 14,
+      "heTitle": "לחיזוק דברי תורה",
+      "ref": "Orot_HaTorah.14.2",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Tishrei",
+      "day": 15,
+      "heTitle": "לחיזוק דברי תורה",
+      "ref": "Orot_HaTorah.14.3",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Tishrei",
+      "day": 16,
+      "heTitle": "אורות התשובה, פתיחה",
+      "ref": "Orot_HaTeshuvah.0.1",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Tishrei",
+      "day": 22,
+      "heTitle": "אורות התשובה ד, א–ג",
+      "ref": "Orot_HaTeshuvah.4.1-3",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Tishrei",
+      "day": 23,
+      "heTitle": "אורות התשובה ד, ד–ט",
+      "ref": "Orot_HaTeshuvah.4.4-9",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Tishrei",
+      "day": 24,
+      "heTitle": "אורות התשובה ד, י–יא",
+      "ref": "Orot_HaTeshuvah.4.10-11",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Tishrei",
+      "day": 25,
+      "heTitle": "אורות התשובה ה, א–ו",
+      "ref": "Orot_HaTeshuvah.5.1-6",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Tishrei",
+      "day": 26,
+      "heTitle": "אורות התשובה ה, ו*–ח",
+      "ref": "Orot_HaTeshuvah.5.6-8",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Tishrei",
+      "day": 27,
+      "heTitle": "אורות התשובה ו, א–ג",
+      "ref": "Orot_HaTeshuvah.6.1-3",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Tishrei",
+      "day": 28,
+      "heTitle": "אורות התשובה ו, ד–ו",
+      "ref": "Orot_HaTeshuvah.6.4-6",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Tishrei",
+      "day": 29,
+      "heTitle": "אורות התשובה ו, ז",
+      "ref": "Orot_HaTeshuvah.6.7",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Tishrei",
+      "day": 30,
+      "heTitle": "אורות התשובה ז, א–ד",
+      "ref": "Orot_HaTeshuvah.7.1-4",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 1,
+      "heTitle": "אורות התשובה ז, ה–ו",
+      "ref": "Orot_HaTeshuvah.7.5-6",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 2,
+      "heTitle": "אורות התשובה ח, א–ג",
+      "ref": "Orot_HaTeshuvah.8.1-3",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 3,
+      "heTitle": "אורות התשובה ח, ד–ו",
+      "ref": "Orot_HaTeshuvah.8.4-6",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 4,
+      "heTitle": "אורות התשובה ח, ז–יא",
+      "ref": "Orot_HaTeshuvah.8.7-11",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 5,
+      "heTitle": "אורות התשובה ח, יב–טז",
+      "ref": "Orot_HaTeshuvah.8.12-16",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 6,
+      "heTitle": "אורות התשובה ט, א–ב",
+      "ref": "Orot_HaTeshuvah.9.1-2",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 7,
+      "heTitle": "אורות התשובה ט, ג–ז",
+      "ref": "Orot_HaTeshuvah.9.3-7",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 8,
+      "heTitle": "אורות התשובה ט, ח–י",
+      "ref": "Orot_HaTeshuvah.9.8-10",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 9,
+      "heTitle": "אורות התשובה י, א–ד",
+      "ref": "Orot_HaTeshuvah.10.1-4",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 10,
+      "heTitle": "אורות התשובה י, ה–ו",
+      "ref": "Orot_HaTeshuvah.10.5-6",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 11,
+      "heTitle": "אורות התשובה י, ז–ט",
+      "ref": "Orot_HaTeshuvah.10.7-9",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 12,
+      "heTitle": "אורות התשובה י, י–יא",
+      "ref": "Orot_HaTeshuvah.10.10-11",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 13,
+      "heTitle": "אורות התשובה יא, א–ג",
+      "ref": "Orot_HaTeshuvah.11.1-3",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 14,
+      "heTitle": "אורות התשובה יא, ד–ה",
+      "ref": "Orot_HaTeshuvah.11.4-5",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 15,
+      "heTitle": "אורות התשובה יא, ו",
+      "ref": "Orot_HaTeshuvah.11.6",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 16,
+      "heTitle": "אורות התשובה יב, א–ד",
+      "ref": "Orot_HaTeshuvah.12.1-4",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 17,
+      "heTitle": "אורות התשובה יב, ה–ח*",
+      "ref": "Orot_HaTeshuvah.12.5-8",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 18,
+      "heTitle": "אורות התשובה יב, ט–י",
+      "ref": "Orot_HaTeshuvah.12.9-10",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 19,
+      "heTitle": "אורות התשובה יב, יא–יב",
+      "ref": "Orot_HaTeshuvah.12.11-12",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 20,
+      "heTitle": "אורות התשובה יג, א–ג",
+      "ref": "Orot_HaTeshuvah.13.1-3",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 21,
+      "heTitle": "אורות התשובה יג, ד–ו",
+      "ref": "Orot_HaTeshuvah.13.4-6",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 22,
+      "heTitle": "אורות התשובה יג, ז–ט*",
+      "ref": "Orot_HaTeshuvah.13.7-9",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 23,
+      "heTitle": "אורות התשובה יג, י–יב",
+      "ref": "Orot_HaTeshuvah.13.10-12",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 24,
+      "heTitle": "אורות התשובה יד, א–ג",
+      "ref": "Orot_HaTeshuvah.14.1-3",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 25,
+      "heTitle": "אורות התשובה יד, ד–ו",
+      "ref": "Orot_HaTeshuvah.14.4-6",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 26,
+      "heTitle": "אורות התשובה יד, ז–יא",
+      "ref": "Orot_HaTeshuvah.14.7-11",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 27,
+      "heTitle": "אורות התשובה יד, יב–טו",
+      "ref": "Orot_HaTeshuvah.14.12-15",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 28,
+      "heTitle": "אורות התשובה יד, טז–יח",
+      "ref": "Orot_HaTeshuvah.14.16-18",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Cheshvan",
+      "day": 29,
+      "heTitle": "אורות התשובה יד, יט–לא",
+      "ref": "Orot_HaTeshuvah.14.19-31",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Kislev",
+      "day": 1,
+      "heTitle": "אורות התשובה יד, לב–לו",
+      "ref": "Orot_HaTeshuvah.14.32-36",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Kislev",
+      "day": 2,
+      "heTitle": "אורות התשובה יד, לז–לט",
+      "ref": "Orot_HaTeshuvah.14.37-39",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Kislev",
+      "day": 3,
+      "heTitle": "אורות התשובה טו, א–ב",
+      "ref": "Orot_HaTeshuvah.15.1-2",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Kislev",
+      "day": 4,
+      "heTitle": "אורות התשובה טו, ג–ה",
+      "ref": "Orot_HaTeshuvah.15.3-5",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Kislev",
+      "day": 5,
+      "heTitle": "אורות התשובה טו, ו–ח",
+      "ref": "Orot_HaTeshuvah.15.6-8",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Kislev",
+      "day": 6,
+      "heTitle": "אורות התשובה טו, ט–י",
+      "ref": "Orot_HaTeshuvah.15.9-10",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Kislev",
+      "day": 7,
+      "heTitle": "אורות התשובה טו, יא–יב",
+      "ref": "Orot_HaTeshuvah.15.11-12",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Kislev",
+      "day": 8,
+      "heTitle": "אורות התשובה טז, א–א*",
+      "ref": "Orot_HaTeshuvah.16.1",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Kislev",
+      "day": 9,
+      "heTitle": "אורות התשובה טז, א*",
+      "ref": "Orot_HaTeshuvah.16.1",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Kislev",
+      "day": 10,
+      "heTitle": "אורות התשובה טז, ג–ו",
+      "ref": "Orot_HaTeshuvah.16.3-6",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Kislev",
+      "day": 11,
+      "heTitle": "אורות התשובה טז, ז–יא",
+      "ref": "Orot_HaTeshuvah.16.7-11",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Kislev",
+      "day": 12,
+      "heTitle": "אורות התשובה טז, יב",
+      "ref": "Orot_HaTeshuvah.16.12",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Kislev",
+      "day": 13,
+      "heTitle": "אורות התשובה יז, א–ג",
+      "ref": "Orot_HaTeshuvah.17.1-3",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Kislev",
+      "day": 14,
+      "heTitle": "אורות התשובה יז, ד–ו",
+      "ref": "Orot_HaTeshuvah.17.4-6",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Kislev",
+      "day": 15,
+      "heTitle": "מוסר אביך, מעין הקדמה",
+      "ref": "Musar_Avikha.0.1-5",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Kislev",
+      "day": 16,
+      "heTitle": "מוסר אביך, מעין הקדמה",
+      "ref": "Musar_Avikha.0.6",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Shevat",
+      "day": 17,
+      "heTitle": "מידות הראי\"ה, העלאת ניצוצות א–ה",
+      "ref": "Middot_HaRa'ayah,_Elevation_of_Sparks.1-5",
+      "reason": "HTTP / Sefaria Error: HTTP Error 400: Bad Request"
+    },
+    {
+      "month": "Shevat",
+      "day": 18,
+      "heTitle": "מידות הראי\"ה, העלאת ניצוצות ו–ז",
+      "ref": "Middot_HaRa'ayah,_Elevation_of_Sparks.6-7",
+      "reason": "HTTP / Sefaria Error: HTTP Error 400: Bad Request"
+    },
+    {
+      "month": "Shevat",
+      "day": 19,
+      "heTitle": "מידות הראי\"ה, חופש, יראה א–ב",
+      "ref": "Middot_HaRa'ayah,_Fear.1-2",
+      "reason": "HTTP / Sefaria Error: HTTP Error 400: Bad Request"
+    },
+    {
+      "month": "Shevat",
+      "day": 20,
+      "heTitle": "מידות הראי\"ה, יראה ג–ד",
+      "ref": "Middot_HaRa'ayah,_Fear.3-4",
+      "reason": "HTTP / Sefaria Error: HTTP Error 400: Bad Request"
+    },
+    {
+      "month": "Shevat",
+      "day": 21,
+      "heTitle": "מידות הראי\"ה, יראה ה–ז",
+      "ref": "Middot_HaRa'ayah,_Fear.5-7",
+      "reason": "HTTP / Sefaria Error: HTTP Error 400: Bad Request"
+    },
+    {
+      "month": "Shevat",
+      "day": 22,
+      "heTitle": "מידות הראי\"ה, יראה ח–יד",
+      "ref": "Middot_HaRa'ayah,_Fear.8-14",
+      "reason": "HTTP / Sefaria Error: HTTP Error 400: Bad Request"
+    },
+    {
+      "month": "Shevat",
+      "day": 23,
+      "heTitle": "מידות הראי\"ה, יראה טו–יט",
+      "ref": "Middot_HaRa'ayah,_Fear.15-19",
+      "reason": "HTTP / Sefaria Error: HTTP Error 400: Bad Request"
+    },
+    {
+      "month": "Shevat",
+      "day": 28,
+      "heTitle": "מידות הראי\"ה, פחדנות א–ד",
+      "ref": "Middot_HaRa'ayah,_Fearfulness.1-4",
+      "reason": "HTTP / Sefaria Error: HTTP Error 400: Bad Request"
+    },
+    {
+      "month": "Shevat",
+      "day": 30,
+      "heTitle": "מידות הראי\"ה, רצון ד, תוכחה, תיקון א–ב",
+      "ref": "Middot_HaRa'ayah,_Will.4",
+      "reason": "HTTP / Sefaria Error: HTTP Error 400: Bad Request"
+    },
+    {
+      "month": "Nissan",
+      "day": 1,
+      "heTitle": "אורות, לדגל ירושלים",
+      "ref": "Orot",
+      "reason": "HTTP / Sefaria Error: HTTP Error 400: Bad Request"
+    },
+    {
+      "month": "Av",
+      "day": 13,
+      "heTitle": "אורות, למהלך האידיאות בישראל ב",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_Godly_Ideal_in_the_Public_Life_of_Israel.1",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Av",
+      "day": 14,
+      "heTitle": "אורות, למהלך האידיאות בישראל ב",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_Godly_Ideal_in_the_Public_Life_of_Israel.2",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Av",
+      "day": 15,
+      "heTitle": "אורות, למהלך האידיאות בישראל ג",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_National_Ideal.1",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Av",
+      "day": 16,
+      "heTitle": "אורות, למהלך האידיאות בישראל ג",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_National_Ideal.2",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Av",
+      "day": 17,
+      "heTitle": "אורות, למהלך האידיאות בישראל ג",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_National_Ideal.3",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Av",
+      "day": 18,
+      "heTitle": "אורות, למהלך האידיאות בישראל ג",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_National_Ideal.4",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Av",
+      "day": 19,
+      "heTitle": "אורות, למהלך האידיאות בישראל ד",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_Individual_Godly_Ideal.1",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Av",
+      "day": 20,
+      "heTitle": "אורות, למהלך האידיאות בישראל ד",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_Individual_Godly_Ideal.2",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Av",
+      "day": 21,
+      "heTitle": "אורות, למהלך האידיאות בישראל ד",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_Individual_Godly_Ideal.3",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Av",
+      "day": 22,
+      "heTitle": "אורות, למהלך האידיאות בישראל ה",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_Modern_Search_for_Ideals.1",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Av",
+      "day": 23,
+      "heTitle": "אורות, למהלך האידיאות בישראל ה",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_Modern_Search_for_Ideals.2",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Av",
+      "day": 24,
+      "heTitle": "אורות, למהלך האידיאות בישראל ה",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_Modern_Search_for_Ideals.3",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Av",
+      "day": 25,
+      "heTitle": "אורות, למהלך האידיאות בישראל ה",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_Modern_Search_for_Ideals.4",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Av",
+      "day": 26,
+      "heTitle": "אורות, למהלך האידיאות בישראל ה",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_Modern_Search_for_Ideals.5",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Av",
+      "day": 27,
+      "heTitle": "אורות, למהלך האידיאות בישראל ה",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_Modern_Search_for_Ideals.6",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Av",
+      "day": 28,
+      "heTitle": "אורות, למהלך האידיאות בישראל ה",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_Modern_Search_for_Ideals.7",
+      "reason": "Sefaria returned empty text for \"he\""
+    },
+    {
+      "month": "Av",
+      "day": 29,
+      "heTitle": "אורות, למהלך האידיאות בישראל ה",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_Modern_Search_for_Ideals.8",
+      "reason": "Sefaria returned empty text for \"he\""
+    }
+  ],
+  "total_errors": 85,
+  "total_success": 240
+}

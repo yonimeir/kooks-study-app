@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ChevronRight, ChevronLeft, CheckCircle, Circle, RefreshCw, ZoomIn, ZoomOut, ExternalLink, Type } from 'lucide-react';
 import { fetchSefariaText, fetchWikisourceText, getHebrewDayChar, getHebrewNumber, getParagraphStartingIndex, bookNameMap } from '../utils/dateUtils';
 import scheduleData from '../data/schedule.json';
-import reishMillinData from '../data/reishMillin.json';
+import allDailyTextsData from '../data/allDailyTexts.json';
 
 interface TodayViewProps {
   activeMonth: string;
@@ -42,13 +42,13 @@ export const TodayView: React.FC<TodayViewProps> = ({
       setText([]);
 
       let loadedText: string[] = [];
-      if (todayPortion.book === "Reish Millin") {
-        const localParas = (reishMillinData as any)[portionKey];
-        if (localParas && localParas.length > 0) {
-          loadedText = localParas;
-        } else {
-          loadedText = await fetchWikisourceText(todayPortion.ref);
-        }
+
+      // 1. Check local pre-bundled database (all verified 13 months)
+      const bundledParas = (allDailyTextsData as any)[portionKey];
+      if (bundledParas && Array.isArray(bundledParas) && bundledParas.length > 0) {
+        loadedText = bundledParas;
+      } else if (todayPortion.book === "Reish Millin") {
+        loadedText = await fetchWikisourceText(todayPortion.ref);
       } else {
         loadedText = await fetchSefariaText(todayPortion.ref);
       }
@@ -124,174 +124,166 @@ export const TodayView: React.FC<TodayViewProps> = ({
 
   if (!todayPortion) {
     return (
-      <div className="flex flex-col items-center justify-center py-20 text-center">
-        <p className="text-study-600 dark:text-study-400 font-serif">לא נמצא לימוד מתוזמן ליום זה.</p>
+      <div className="p-8 text-center bg-white dark:bg-study-850 rounded-2xl shadow-sm border border-study-200 dark:border-study-800">
+        <p className="text-study-600 dark:text-study-400">לא נמצא לימוד עבור יום זה.</p>
       </div>
     );
   }
 
-  // External Reading link
-  const getExternalLink = () => {
-    if (todayPortion.book === "Reish Millin") {
-      return `https://he.wikisource.org/wiki/ראש_מילין`;
-    }
-    return `https://www.sefaria.org/${todayPortion.ref}`;
-  };
-
-  const startingParagraphIndex = getParagraphStartingIndex(todayPortion.ref);
+  const startParagraphIndex = getParagraphStartingIndex(todayPortion.ref);
 
   return (
-    <div className="max-w-3xl mx-auto px-4 py-6 transition-colors duration-200">
-      {/* Date Navigation Header */}
-      <div className="flex items-center justify-between bg-study-50 dark:bg-study-850 p-4 rounded-xl border border-study-200 dark:border-study-800 shadow-sm mb-6">
+    <div className="space-y-6 max-w-4xl mx-auto px-4">
+      {/* Top Navigation Control Bar */}
+      <div className="flex items-center justify-between bg-white dark:bg-study-850 p-4 rounded-2xl shadow-xs border border-study-200 dark:border-study-800 transition-colors">
         <button
           onClick={handlePrevDay}
-          className="flex items-center gap-1.5 px-3 py-2 bg-white dark:bg-study-800 text-study-700 dark:text-study-300 border border-study-250 dark:border-study-700 rounded-lg hover:bg-study-100 dark:hover:bg-study-750 transition-all font-semibold text-sm shadow-sm"
+          className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-sm font-semibold text-study-700 dark:text-study-300 hover:bg-study-100 dark:hover:bg-study-800 border border-study-300 dark:border-study-700 transition"
         >
           <ChevronRight className="w-4 h-4" />
           <span>יום קודם</span>
         </button>
 
         <div className="text-center">
-          <span className="text-xs font-bold uppercase tracking-wider text-study-500 dark:text-study-400 block mb-0.5">לוח הלימוד</span>
-          <h2 className="text-lg md:text-xl font-bold font-serif text-study-800 dark:text-study-200">
+          <span className="text-xs font-semibold text-study-500 dark:text-study-400 uppercase tracking-wider block">
+            לוח הלימוד
+          </span>
+          <span className="text-lg font-bold font-serif text-study-800 dark:text-study-200">
             {getHebrewDayChar(activeDay)} ב{monthNameMap[activeMonth] || activeMonth}
-          </h2>
+          </span>
         </div>
 
         <button
           onClick={handleNextDay}
-          className="flex items-center gap-1.5 px-3 py-2 bg-white dark:bg-study-800 text-study-700 dark:text-study-300 border border-study-250 dark:border-study-700 rounded-lg hover:bg-study-100 dark:hover:bg-study-750 transition-all font-semibold text-sm shadow-sm"
+          className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-sm font-semibold text-study-700 dark:text-study-300 hover:bg-study-100 dark:hover:bg-study-800 border border-study-300 dark:border-study-700 transition"
         >
           <span>יום הבא</span>
           <ChevronLeft className="w-4 h-4" />
         </button>
       </div>
 
-      {/* Main Reading Card */}
-      <div className="bg-white dark:bg-study-850 rounded-2xl border border-study-200 dark:border-study-800 shadow-md overflow-hidden transition-all duration-200">
-        
-        {/* Card Header Info */}
-        <div className="bg-study-100/50 dark:bg-study-900/50 border-b border-study-200 dark:border-study-800 p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <div>
-            <span className="inline-block px-2.5 py-0.5 bg-study-500 text-white rounded-full text-xs font-bold shadow-sm mb-1.5">
-              {todayPortion.book === "Reish Millin" ? "ריש מילין" : (bookNameMap[todayPortion.book] || todayPortion.book)}
+      {/* Main Study Card */}
+      <div className="bg-white dark:bg-study-850 rounded-2xl shadow-md border border-study-200 dark:border-study-800 overflow-hidden transition-colors">
+        {/* Book & Title Header */}
+        <div className="p-6 md:p-8 bg-study-50/70 dark:bg-study-900/50 border-b border-study-200/80 dark:border-study-800 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div className="space-y-1">
+            <span className="inline-block bg-study-500 text-white text-xs font-bold px-2.5 py-1 rounded-md uppercase tracking-wider">
+              {bookNameMap[todayPortion.book] || todayPortion.book}
             </span>
-            <h3 className="text-lg md:text-xl font-bold font-serif text-study-800 dark:text-study-200">
+            <h2 className="text-2xl md:text-3xl font-bold font-serif text-study-800 dark:text-study-100 mt-1">
               {todayPortion.heTitle}
-            </h3>
+            </h2>
             {todayPortion.portion && (
-              <p className="text-xs font-medium text-study-600 dark:text-study-400 mt-1">
+              <p className="text-xs text-study-600 dark:text-study-400 mt-1">
                 {todayPortion.portion}
               </p>
             )}
           </div>
 
-          {/* Reading Customization Controls */}
-          <div className="flex items-center gap-2">
+          {/* Reading Controls */}
+          <div className="flex items-center gap-2 self-end md:self-auto">
+            {/* Font Family Switcher */}
             <button
               onClick={toggleFontFamily}
-              className="flex items-center gap-1.5 px-2.5 py-1.5 bg-white dark:bg-study-800 border border-study-200 dark:border-study-700 rounded-lg text-study-700 dark:text-study-300 hover:bg-study-50 dark:hover:bg-study-700 transition shadow-xs text-xs font-semibold"
-              title="החלף פונט קריאה"
+              className="flex items-center gap-1.5 px-2.5 py-1.5 bg-white dark:bg-study-800 border border-study-200 dark:border-study-700 rounded-lg text-xs font-semibold text-study-700 dark:text-study-300 hover:bg-study-50 dark:hover:bg-study-750 transition shadow-xs"
+              title="החלף גופן (פונט)"
             >
               <Type className="w-3.5 h-3.5 text-study-500" />
-              <span>{fontLabels[fontFamily]}</span>
+              <span>{fontLabels[fontFamily] || 'גופן'}</span>
             </button>
 
-            <button
-              onClick={() => setFontSize(Math.max(14, fontSize - 2))}
-              className="p-2 bg-white dark:bg-study-800 border border-study-200 dark:border-study-700 rounded-lg text-study-600 dark:text-study-300 hover:bg-study-50 dark:hover:bg-study-700 transition shadow-sm"
-              title="הקטן גופן"
-            >
-              <ZoomOut className="w-4.5 h-4.5" />
-            </button>
-            <button
-              onClick={() => setFontSize(Math.min(28, fontSize + 2))}
-              className="p-2 bg-white dark:bg-study-800 border border-study-200 dark:border-study-700 rounded-lg text-study-600 dark:text-study-300 hover:bg-study-50 dark:hover:bg-study-700 transition shadow-sm"
-              title="הגדל גופן"
-            >
-              <ZoomIn className="w-4.5 h-4.5" />
-            </button>
+            {/* Font Size Zoom Controls */}
+            <div className="flex items-center bg-white dark:bg-study-800 border border-study-200 dark:border-study-700 rounded-lg p-1 shadow-xs">
+              <button
+                onClick={() => setFontSize(prev => Math.max(prev - 2, 14))}
+                className="p-1.5 text-study-600 dark:text-study-400 hover:text-study-900 dark:hover:text-white rounded hover:bg-study-100 dark:hover:bg-study-700 transition"
+                title="הקטן גופן"
+              >
+                <ZoomOut className="w-4 h-4" />
+              </button>
+              <button
+                onClick={() => setFontSize(prev => Math.min(prev + 2, 32))}
+                className="p-1.5 text-study-600 dark:text-study-400 hover:text-study-900 dark:hover:text-white rounded hover:bg-study-100 dark:hover:bg-study-700 transition"
+                title="הגדל גופן"
+              >
+                <ZoomIn className="w-4 h-4" />
+              </button>
+            </div>
           </div>
         </div>
 
-        {/* Text Pane with Distinct Paragraphs */}
-        <div className="p-5 md:p-8 min-h-[300px] flex flex-col justify-between">
+        {/* Text Reader Body */}
+        <div className="p-6 md:p-10 space-y-6">
           {loading ? (
-            <div className="flex flex-col items-center justify-center flex-1 py-16">
-              <RefreshCw className="w-8 h-8 text-study-500 animate-spin mb-3" />
-              <p className="text-sm text-study-500 dark:text-study-400">טוען את הטקסט...</p>
+            <div className="py-20 flex flex-col items-center justify-center gap-3 text-study-500">
+              <RefreshCw className="w-8 h-8 animate-spin text-study-500" />
+              <p className="text-sm font-medium">טוען את תוכן הלימוד...</p>
             </div>
           ) : (
-            <div 
-              className={`${fontFamily} text-study-900 dark:text-study-100 space-y-5`}
-              style={{ fontSize: `${fontSize}px`, direction: 'rtl' }}
-            >
-              {text.map((paragraph, index) => {
-                const currentNum = startingParagraphIndex + index;
-                const isReishMillin = todayPortion.book === "Reish Millin";
-                const numHeb = getHebrewNumber(currentNum);
-
-                return (
-                  <div 
-                    key={index} 
-                    className="bg-study-50/70 dark:bg-study-900/40 p-5 md:p-6 rounded-2xl border border-study-200/80 dark:border-study-800 shadow-xs transition-all hover:border-study-300 dark:hover:border-study-700"
+            <div className="space-y-6">
+              {text.map((paragraph, idx) => (
+                <div 
+                  key={idx} 
+                  className="bg-study-50/40 dark:bg-study-900/30 p-5 rounded-xl border border-study-100 dark:border-study-800/80 hover:border-study-200 dark:hover:border-study-700/80 transition-all"
+                >
+                  <span className="inline-block text-xs font-bold text-study-600 dark:text-study-400 bg-study-200/50 dark:bg-study-800 px-2 py-0.5 rounded-md mb-2">
+                    פסקה {getHebrewNumber(startParagraphIndex + idx)}
+                  </span>
+                  <p 
+                    style={{ fontSize: `${fontSize}px` }}
+                    className={`${fontFamily} text-study-850 dark:text-study-150 leading-[1.85] text-justify font-normal select-text`}
                   >
-                    {!isReishMillin && (
-                      <div className="flex items-center gap-2 mb-3 pb-2 border-b border-study-200/60 dark:border-study-800/80">
-                        <span className="inline-flex items-center justify-center font-bold text-study-800 dark:text-study-200 bg-study-200/90 dark:bg-study-800 px-3 py-0.5 rounded-lg text-xs font-serif shadow-xs">
-                          פסקה {numHeb}
-                        </span>
-                      </div>
-                    )}
-                    <p className="leading-[1.85] text-justify select-text indent-1 tracking-normal font-normal">
-                      {paragraph}
-                    </p>
-                  </div>
-                );
-              })}
+                    {paragraph}
+                  </p>
+                </div>
+              ))}
+
+              {text.length === 0 && (
+                <p className="text-study-600 dark:text-study-400 text-center py-8">
+                  לא נמצא טקסט עבור קטע זה.
+                </p>
+              )}
             </div>
           )}
-
-          {/* Footer Action and Links */}
-          <div className="border-t border-study-200 dark:border-study-800 mt-8 pt-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            
-            {/* Mark as Completed */}
-            <button
-              onClick={() => toggleComplete(activeMonth, activeDay)}
-              className={`flex items-center justify-center gap-2.5 px-5 py-2.5 rounded-xl border font-bold text-sm transition-all shadow-sm ${
-                isCompleted
-                  ? 'bg-emerald-50 border-emerald-200 text-emerald-700 dark:bg-emerald-950/30 dark:border-emerald-900 dark:text-emerald-400'
-                  : 'bg-study-500 hover:bg-study-600 border-transparent text-white dark:bg-study-600 dark:hover:bg-study-700'
-              }`}
-            >
-              {isCompleted ? (
-                <>
-                  <CheckCircle className="w-5 h-5 fill-current" />
-                  <span>נלמד בהצלחה! (סמן כלא נלמד)</span>
-                </>
-              ) : (
-                <>
-                  <Circle className="w-5 h-5" />
-                  <span>סמן כנלמד היום</span>
-                </>
-              )}
-            </button>
-
-            {/* Read External */}
-            <a
-              href={getExternalLink()}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-1.5 text-xs font-semibold text-study-600 hover:text-study-800 dark:text-study-400 dark:hover:text-study-200 transition-colors"
-            >
-              <span>קרא ב{todayPortion.book === "Reish Millin" ? "ויקיטקסט" : "ספריא"} המקורי</span>
-              <ExternalLink className="w-3.5 h-3.5" />
-            </a>
-
-          </div>
         </div>
 
+        {/* Completion Footer */}
+        <div className="p-6 bg-study-50 dark:bg-study-900/60 border-t border-study-200 dark:border-study-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-2 text-xs text-study-500 dark:text-study-400">
+            {todayPortion.book !== "Reish Millin" && todayPortion.ref && (
+              <a
+                href={`https://www.sefaria.org/${todayPortion.ref}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 hover:text-study-700 dark:hover:text-study-300 underline"
+              >
+                <span>פתח בספריא</span>
+                <ExternalLink className="w-3 h-3" />
+              </a>
+            )}
+          </div>
+
+          <button
+            onClick={() => toggleComplete(activeMonth, activeDay)}
+            className={`flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm shadow-sm transition-all ${
+              isCompleted
+                ? 'bg-emerald-600 text-white hover:bg-emerald-700'
+                : 'bg-study-500 text-white hover:bg-study-600'
+            }`}
+          >
+            {isCompleted ? (
+              <>
+                <CheckCircle className="w-5 h-5 fill-current" />
+                <span>הלימוד הושלם!</span>
+              </>
+            ) : (
+              <>
+                <Circle className="w-5 h-5" />
+                <span>סמן כהושלם</span>
+              </>
+            )}
+          </button>
+        </div>
       </div>
     </div>
   );
