@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
+import { DedicationBanner } from './components/DedicationBanner';
 import { TodayView } from './components/TodayView';
 import { Calendar } from './components/Calendar';
 import { Progress } from './components/Progress';
@@ -74,6 +75,9 @@ export const App: React.FC = () => {
         darkMode={darkMode}
         setDarkMode={setDarkMode}
       />
+
+      {/* Dedication Banner for Refuah */}
+      <DedicationBanner />
       
       <main className="flex-1 w-full max-w-6xl mx-auto py-4">
         {currentTab === 'today' && (
@@ -102,10 +106,24 @@ export const App: React.FC = () => {
         )}
       </main>
 
-      <footer className="py-6 border-t border-study-200 dark:border-study-800 bg-study-100/30 dark:bg-study-900/30 text-center transition-colors">
-        <p className="text-xs text-study-500 dark:text-study-400">
-          אפליקציית "עיקרי משנת הראי"ה" – נבנתה באהבה ללומדי משנת הראי"ה קוק זצ"ל
-        </p>
+      <footer className="py-8 border-t border-study-200 dark:border-study-800 bg-study-100/40 dark:bg-study-900/40 transition-colors">
+        <div className="max-w-4xl mx-auto px-4 text-center space-y-3">
+          <p className="text-xs text-study-700 dark:text-study-300 font-serif leading-relaxed max-w-2xl mx-auto">
+            "מטרת התוכנית היא ליצור היכרות רציפה עם עיקרי משנת הראי״ה, מתוך מפגש יומי עם לשונו ורעיונותיו. 
+            הלימוד מכוון להבנה פשוטה וישירה ככל האפשר, כפי כוחו של כל לומד, ולהתבסמות מאורם של הדברים."
+          </p>
+
+          <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3 text-xs text-study-500 dark:text-study-400">
+            <span>אפליקציית "עיקרי משנת הראי"ה" – נבנתה באהבה ללומדי משנת הראי"ה זצ"ל</span>
+            <span className="hidden sm:inline">•</span>
+            <a 
+              href="mailto:skalderon@yeshivatshefa.org.il" 
+              className="text-study-600 hover:text-study-800 dark:text-study-400 dark:hover:text-study-200 underline"
+            >
+              ליצירת קשר: שי קלדרון
+            </a>
+          </div>
+        </div>
       </footer>
     </div>
   );
