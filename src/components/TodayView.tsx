@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronRight, ChevronLeft, CheckCircle, Circle, RefreshCw, ZoomIn, ZoomOut, ExternalLink, Type } from 'lucide-react';
 import { fetchSefariaText, fetchWikisourceText, getHebrewDayChar, getHebrewNumber, getParagraphStartingIndex, bookNameMap } from '../utils/dateUtils';
+import { recordStudyActivity } from '../utils/analyticsUtils';
 import scheduleData from '../data/schedule.json';
 import allDailyTextsData from '../data/allDailyTexts.json';
 
@@ -264,7 +265,12 @@ export const TodayView: React.FC<TodayViewProps> = ({
           </div>
 
           <button
-            onClick={() => toggleComplete(activeMonth, activeDay)}
+            onClick={() => {
+              if (!isCompleted) {
+                recordStudyActivity(portionKey, todayPortion.book, 8);
+              }
+              toggleComplete(activeMonth, activeDay);
+            }}
             className={`flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm shadow-sm transition-all ${
               isCompleted
                 ? 'bg-emerald-600 text-white hover:bg-emerald-700'

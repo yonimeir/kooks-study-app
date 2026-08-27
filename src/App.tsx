@@ -8,6 +8,7 @@ import { Progress } from './components/Progress';
 import { AdminDashboard } from './components/AdminDashboard';
 import { getTodayHebrewDate } from './utils/dateUtils';
 import type { HebrewDateInfo } from './utils/dateUtils';
+import { initGoogleAnalytics } from './utils/analyticsUtils';
 import initialSiteConfig from './data/siteConfig.json';
 import initialScheduleData from './data/schedule.json';
 
@@ -67,6 +68,12 @@ export const App: React.FC = () => {
       document.documentElement.classList.remove('dark');
     }
   }, [darkMode]);
+
+  useEffect(() => {
+    if (siteConfig?.gaMeasurementId) {
+      initGoogleAnalytics(siteConfig.gaMeasurementId);
+    }
+  }, [siteConfig?.gaMeasurementId]);
 
   const handleSaveSiteConfig = (newConfig: any) => {
     setSiteConfig(newConfig);

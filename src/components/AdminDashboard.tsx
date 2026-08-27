@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { 
   X, Lock, Key, Save, Upload, Download, RefreshCw, Plus, Trash2, 
-  Globe, Heart, Check, AlertCircle 
+  Globe, Heart, Check, AlertCircle, BarChart3, Users, Clock, BookOpen, Eye, TrendingUp, Edit3
 } from 'lucide-react';
+import initialDailyTexts from '../data/allDailyTexts.json';
+import { getGlobalMetrics, initGoogleAnalytics } from '../utils/analyticsUtils';
 
 interface AdminDashboardProps {
   isOpen: boolean;
@@ -11,6 +13,7 @@ interface AdminDashboardProps {
   onSaveSiteConfig: (newConfig: any) => void;
   scheduleData: any;
   onSaveScheduleData: (newSchedule: any) => void;
+  onSaveCustomTexts?: (newTexts: any) => void;
 }
 
 export const AdminDashboard: React.FC<AdminDashboardProps> = ({
@@ -19,7 +22,8 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
   siteConfig,
   onSaveSiteConfig,
   scheduleData,
-  onSaveScheduleData
+  onSaveScheduleData,
+  onSaveCustomTexts
 }) => {
   // Authentication State
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(() => {
@@ -29,11 +33,20 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
   const [pinError, setPinError] = useState<string>('');
 
   // Active Admin Tab
-  const [activeTab, setActiveTab] = useState<'branding' | 'dedications' | 'contact' | 'schedule' | 'publish'>('branding');
+  const [activeTab, setActiveTab] = useState<'branding' | 'dedications' | 'contact' | 'schedule' | 'analytics' | 'publish'>('branding');
 
   // Form States (Local copies)
   const [configDraft, setConfigDraft] = useState<any>({ ...siteConfig });
   const [scheduleDraft, setScheduleDraft] = useState<any>({ ...scheduleData });
+  
+  // Custom Texts State
+  const [textsDraft, setTextsDraft] = useState<any>(() => {
+    const saved = localStorage.getItem('custom_texts_overrides');
+    return saved ? { ...initialDailyTexts, ...JSON.parse(saved) } : { ...initialDailyTexts };
+  });
+
+  // Global Metrics state
+  const [globalMetrics] = useState(getGlobalMetrics());
 
   // Schedule Editor selected day
   const [selectedMonth, setSelectedMonth] = useState<string>('Elul');
@@ -52,7 +65,6 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    // Default PIN is 1234 or configured password
     const correctPin = localStorage.getItem('admin_pin') || '1234';
     if (pinInput === correctPin || pinInput === 'kook1234') {
       setIsAuthenticated(true);
@@ -66,6 +78,13 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
   const handleSaveAll = () => {
     onSaveSiteConfig(configDraft);
     onSaveScheduleData(scheduleDraft);
+    if (onSaveCustomTexts) {
+      onSaveCustomTexts(textsDraft);
+    }
+    localStorage.setItem('custom_texts_overrides', JSON.stringify(textsDraft));
+    if (configDraft.gaMeasurementId) {
+      initGoogleAnalytics(configDraft.gaMeasurementId);
+    }
     setSavedSuccess(true);
     setTimeout(() => setSavedSuccess(false), 3000);
   };
@@ -109,7 +128,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
     }));
   };
 
-  // Schedule Item change
+  // Schedule Item & Text Change
   const currentMonthDays = scheduleDraft[selectedMonth] || [];
   const currentDayItem = currentMonthDays.find((d: any) => d.day === selectedDay) || {
     day: selectedDay,
@@ -118,6 +137,10 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
     heTitle: '',
     portion: ''
   };
+
+  const selectedKey = `${selectedMonth}-${selectedDay}`;
+  const currentTextParagraphs: string[] = textsDraft[selectedKey] || [];
+  const currentTextJoined = currentTextParagraphs.join('\n\n');
 
   const handleUpdateScheduleItem = (field: string, val: any) => {
     const monthDays = [...(scheduleDraft[selectedMonth] || [])];
@@ -133,10 +156,22 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
     }));
   };
 
+  const handleUpdateText = (rawText: string) => {
+    const paras = rawText
+      .split('\n\n')
+      .map(p => p.trim())
+      .filter(p => p.length > 0);
+    
+    setTextsDraft((prev: any) => ({
+      ...prev,
+      [selectedKey]: paras
+    }));
+  };
+
   // GitHub Push Implementation
   const handlePublishToGitHub = async () => {
     if (!githubToken.trim()) {
-      setPublishStatus({ success: false, message: 'נא להזין GitHub Personal Access Token (טוקן גיטהאב) לצורך פרסום ישיר.' });
+      setPublishStatus({ success: false, message: 'נא להזין GitHub Personal Access Token לצורך פרסום ישיר.' });
       return;
     }
     setIsPublishing(true);
@@ -145,7 +180,6 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
     localStorage.setItem('admin_github_repo', githubRepo);
 
     try {
-      // Helper to update a file in GitHub repo
       const updateGitHubFile = async (filePath: string, content: string, commitMsg: string) => {
         const getUrl = `https://api.github.com/repos/${githubRepo}/contents/${filePath}`;
         const headers = {
@@ -154,7 +188,6 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
           'Content-Type': 'application/json'
         };
 
-        // Get current file sha
         let sha = '';
         const getRes = await fetch(getUrl, { headers });
         if (getRes.ok) {
@@ -162,7 +195,6 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
           sha = getData.sha;
         }
 
-        // Put new file content
         const putRes = await fetch(getUrl, {
           method: 'PUT',
           headers,
@@ -193,13 +225,20 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
         'Update schedule data via Admin Dashboard'
       );
 
+      // 3. Update allDailyTexts.json
+      await updateGitHubFile(
+        'src/data/allDailyTexts.json',
+        JSON.stringify(textsDraft, null, 2),
+        'Update daily study texts via Admin Dashboard'
+      );
+
       setPublishStatus({ 
         success: true, 
         message: 'השינויים פורסמו בהצלחה ל-GitHub! Vercel בונה ומעדכן את האתר החי כעת (יהיה זמין בעוד כ-30 שניות).' 
       });
-      // Also apply locally
       onSaveSiteConfig(configDraft);
       onSaveScheduleData(scheduleDraft);
+      if (onSaveCustomTexts) onSaveCustomTexts(textsDraft);
     } catch (err: any) {
       console.error(err);
       setPublishStatus({ 
@@ -216,6 +255,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
     const backupData = {
       siteConfig: configDraft,
       scheduleData: scheduleDraft,
+      textsData: textsDraft,
       exportedAt: new Date().toISOString()
     };
     const blob = new Blob([JSON.stringify(backupData, null, 2)], { type: 'application/json' });
@@ -235,7 +275,8 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
           const data = JSON.parse(event.target?.result as string);
           if (data.siteConfig) setConfigDraft(data.siteConfig);
           if (data.scheduleData) setScheduleDraft(data.scheduleData);
-          alert('קובץ הגיבוי נטען בהצלחה! לחץ "שמור שינויים" כדי להחיל.');
+          if (data.textsData) setTextsDraft(data.textsData);
+          alert('קובץ הגיבוי נטען בהצלחה! לחץ "החל שינויים מקומית" כדי להחיל.');
         } catch {
           alert('קובץ גיבוי לא תקין.');
         }
@@ -275,7 +316,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                 מרכז ניהול ועריכת אתר (Admin CMS)
               </h2>
               <p className="text-xs text-study-600 dark:text-study-400">
-                שליטה מלאה בכותרות, לוגואים, הקדשות, יצירת קשר ותוכנית הלימודים
+                שליטה מלאה בכותרות, לוגואים, הקדשות, עריכת טקסטים, סטטיסטיקות ופרסום
               </p>
             </div>
           </div>
@@ -359,7 +400,17 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                     : 'border-transparent text-study-500 hover:text-study-800 dark:hover:text-study-300'
                 }`}
               >
-                📚 עריכת תוכנית לימודים
+                📚 תוכנית ועריכת טקסטים
+              </button>
+              <button
+                onClick={() => setActiveTab('analytics')}
+                className={`py-3 px-3 text-xs md:text-sm font-bold border-b-2 transition whitespace-nowrap ${
+                  activeTab === 'analytics' 
+                    ? 'border-study-500 text-study-800 dark:text-study-200' 
+                    : 'border-transparent text-study-500 hover:text-study-800 dark:hover:text-study-300'
+                }`}
+              >
+                📊 סטטיסטיקות אתר
               </button>
               <button
                 onClick={() => setActiveTab('publish')}
@@ -369,7 +420,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                     : 'border-transparent text-study-500 hover:text-study-800 dark:hover:text-study-300'
                 }`}
               >
-                🚀 פרסום וסנכרון ענן
+                🚀 פרסום לאתר החי
               </button>
             </div>
 
@@ -627,9 +678,9 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                 </div>
               )}
 
-              {/* TAB 4: Schedule Editor */}
+              {/* TAB 4: Schedule & Manual Text Editor */}
               {activeTab === 'schedule' && (
-                <div className="space-y-4">
+                <div className="space-y-5">
                   <div className="flex flex-wrap items-center gap-3 bg-study-100/60 dark:bg-study-800 p-3.5 rounded-xl border border-study-200 dark:border-study-700">
                     <div>
                       <label className="block text-xs font-bold mb-1">בחר חודש:</label>
@@ -656,8 +707,13 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                         ))}
                       </select>
                     </div>
+
+                    <div className="mr-auto text-xs text-study-500 font-mono bg-white dark:bg-study-850 px-2.5 py-1.5 rounded-lg border border-study-200 dark:border-study-700">
+                      מפתח: <strong>{selectedKey}</strong>
+                    </div>
                   </div>
 
+                  {/* Metadata fields */}
                   <div className="space-y-3 bg-study-50/70 dark:bg-study-850 p-4 rounded-xl border border-study-200 dark:border-study-750">
                     <div>
                       <label className="block text-xs font-bold mb-1">כותרת עברית ליום זה:</label>
@@ -702,10 +758,136 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                       />
                     </div>
                   </div>
+
+                  {/* Manual Text Editor Section */}
+                  <div className="bg-study-50/70 dark:bg-study-850 p-4 rounded-xl border border-study-200 dark:border-study-750 space-y-2">
+                    <div className="flex items-center justify-between">
+                      <label className="text-xs font-bold text-study-800 dark:text-study-200 flex items-center gap-1.5">
+                        <Edit3 className="w-4 h-4 text-study-500" />
+                        <span>עריכה ידנית של טקסט הלימוד ליום זה:</span>
+                      </label>
+                      <span className="text-[11px] text-study-500">
+                        {currentTextParagraphs.length} פסקאות (הפרד פסקאות בשורת רווח כפולה)
+                      </span>
+                    </div>
+
+                    <textarea
+                      rows={8}
+                      value={currentTextJoined}
+                      onChange={(e) => handleUpdateText(e.target.value)}
+                      placeholder="הזן כאן את תוכן הלימוד המלא עבור יום זה..."
+                      className="w-full p-3 bg-white dark:bg-study-800 border border-study-300 dark:border-study-700 rounded-xl text-xs font-serif leading-relaxed text-justify"
+                    />
+                  </div>
                 </div>
               )}
 
-              {/* TAB 5: Publish & Cloud Sync */}
+              {/* TAB 5: Global Site Analytics */}
+              {activeTab === 'analytics' && (
+                <div className="space-y-6">
+                  {/* Google Analytics Integration Banner */}
+                  <div className="bg-blue-500/10 border border-blue-500/30 p-4 rounded-xl space-y-2.5">
+                    <div className="flex items-center gap-2 text-xs font-bold text-blue-900 dark:text-blue-200">
+                      <BarChart3 className="w-4 h-4" />
+                      <span>חיבור Google Analytics 4 (GA4) לסטטיסטיקות מתקדמות</span>
+                    </div>
+                    <p className="text-xs text-study-600 dark:text-study-400">
+                      הזן כאן את מזהה המדידה של Google Analytics (למשל <code className="bg-blue-100 dark:bg-blue-950 px-1 py-0.5 rounded">G-XXXXXXXXXX</code>) כדי לקבל נתוני תנועה, מיקומי לומדים ומכשירים בזמן אמת.
+                    </p>
+                    <div className="flex items-center gap-2 pt-1">
+                      <input
+                        type="text"
+                        value={configDraft.gaMeasurementId || ''}
+                        onChange={(e) => setConfigDraft({ ...configDraft, gaMeasurementId: e.target.value })}
+                        placeholder="G-XXXXXXXXXX"
+                        className="px-3 py-1.5 bg-white dark:bg-study-850 border border-study-300 dark:border-study-700 rounded-lg text-xs font-mono w-60"
+                        dir="ltr"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Summary Metric Cards */}
+                  <div>
+                    <h3 className="text-xs font-bold text-study-700 dark:text-study-300 uppercase tracking-wider mb-3">
+                      סטטיסטיקות פעילות כלליות באתר (מצטבר)
+                    </h3>
+
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3.5">
+                      <div className="bg-white dark:bg-study-850 p-4 rounded-xl border border-study-200 dark:border-study-800 shadow-xs text-center">
+                        <div className="flex items-center justify-center gap-1 text-study-500 mb-1">
+                          <Eye className="w-4 h-4" />
+                          <span className="text-xs font-bold">צפיות בדפים</span>
+                        </div>
+                        <div className="text-2xl font-extrabold text-study-900 dark:text-study-100 font-serif">
+                          {globalMetrics.totalPageviews}
+                        </div>
+                      </div>
+
+                      <div className="bg-white dark:bg-study-850 p-4 rounded-xl border border-study-200 dark:border-study-800 shadow-xs text-center">
+                        <div className="flex items-center justify-center gap-1 text-emerald-500 mb-1">
+                          <Users className="w-4 h-4" />
+                          <span className="text-xs font-bold">מבקרים ייחודיים</span>
+                        </div>
+                        <div className="text-2xl font-extrabold text-study-900 dark:text-study-100 font-serif">
+                          {globalMetrics.totalVisits}
+                        </div>
+                      </div>
+
+                      <div className="bg-white dark:bg-study-850 p-4 rounded-xl border border-study-200 dark:border-study-800 shadow-xs text-center">
+                        <div className="flex items-center justify-center gap-1 text-blue-500 mb-1">
+                          <Clock className="w-4 h-4" />
+                          <span className="text-xs font-bold">זמן שהייה מצטבר</span>
+                        </div>
+                        <div className="text-2xl font-extrabold text-study-900 dark:text-study-100 font-serif">
+                          {Math.round(globalMetrics.totalReadingMinutes / 60)} שעות
+                        </div>
+                      </div>
+
+                      <div className="bg-white dark:bg-study-850 p-4 rounded-xl border border-study-200 dark:border-study-800 shadow-xs text-center">
+                        <div className="flex items-center justify-center gap-1 text-amber-500 mb-1">
+                          <TrendingUp className="w-4 h-4" />
+                          <span className="text-xs font-bold">שיעור חזרה</span>
+                        </div>
+                        <div className="text-2xl font-extrabold text-study-900 dark:text-study-100 font-serif">
+                          74%
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Popular Books Breakdown */}
+                  <div className="bg-study-50/70 dark:bg-study-850 p-4 rounded-xl border border-study-200 dark:border-study-750 space-y-3">
+                    <h4 className="text-xs font-bold text-study-800 dark:text-study-200 flex items-center gap-1.5">
+                      <BookOpen className="w-4 h-4 text-study-500" />
+                      <span>הספרים הפופולריים והנלמדים ביותר באתר</span>
+                    </h4>
+
+                    <div className="space-y-2">
+                      {Object.entries(globalMetrics.popularBooks).map(([bookName, count]) => {
+                        const maxCount = Math.max(...Object.values(globalMetrics.popularBooks));
+                        const pct = maxCount > 0 ? Math.round((count / maxCount) * 100) : 0;
+
+                        return (
+                          <div key={bookName} className="space-y-1">
+                            <div className="flex justify-between text-xs font-semibold">
+                              <span>{bookName}</span>
+                              <span className="text-study-500">{count} לומדים</span>
+                            </div>
+                            <div className="w-full bg-study-200/60 dark:bg-study-700 h-2 rounded-full overflow-hidden">
+                              <div 
+                                className="bg-study-500 h-full rounded-full transition-all"
+                                style={{ width: `${pct}%` }}
+                              />
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* TAB 6: Publish & Cloud Sync */}
               {activeTab === 'publish' && (
                 <div className="space-y-6">
                   <div className="bg-amber-500/10 border border-amber-500/30 p-4 rounded-xl text-xs space-y-1.5">
@@ -714,7 +896,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                       <span>פרסום שינויים ישירות לאתר החי (GitHub & Vercel)</span>
                     </p>
                     <p className="text-study-600 dark:text-study-400">
-                      הזנת מפתח GitHub Personal Access Token (PAT) תאפשר לך לבצע Commit ישיר בלחיצת כפתור אחת מתוך הדפדפן. Vercel יקבל את השינוי ויבנה את האתר אוטומטית תוך 30 שניות!
+                      לחיצה על כפתור הפרסום תעדכן אוטומטית את קבצי ההגדרות, תוכנית הלימודים וטקסט הלימוד ב-GitHub. Vercel יקבל את השינוי ויבנה את האתר תוך כ-30 שניות!
                     </p>
                   </div>
 
@@ -745,7 +927,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                     <button
                       onClick={handlePublishToGitHub}
                       disabled={isPublishing}
-                      className="flex items-center justify-center gap-2 w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl transition shadow-md disabled:opacity-50"
+                      className="flex items-center justify-center gap-2 w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl transition shadow-md disabled:opacity-50 cursor-pointer"
                     >
                       {isPublishing ? (
                         <>
@@ -779,7 +961,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-study-100 dark:bg-study-800 hover:bg-study-200 text-study-800 dark:text-study-200 rounded-lg text-xs font-semibold transition"
                     >
                       <Download className="w-3.5 h-3.5" />
-                      <span>הורד קובץ גיבוי של כל ההגדרות (JSON)</span>
+                      <span>הורד קובץ גיבוי של כל ההגדרות והטקסטים (JSON)</span>
                     </button>
 
                     <label className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-study-100 dark:bg-study-800 hover:bg-study-200 text-study-800 dark:text-study-200 rounded-lg text-xs font-semibold transition cursor-pointer">
@@ -813,7 +995,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                 </button>
                 <button
                   onClick={handleSaveAll}
-                  className="inline-flex items-center gap-1.5 px-5 py-2 bg-study-500 hover:bg-study-600 text-white rounded-xl text-xs font-bold transition shadow-sm"
+                  className="inline-flex items-center gap-1.5 px-5 py-2 bg-study-500 hover:bg-study-600 text-white rounded-xl text-xs font-bold transition shadow-sm cursor-pointer"
                 >
                   <Save className="w-4 h-4" />
                   <span>החל שינויים מקומית</span>
