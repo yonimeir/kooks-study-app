@@ -23,12 +23,12 @@ export const Header: React.FC<HeaderProps> = ({
         {/* Title and Logo */}
         <div className="flex items-center gap-3.5">
           <img 
-            src="/logo.png" 
+            src="/logo_emblem.png" 
             alt="לוגו עיקרי משנת הראי״ה" 
-            className="w-12 h-12 rounded-xl shadow-sm object-contain bg-white dark:bg-study-800 p-1 border border-study-200 dark:border-study-700" 
+            className="w-13 h-13 md:w-15 md:h-15 object-contain" 
           />
           <div>
-            <h1 className="text-xl md:text-2xl font-bold text-study-800 dark:text-study-200 font-serif">
+            <h1 className="text-xl md:text-2xl font-bold text-study-800 dark:text-study-200 font-serif leading-tight">
               עיקרי משנת הראי"ה
             </h1>
             <p className="text-xs text-study-600 dark:text-study-400">
@@ -47,7 +47,7 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
           </div>
 
-          {/* Theme Selector & Year Selection (Visual only for now) */}
+          {/* Theme Selector & Year Selection */}
           <div className="flex items-center gap-2">
             <select 
               className="bg-white dark:bg-study-850 border border-study-200 dark:border-study-800 rounded-lg px-2.5 py-1.5 text-xs text-study-700 dark:text-study-300 font-semibold focus:outline-none focus:ring-1 focus:ring-study-400"
@@ -59,42 +59,56 @@ export const Header: React.FC<HeaderProps> = ({
               <option value="year3" disabled>שנה שלישית (תשפ"ט) - בקרוב</option>
             </select>
 
+            {/* Dark Mode Toggle */}
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="p-2 bg-white dark:bg-study-850 border border-study-200 dark:border-study-800 rounded-lg text-study-600 dark:text-study-300 hover:bg-study-50 dark:hover:bg-study-800 shadow-sm transition-all"
-              aria-label="Toggle Dark Mode"
+              className="p-2 bg-white dark:bg-study-850 border border-study-200 dark:border-study-800 rounded-lg text-study-600 dark:text-study-300 hover:bg-study-50 dark:hover:bg-study-800 transition shadow-sm"
+              title={darkMode ? "עבור למצב יום" : "עבור למצב לילה"}
             >
-              {darkMode ? <Sun className="w-4.5 h-4.5" /> : <Moon className="w-4.5 h-4.5" />}
+              {darkMode ? <Sun className="w-4.5 h-4.5 text-amber-400" /> : <Moon className="w-4.5 h-4.5 text-study-700" />}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Tabs Navigation */}
-      <div className="max-w-6xl mx-auto px-4">
-        <nav className="flex gap-1 md:gap-2 -mb-px">
-          {[
-            { id: 'today', label: 'הלימוד היומי', icon: BookOpen },
-            { id: 'calendar', label: 'לוח לימוד שנתי', icon: CalendarIcon },
-            { id: 'progress', label: 'התקדמות ומעקב', icon: Award }
-          ].map((tab) => {
-            const Icon = tab.icon;
-            const isActive = currentTab === tab.id;
-            return (
-              <button
-                key={tab.id}
-                onClick={() => setCurrentTab(tab.id)}
-                className={`flex items-center gap-2 px-4 py-3 text-sm font-semibold border-b-2 transition-all ${
-                  isActive
-                    ? 'border-study-500 text-study-700 dark:text-study-300 bg-study-50 dark:bg-study-850/50'
-                    : 'border-transparent text-study-500 hover:text-study-700 dark:text-study-400 dark:hover:text-study-300'
-                }`}
-              >
-                <Icon className="w-4 h-4" />
-                <span>{tab.label}</span>
-              </button>
-            );
-          })}
+      {/* Navigation Tabs */}
+      <div className="max-w-6xl mx-auto px-4 mt-2">
+        <nav className="flex space-x-1 space-x-reverse border-t border-study-200/60 dark:border-study-800/60 pt-2">
+          <button
+            onClick={() => setCurrentTab('today')}
+            className={`flex items-center gap-2 px-4 py-2.5 rounded-t-lg font-bold text-sm transition-all border-b-2 ${
+              currentTab === 'today'
+                ? 'border-study-500 text-study-800 dark:text-study-100 bg-study-50/80 dark:bg-study-850'
+                : 'border-transparent text-study-600 dark:text-study-400 hover:text-study-900 dark:hover:text-study-200'
+            }`}
+          >
+            <BookOpen className="w-4 h-4" />
+            <span>הלימוד היומי</span>
+          </button>
+
+          <button
+            onClick={() => setCurrentTab('calendar')}
+            className={`flex items-center gap-2 px-4 py-2.5 rounded-t-lg font-bold text-sm transition-all border-b-2 ${
+              currentTab === 'calendar'
+                ? 'border-study-500 text-study-800 dark:text-study-100 bg-study-50/80 dark:bg-study-850'
+                : 'border-transparent text-study-600 dark:text-study-400 hover:text-study-900 dark:hover:text-study-200'
+            }`}
+          >
+            <CalendarIcon className="w-4 h-4" />
+            <span>לוח שנתי</span>
+          </button>
+
+          <button
+            onClick={() => setCurrentTab('progress')}
+            className={`flex items-center gap-2 px-4 py-2.5 rounded-t-lg font-bold text-sm transition-all border-b-2 ${
+              currentTab === 'progress'
+                ? 'border-study-500 text-study-800 dark:text-study-100 bg-study-50/80 dark:bg-study-850'
+                : 'border-transparent text-study-600 dark:text-study-400 hover:text-study-900 dark:hover:text-study-200'
+            }`}
+          >
+            <Award className="w-4 h-4" />
+            <span>ההתקדמות שלי</span>
+          </button>
         </nav>
       </div>
     </header>
