@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-study-50: #fdfbf7;
+  --color-study-100: #f6f1e3;
+  --color-study-200: #eadebe;
+  --color-study-300: #dac794;
+  --color-study-400: #cbab6a;
+  --color-study-500: #bd8f48;
+  --color-study-650: #a27237;
+  --color-study-600: #a7753c;
+  --color-study-700: #8b5a32;
+  --color-study-800: #71482b;
+  --color-study-850: #291a10;
+  --color-study-900: #1d110a;
+  --color-study-950: #130a05;
+  
+  --font-serif: "David", "Frank Ruhl Libre", "Georgia", serif;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fdfbf7;
+  color: #1a1a1a;
+}
+
+.dark body {
+  background-color: #130a05;
+  color: #f6f1e3;
+}
