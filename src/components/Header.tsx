@@ -23,15 +23,15 @@ export const Header: React.FC<HeaderProps> = ({
         {/* Title and Logo */}
         <div className="flex items-center gap-3.5">
           <img 
-            src="/logo_emblem.png" 
-            alt="לוגו עיקרי משנת הראי״ה" 
-            className="w-13 h-13 md:w-15 md:h-15 object-contain" 
+            src="/logo.png" 
+            alt="עיקרי משנת הראי״ה" 
+            className="h-13 md:h-15 w-auto object-contain shrink-0" 
           />
           <div>
             <h1 className="text-xl md:text-2xl font-bold text-study-800 dark:text-study-200 font-serif leading-tight">
               עיקרי משנת הראי"ה
             </h1>
-            <p className="text-xs text-study-600 dark:text-study-400">
+            <p className="text-xs text-study-600 dark:text-study-400 mt-0.5">
               תוכנית לימוד יומית תלת-שנתית בכתבי הרב קוק זצ"ל
             </p>
           </div>
