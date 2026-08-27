@@ -28,54 +28,38 @@ export const bookNameMap: { [key: string]: string } = {
   'Reish Millin': 'ריש מילין'
 };
 
-// Gematriya helper to convert numbers into Hebrew letters (1 -> א, 15 -> טו, 30 -> ל)
-export function getHebrewDayChar(day: number): string {
-  const units = ["", "א'", "ב'", "ג'", "ד'", "ה'", "ו'", "ז'", "ח'", "ט'"];
-  const tens = ["", "י'", "כ'", "ל'"];
-
-  if (day === 15) return 'ט"ו';
-  if (day === 16) return 'ט"ז';
-
-  if (day <= 9) return units[day];
+// Gematriya helper to convert numbers into Hebrew letters (supports 1 to 999)
+export function getHebrewNumber(num: number): string {
+  if (num <= 0) return "";
   
-  const tenDigit = Math.floor(day / 10);
-  const unitDigit = day % 10;
-
-  if (unitDigit === 0) {
-    return tens[tenDigit].replace("'", "");
-  }
-
-  const tenStr = tens[tenDigit].replace("'", "");
-  const unitStr = units[unitDigit].replace("'", "");
-  return `${tenStr}\"${unitStr}`;
-}
-
-// Convert Hebrew year number (e.g. 5786) to Hebrew characters (e.g. תשפ"ו)
-export function formatHebrewYear(year: number): string {
-  const num = year % 1000;
-  
-  const hundredsMap: { [key: number]: string } = {
-    100: "ק", 200: "ר", 300: "ש", 400: "ת",
-    500: "תק", 600: "תר", 700: "תש", 800: "תת", 900: "תתק"
+  const unitsMap: { [key: number]: string } = {
+    1: "א", 2: "ב", 3: "ג", 4: "ד", 5: "ה", 6: "ו", 7: "ז", 8: "ח", 9: "ט"
   };
   const tensMap: { [key: number]: string } = {
     10: "י", 20: "כ", 30: "ל", 40: "מ", 50: "נ", 60: "ס", 70: "ע", 80: "פ", 90: "צ"
   };
-  const unitsMap: { [key: number]: string } = {
-    1: "א", 2: "ב", 3: "ג", 4: "ד", 5: "ה", 6: "ו", 7: "ז", 8: "ח", 9: "ט"
+  const hundredsMap: { [key: number]: string } = {
+    100: "ק", 200: "ר", 300: "ש", 400: "ת",
+    500: "תק", 600: "תר", 700: "תש", 800: "תת", 900: "תתק"
   };
 
   const hundreds = Math.floor(num / 100) * 100;
   const rem100 = num % 100;
-  const tens = Math.floor(rem100 / 10) * 10;
-  const units = rem100 % 10;
 
-  let str = (hundredsMap[hundreds] || "") + (tensMap[tens] || "") + (unitsMap[units] || "");
+  let str = "";
+  if (hundreds > 0) {
+    str += hundredsMap[hundreds] || "";
+  }
 
   if (rem100 === 15) {
-    str = (hundredsMap[hundreds] || "") + "טו";
+    str += "טו";
   } else if (rem100 === 16) {
-    str = (hundredsMap[hundreds] || "") + "טז";
+    str += "טז";
+  } else {
+    const tens = Math.floor(rem100 / 10) * 10;
+    const units = rem100 % 10;
+    if (tens > 0) str += tensMap[tens] || "";
+    if (units > 0) str += unitsMap[units] || "";
   }
 
   if (str.length > 1) {
@@ -84,6 +68,26 @@ export function formatHebrewYear(year: number): string {
     return str + "'";
   }
   return str;
+}
+
+export function getHebrewDayChar(day: number): string {
+  return getHebrewNumber(day);
+}
+
+// Convert Hebrew year number (e.g. 5786) to Hebrew characters (e.g. תשפ"ו)
+export function formatHebrewYear(year: number): string {
+  const num = year % 1000;
+  return getHebrewNumber(num);
+}
+
+// Extract the starting paragraph number from a Sefaria ref
+export function getParagraphStartingIndex(ref: string): number {
+  if (!ref) return 1;
+  const match = ref.match(/\.(\d+)(?:-\d+)?$/);
+  if (match) {
+    return parseInt(match[1], 10);
+  }
+  return 1;
 }
 
 // Convert month name to Hebrew

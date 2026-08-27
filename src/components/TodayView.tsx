@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronRight, ChevronLeft, CheckCircle, Circle, RefreshCw, ZoomIn, ZoomOut, ExternalLink } from 'lucide-react';
-import { fetchSefariaText, fetchWikisourceText, getHebrewDayChar, bookNameMap } from '../utils/dateUtils';
+import { fetchSefariaText, fetchWikisourceText, getHebrewDayChar, getHebrewNumber, getParagraphStartingIndex, bookNameMap } from '../utils/dateUtils';
 import scheduleData from '../data/schedule.json';
 import reishMillinData from '../data/reishMillin.json';
 
@@ -121,6 +121,8 @@ export const TodayView: React.FC<TodayViewProps> = ({
     return `https://www.sefaria.org/${todayPortion.ref}`;
   };
 
+  const startingParagraphIndex = getParagraphStartingIndex(todayPortion.ref);
+
   return (
     <div className="max-w-3xl mx-auto px-4 py-6 transition-colors duration-200">
       {/* Date Navigation Header */}
@@ -187,8 +189,8 @@ export const TodayView: React.FC<TodayViewProps> = ({
           </div>
         </div>
 
-        {/* Text Pane */}
-        <div className="p-6 md:p-8 min-h-[300px] flex flex-col justify-between">
+        {/* Text Pane with Distinct Paragraphs */}
+        <div className="p-5 md:p-8 min-h-[300px] flex flex-col justify-between">
           {loading ? (
             <div className="flex flex-col items-center justify-center flex-1 py-16">
               <RefreshCw className="w-8 h-8 text-study-500 animate-spin mb-3" />
@@ -196,14 +198,32 @@ export const TodayView: React.FC<TodayViewProps> = ({
             </div>
           ) : (
             <div 
-              className="font-serif leading-relaxed text-study-900 dark:text-study-100 text-justify tracking-wide space-y-6"
+              className="font-serif text-study-900 dark:text-study-100 space-y-5"
               style={{ fontSize: `${fontSize}px`, direction: 'rtl' }}
             >
-              {text.map((paragraph, index) => (
-                <p key={index} className="indent-4 select-text leading-loose">
-                  {paragraph}
-                </p>
-              ))}
+              {text.map((paragraph, index) => {
+                const currentNum = startingParagraphIndex + index;
+                const isReishMillin = todayPortion.book === "Reish Millin";
+                const numHeb = getHebrewNumber(currentNum);
+
+                return (
+                  <div 
+                    key={index} 
+                    className="bg-study-50/70 dark:bg-study-900/40 p-5 md:p-6 rounded-2xl border border-study-200/80 dark:border-study-800 shadow-xs transition-all hover:border-study-300 dark:hover:border-study-700"
+                  >
+                    {!isReishMillin && (
+                      <div className="flex items-center gap-2 mb-3 pb-2 border-b border-study-200/60 dark:border-study-800/80">
+                        <span className="inline-flex items-center justify-center font-bold text-study-800 dark:text-study-200 bg-study-200/90 dark:bg-study-800 px-3 py-0.5 rounded-lg text-xs font-serif shadow-xs">
+                          פסקה {numHeb}
+                        </span>
+                      </div>
+                    )}
+                    <p className="leading-loose text-justify select-text indent-1">
+                      {paragraph}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
           )}
 
