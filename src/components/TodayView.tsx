@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ChevronRight, ChevronLeft, CheckCircle, Circle, RefreshCw, ZoomIn, ZoomOut, ExternalLink } from 'lucide-react';
 import { fetchSefariaText, fetchWikisourceText, getHebrewDayChar, bookNameMap } from '../utils/dateUtils';
 import scheduleData from '../data/schedule.json';
+import reishMillinData from '../data/reishMillin.json';
 
 interface TodayViewProps {
   activeMonth: string;
@@ -39,7 +40,12 @@ export const TodayView: React.FC<TodayViewProps> = ({
 
       let loadedText: string[] = [];
       if (todayPortion.book === "Reish Millin") {
-        loadedText = await fetchWikisourceText(todayPortion.ref);
+        const localParas = (reishMillinData as any)[portionKey];
+        if (localParas && localParas.length > 0) {
+          loadedText = localParas;
+        } else {
+          loadedText = await fetchWikisourceText(todayPortion.ref);
+        }
       } else {
         loadedText = await fetchSefariaText(todayPortion.ref);
       }
@@ -54,7 +60,7 @@ export const TodayView: React.FC<TodayViewProps> = ({
     return () => {
       active = false;
     };
-  }, [activeMonth, activeDay, todayPortion]);
+  }, [activeMonth, activeDay, todayPortion, portionKey]);
 
   const handleNextDay = () => {
     const nextIdx = monthSchedule.findIndex((item: any) => item.day === activeDay) + 1;
@@ -110,7 +116,7 @@ export const TodayView: React.FC<TodayViewProps> = ({
   // External Reading link
   const getExternalLink = () => {
     if (todayPortion.book === "Reish Millin") {
-      return `https://he.wikisource.org/wiki/ראש_מילין/${todayPortion.ref}`;
+      return `https://he.wikisource.org/wiki/ראש_מילין`;
     }
     return `https://www.sefaria.org/${todayPortion.ref}`;
   };
@@ -150,7 +156,7 @@ export const TodayView: React.FC<TodayViewProps> = ({
         <div className="bg-study-100/50 dark:bg-study-900/50 border-b border-study-200 dark:border-study-800 p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div>
             <span className="inline-block px-2.5 py-0.5 bg-study-500 text-white rounded-full text-xs font-bold shadow-sm mb-1.5">
-              {todayPortion.book === "Reish Millin" ? "ריש מילין (ויקיטקסט)" : (bookNameMap[todayPortion.book] || todayPortion.book)}
+              {todayPortion.book === "Reish Millin" ? "ריש מילין" : (bookNameMap[todayPortion.book] || todayPortion.book)}
             </span>
             <h3 className="text-lg md:text-xl font-bold font-serif text-study-800 dark:text-study-200">
               {todayPortion.heTitle}
@@ -194,7 +200,7 @@ export const TodayView: React.FC<TodayViewProps> = ({
               style={{ fontSize: `${fontSize}px`, direction: 'rtl' }}
             >
               {text.map((paragraph, index) => (
-                <p key={index} className="indent-4 select-text">
+                <p key={index} className="indent-4 select-text leading-loose">
                   {paragraph}
                 </p>
               ))}
