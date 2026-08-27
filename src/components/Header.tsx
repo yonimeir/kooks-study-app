@@ -41,7 +41,7 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="bg-white dark:bg-study-850 px-3.5 py-1.5 rounded-lg border border-study-200 dark:border-study-800 text-right shadow-sm">
             <div className="text-xs text-study-500 dark:text-study-400">היום לומדים:</div>
             <div className="text-sm font-semibold text-study-800 dark:text-study-200">
-              {todayHebDate.dayHebrew} ב{todayHebDate.monthHebrew} {todayHebDate.year}
+              {todayHebDate.dayHebrew} ב{todayHebDate.monthHebrew} {todayHebDate.yearHebrew}
             </div>
           </div>
 

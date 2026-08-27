@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronRight, ChevronLeft, CheckCircle, Circle, RefreshCw, ZoomIn, ZoomOut, ExternalLink } from 'lucide-react';
-import { fetchSefariaText, fetchWikisourceText, getHebrewDayChar } from '../utils/dateUtils';
+import { fetchSefariaText, fetchWikisourceText, getHebrewDayChar, bookNameMap } from '../utils/dateUtils';
 import scheduleData from '../data/schedule.json';
 
 interface TodayViewProps {
@@ -150,7 +150,7 @@ export const TodayView: React.FC<TodayViewProps> = ({
         <div className="bg-study-100/50 dark:bg-study-900/50 border-b border-study-200 dark:border-study-800 p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div>
             <span className="inline-block px-2.5 py-0.5 bg-study-500 text-white rounded-full text-xs font-bold shadow-sm mb-1.5">
-              {todayPortion.book === "Reish Millin" ? "ריש מילין - ויקיטקסט" : todayPortion.book}
+              {todayPortion.book === "Reish Millin" ? "ריש מילין (ויקיטקסט)" : (bookNameMap[todayPortion.book] || todayPortion.book)}
             </span>
             <h3 className="text-lg md:text-xl font-bold font-serif text-study-800 dark:text-study-200">
               {todayPortion.heTitle}

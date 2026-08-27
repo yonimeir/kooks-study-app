@@ -18,6 +18,16 @@ export const monthMap: { [key: string]: { key: string; heTitle: string } } = {
   'Av': { key: 'Av', heTitle: 'אב' }
 };
 
+// Book name mapping from English keys to Hebrew titles
+export const bookNameMap: { [key: string]: string } = {
+  'Orot': 'אורות',
+  'Orot HaTorah': 'אורות התורה',
+  'Orot HaTeshuvah': 'אורות התשובה',
+  'Musar Avikha': 'מוסר אביך',
+  'Middot HaRa\'ayah': 'מידות הראי"ה',
+  'Reish Millin': 'ריש מילין'
+};
+
 // Gematriya helper to convert numbers into Hebrew letters (1 -> א, 15 -> טו, 30 -> ל)
 export function getHebrewDayChar(day: number): string {
   const units = ["", "א'", "ב'", "ג'", "ד'", "ה'", "ו'", "ז'", "ח'", "ט'"];
@@ -40,6 +50,42 @@ export function getHebrewDayChar(day: number): string {
   return `${tenStr}\"${unitStr}`;
 }
 
+// Convert Hebrew year number (e.g. 5786) to Hebrew characters (e.g. תשפ"ו)
+export function formatHebrewYear(year: number): string {
+  const num = year % 1000;
+  
+  const hundredsMap: { [key: number]: string } = {
+    100: "ק", 200: "ר", 300: "ש", 400: "ת",
+    500: "תק", 600: "תר", 700: "תש", 800: "תת", 900: "תתק"
+  };
+  const tensMap: { [key: number]: string } = {
+    10: "י", 20: "כ", 30: "ל", 40: "מ", 50: "נ", 60: "ס", 70: "ע", 80: "פ", 90: "צ"
+  };
+  const unitsMap: { [key: number]: string } = {
+    1: "א", 2: "ב", 3: "ג", 4: "ד", 5: "ה", 6: "ו", 7: "ז", 8: "ח", 9: "ט"
+  };
+
+  const hundreds = Math.floor(num / 100) * 100;
+  const rem100 = num % 100;
+  const tens = Math.floor(rem100 / 10) * 10;
+  const units = rem100 % 10;
+
+  let str = (hundredsMap[hundreds] || "") + (tensMap[tens] || "") + (unitsMap[units] || "");
+
+  if (rem100 === 15) {
+    str = (hundredsMap[hundreds] || "") + "טו";
+  } else if (rem100 === 16) {
+    str = (hundredsMap[hundreds] || "") + "טז";
+  }
+
+  if (str.length > 1) {
+    return str.slice(0, -1) + '"' + str.slice(-1);
+  } else if (str.length === 1) {
+    return str + "'";
+  }
+  return str;
+}
+
 // Convert month name to Hebrew
 export function getHebrewMonthName(hebcalMonth: string): string {
   return monthMap[hebcalMonth]?.heTitle || hebcalMonth;
@@ -53,12 +99,14 @@ export interface HebrewDateInfo {
   monthHebrew: string;
   monthKey: string;
   year: number;
+  yearHebrew: string;
 }
 
 export function getTodayHebrewDate(): HebrewDateInfo {
   const hd = new HDate(new Date());
   const monthName = hd.getMonthName();
   const info = monthMap[monthName] || { key: monthName, heTitle: monthName };
+  const yearNum = hd.getFullYear();
   
   return {
     day: hd.getDate(),
@@ -66,7 +114,8 @@ export function getTodayHebrewDate(): HebrewDateInfo {
     monthEnglish: monthName,
     monthHebrew: info.heTitle,
     monthKey: info.key,
-    year: hd.getFullYear()
+    year: yearNum,
+    yearHebrew: formatHebrewYear(yearNum)
   };
 }
 
@@ -80,8 +129,7 @@ export async function fetchSefariaText(ref: string): Promise<string[]> {
     }
     const data = await response.json();
     if (data.he && Array.isArray(data.he)) {
-      // Sometimes Sefaria returns an array of strings (paragraphs)
-      return data.he.map((p: string) => p.replace(/<\/?[^>]+(>|$)/g, "")); // strip HTML
+      return data.he.map((p: string) => p.replace(/<\/?[^>]+(>|$)/g, ""));
     } else if (data.he && typeof data.he === 'string') {
       return [data.he.replace(/<\/?[^>]+(>|$)/g, "")];
     }
@@ -104,11 +152,9 @@ export async function fetchWikisourceText(pageRef: string): Promise<string[]> {
     const data = await response.json();
     if (data.parse && data.parse.text && data.parse.text["*"]) {
       const htmlContent = data.parse.text["*"];
-      // Create a temporary DOM parser to extract paragraphs
       const parser = new DOMParser();
       const doc = parser.parseFromString(htmlContent, 'text/html');
       
-      // Wikisource texts are in divs, usually inside p elements
       const paragraphs = Array.from(doc.querySelectorAll('p'));
       const textArray = paragraphs
         .map(p => p.textContent?.trim() || "")
@@ -118,7 +164,6 @@ export async function fetchWikisourceText(pageRef: string): Promise<string[]> {
         return textArray;
       }
       
-      // Fallback: extract text content directly and split by double newlines
       const cleanText = doc.body.textContent || "";
       return cleanText
         .split('\n')

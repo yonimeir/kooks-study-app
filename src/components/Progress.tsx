@@ -1,4 +1,5 @@
 import { Award, Book, Trash2 } from 'lucide-react';
+import { bookNameMap } from '../utils/dateUtils';
 import scheduleData from '../data/schedule.json';
 
 interface ProgressProps {
@@ -111,7 +112,7 @@ export const Progress: React.FC<ProgressProps> = ({ completedPortions, resetProg
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center gap-2">
                     <Book className="w-4 h-4 text-study-500" />
-                    <span className="text-sm font-bold text-study-850 dark:text-study-250">{book}</span>
+                    <span className="text-sm font-bold text-study-850 dark:text-study-250">{bookNameMap[book] || book}</span>
                   </div>
                   <span className="text-xs font-semibold text-study-600 dark:text-study-400">{completed} / {total} ימים ({pct}%)</span>
                 </div>

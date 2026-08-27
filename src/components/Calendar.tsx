@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Search, Calendar as CalendarIcon, CheckCircle2, ChevronLeft } from 'lucide-react';
-import { getHebrewDayChar } from '../utils/dateUtils';
+import { getHebrewDayChar, bookNameMap } from '../utils/dateUtils';
 import scheduleData from '../data/schedule.json';
 
 interface CalendarProps {
@@ -42,10 +42,12 @@ export const Calendar: React.FC<CalendarProps> = ({
     months.forEach((m) => {
       const days = (scheduleData as any)[m] || [];
       days.forEach((item: any) => {
+        const bookHebrew = bookNameMap[item.book] || item.book;
         if (
           item.heTitle.toLowerCase().includes(query) ||
           item.portion.toLowerCase().includes(query) ||
-          item.book.toLowerCase().includes(query)
+          item.book.toLowerCase().includes(query) ||
+          bookHebrew.toLowerCase().includes(query)
         ) {
           searchResults.push({ month: m, day: item.day, item });
         }
@@ -60,7 +62,7 @@ export const Calendar: React.FC<CalendarProps> = ({
       
       {/* Search Bar */}
       <div className="relative mb-6">
-        <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-study-400">
+        <div className="absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-study-400">
           <Search className="w-5 h-5" />
         </div>
         <input
@@ -68,7 +70,7 @@ export const Calendar: React.FC<CalendarProps> = ({
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder="חפש נושא או ספר בלוח הלימוד (לדוגמה: אהבה, אורות התשובה)..."
-          className="w-full pl-4 pr-10 py-3 bg-white dark:bg-study-850 border border-study-200 dark:border-study-800 rounded-xl text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-study-400 text-study-800 dark:text-study-250 shadow-sm"
+          className="w-full pl-4 pr-11 py-3 bg-white dark:bg-study-850 border border-study-200 dark:border-study-800 rounded-xl text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-study-400 text-study-800 dark:text-study-250 shadow-sm"
         />
       </div>
 
@@ -98,7 +100,7 @@ export const Calendar: React.FC<CalendarProps> = ({
                         {monthNames[month]} - {getHebrewDayChar(day)}
                       </div>
                       <div className="text-right">
-                        <span className="text-xs font-bold text-study-500 block mb-0.5">{item.book}</span>
+                        <span className="text-xs font-bold text-study-500 block mb-0.5">{bookNameMap[item.book] || item.book}</span>
                         <span className="text-sm font-bold text-study-800 dark:text-study-200 group-hover:text-study-600 dark:group-hover:text-study-400">{item.heTitle}</span>
                         {item.portion && <span className="text-xs text-study-500 block mt-0.5">{item.portion}</span>}
                       </div>
@@ -183,7 +185,7 @@ export const Calendar: React.FC<CalendarProps> = ({
                         {getHebrewDayChar(item.day).replace("'", "").replace('"', "")}
                       </div>
                       <div>
-                        <span className="text-xxs font-bold text-study-400 block mb-0.5">{item.book}</span>
+                        <span className="text-xxs font-bold text-study-400 block mb-0.5">{bookNameMap[item.book] || item.book}</span>
                         <span className="text-xs font-bold text-study-750 dark:text-study-300 group-hover:text-study-600 dark:group-hover:text-study-400">{item.heTitle}</span>
                       </div>
                     </div>
