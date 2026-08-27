@@ -118,8 +118,8 @@ export const TodayView: React.FC<TodayViewProps> = ({
   // Convert month key to Hebrew name
   const monthNameMap: { [key: string]: string } = {
     'Elul': 'אלול', 'Tishrei': 'תשרי', 'Cheshvan': 'חשוון', 'Kislev': 'כסלו',
-    'Tevet': 'טבת', 'Shevat': 'שבט', 'Adar': 'אדר', 'Nissan': 'ניסן',
-    'Iyar': 'אייר', 'Sivan': 'סיון', 'Tammuz': 'תמוז', 'Av': 'אב'
+    'Tevet': 'טבת', 'Shevat': 'שבט', 'Adar': 'אדר', 'Adar1': 'אדר א\'', 'Adar2': 'אדר ב\'',
+    'Nissan': 'ניסן', 'Iyar': 'אייר', 'Sivan': 'סיון', 'Tammuz': 'תמוז', 'Av': 'אב'
   };
 
   if (!todayPortion) {

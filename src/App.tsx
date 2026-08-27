@@ -29,7 +29,7 @@ export const App: React.FC = () => {
 
   useEffect(() => {
     // If today's Hebrew month is in the schedule, default to it
-    const validMonths = ['Elul', 'Tishrei', 'Cheshvan', 'Kislev', 'Tevet', 'Shevat', 'Adar', 'Nissan', 'Iyar', 'Sivan', 'Tammuz', 'Av'];
+    const validMonths = ['Elul', 'Tishrei', 'Cheshvan', 'Kislev', 'Tevet', 'Shevat', 'Adar', 'Adar1', 'Adar2', 'Nissan', 'Iyar', 'Sivan', 'Tammuz', 'Av'];
     if (validMonths.includes(todayHebDate.monthKey)) {
       setActiveMonth(todayHebDate.monthKey);
       setActiveDay(todayHebDate.day);
