@@ -18,12 +18,14 @@
   --color-study-900: #160d08;
   --color-study-950: #0d0704;
   
-  --font-serif: "David", "Frank Ruhl Libre", "Georgia", serif;
+  --font-serif: "Frank Ruhl Libre", "David", "Georgia", serif;
+  --font-sans: "Assistant", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-alef: "Alef", "Assistant", sans-serif;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: "Assistant", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;

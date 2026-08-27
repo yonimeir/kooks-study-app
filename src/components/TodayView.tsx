@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronRight, ChevronLeft, CheckCircle, Circle, RefreshCw, ZoomIn, ZoomOut, ExternalLink } from 'lucide-react';
+import { ChevronRight, ChevronLeft, CheckCircle, Circle, RefreshCw, ZoomIn, ZoomOut, ExternalLink, Type } from 'lucide-react';
 import { fetchSefariaText, fetchWikisourceText, getHebrewDayChar, getHebrewNumber, getParagraphStartingIndex, bookNameMap } from '../utils/dateUtils';
 import scheduleData from '../data/schedule.json';
 import reishMillinData from '../data/reishMillin.json';
@@ -21,7 +21,10 @@ export const TodayView: React.FC<TodayViewProps> = ({
 }) => {
   const [text, setText] = useState<string[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
-  const [fontSize, setFontSize] = useState<number>(18); // Default font size in px
+  const [fontSize, setFontSize] = useState<number>(19); // Default font size in px
+  const [fontFamily, setFontFamily] = useState<string>(() => {
+    return localStorage.getItem('reader_font_family') || 'font-serif';
+  });
 
   const monthSchedule = (scheduleData as any)[activeMonth] || [];
   const todayPortion = monthSchedule.find((item: any) => item.day === activeDay);
@@ -96,6 +99,20 @@ export const TodayView: React.FC<TodayViewProps> = ({
         }
       }
     }
+  };
+
+  const toggleFontFamily = () => {
+    const fonts = ['font-serif', 'font-sans', 'font-alef'];
+    const nextIdx = (fonts.indexOf(fontFamily) + 1) % fonts.length;
+    const nextFont = fonts[nextIdx];
+    setFontFamily(nextFont);
+    localStorage.setItem('reader_font_family', nextFont);
+  };
+
+  const fontLabels: { [key: string]: string } = {
+    'font-serif': 'פרנק-ריהל',
+    'font-sans': 'אסיסטנט',
+    'font-alef': 'אלף'
   };
 
   // Convert month key to Hebrew name
@@ -173,6 +190,15 @@ export const TodayView: React.FC<TodayViewProps> = ({
           {/* Reading Customization Controls */}
           <div className="flex items-center gap-2">
             <button
+              onClick={toggleFontFamily}
+              className="flex items-center gap-1.5 px-2.5 py-1.5 bg-white dark:bg-study-800 border border-study-200 dark:border-study-700 rounded-lg text-study-700 dark:text-study-300 hover:bg-study-50 dark:hover:bg-study-700 transition shadow-xs text-xs font-semibold"
+              title="החלף פונט קריאה"
+            >
+              <Type className="w-3.5 h-3.5 text-study-500" />
+              <span>{fontLabels[fontFamily]}</span>
+            </button>
+
+            <button
               onClick={() => setFontSize(Math.max(14, fontSize - 2))}
               className="p-2 bg-white dark:bg-study-800 border border-study-200 dark:border-study-700 rounded-lg text-study-600 dark:text-study-300 hover:bg-study-50 dark:hover:bg-study-700 transition shadow-sm"
               title="הקטן גופן"
@@ -198,7 +224,7 @@ export const TodayView: React.FC<TodayViewProps> = ({
             </div>
           ) : (
             <div 
-              className="font-serif text-study-900 dark:text-study-100 space-y-5"
+              className={`${fontFamily} text-study-900 dark:text-study-100 space-y-5`}
               style={{ fontSize: `${fontSize}px`, direction: 'rtl' }}
             >
               {text.map((paragraph, index) => {
@@ -218,7 +244,7 @@ export const TodayView: React.FC<TodayViewProps> = ({
                         </span>
                       </div>
                     )}
-                    <p className="leading-loose text-justify select-text indent-1">
+                    <p className="leading-[1.85] text-justify select-text indent-1 tracking-normal font-normal">
                       {paragraph}
                     </p>
                   </div>
