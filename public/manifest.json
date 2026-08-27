@@ -1,0 +1,24 @@
+{
+  "short_name": "משנת הראי\"ה",
+  "name": "עיקרי משנת הראי\"ה - תוכנית לימוד יומית",
+  "description": "תוכנית לימוד יומית תלת-שנתית בכתבי הרב קוק זצ\"ל",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#fdfbf7",
+  "theme_color": "#bd8f48",
+  "display": "standalone",
+  "orientation": "portrait",
+  "dir": "rtl",
+  "lang": "he"
+}

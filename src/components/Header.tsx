@@ -22,9 +22,11 @@ export const Header: React.FC<HeaderProps> = ({
       <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         {/* Title and Logo */}
         <div className="flex items-center gap-3">
-          <div className="p-2.5 bg-study-500 text-white rounded-xl shadow-md">
-            <BookOpen className="w-6 h-6" />
-          </div>
+          <img 
+            src="/logo.jpg" 
+            alt="Logo" 
+            className="w-11 h-11 rounded-xl shadow-md object-cover border border-study-300 dark:border-study-700" 
+          />
           <div>
             <h1 className="text-xl md:text-2xl font-bold text-study-800 dark:text-study-200 font-serif">
               עיקרי משנת הראי"ה
