@@ -1465,211 +1465,6 @@
   "Adar2": [
     {
       "day": 1,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.29",
-      "heTitle": "אורות, אורות התחיה כט",
-      "portion": ""
-    },
-    {
-      "day": 2,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.30",
-      "heTitle": "אורות, אורות התחיה ל",
-      "portion": ""
-    },
-    {
-      "day": 3,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.31",
-      "heTitle": "אורות, אורות התחיה לא",
-      "portion": ""
-    },
-    {
-      "day": 4,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.32-33",
-      "heTitle": "אורות, אורות התחיה לב–לג",
-      "portion": ""
-    },
-    {
-      "day": 5,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.34",
-      "heTitle": "אורות, אורות התחיה לד",
-      "portion": ""
-    },
-    {
-      "day": 6,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.35",
-      "heTitle": "אורות, אורות התחיה לה",
-      "portion": ""
-    },
-    {
-      "day": 7,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.36",
-      "heTitle": "אורות, אורות התחיה לו",
-      "portion": ""
-    },
-    {
-      "day": 8,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.37-38",
-      "heTitle": "אורות, אורות התחיה לז–לח",
-      "portion": ""
-    },
-    {
-      "day": 9,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.39-40",
-      "heTitle": "אורות, אורות התחיה לט–מ",
-      "portion": ""
-    },
-    {
-      "day": 10,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.41-42",
-      "heTitle": "אורות, אורות התחיה מא–מב",
-      "portion": ""
-    },
-    {
-      "day": 11,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.43",
-      "heTitle": "אורות, אורות התחיה מג",
-      "portion": ""
-    },
-    {
-      "day": 12,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.44",
-      "heTitle": "אורות, אורות התחיה מד",
-      "portion": ""
-    },
-    {
-      "day": 13,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.45",
-      "heTitle": "אורות, אורות התחיה מה",
-      "portion": ""
-    },
-    {
-      "day": 14,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.46",
-      "heTitle": "אורות, אורות התחיה מו",
-      "portion": ""
-    },
-    {
-      "day": 15,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.47-48",
-      "heTitle": "אורות, אורות התחיה מז–מח",
-      "portion": ""
-    },
-    {
-      "day": 16,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.49-50",
-      "heTitle": "אורות, אורות התחיה מט–נ",
-      "portion": ""
-    },
-    {
-      "day": 17,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.51",
-      "heTitle": "אורות, אורות התחיה נא",
-      "portion": ""
-    },
-    {
-      "day": 18,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.52",
-      "heTitle": "אורות, אורות התחיה נב",
-      "portion": ""
-    },
-    {
-      "day": 19,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.53",
-      "heTitle": "אורות, אורות התחיה נג",
-      "portion": ""
-    },
-    {
-      "day": 20,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.54",
-      "heTitle": "אורות, אורות התחיה נד",
-      "portion": ""
-    },
-    {
-      "day": 21,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.55",
-      "heTitle": "אורות, אורות התחיה נה",
-      "portion": ""
-    },
-    {
-      "day": 22,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.56",
-      "heTitle": "אורות, אורות התחיה נו",
-      "portion": ""
-    },
-    {
-      "day": 23,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.57",
-      "heTitle": "אורות, אורות התחיה נז",
-      "portion": ""
-    },
-    {
-      "day": 24,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.58",
-      "heTitle": "אורות, אורות התחיה נח",
-      "portion": ""
-    },
-    {
-      "day": 25,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.59",
-      "heTitle": "אורות, אורות התחיה נט",
-      "portion": ""
-    },
-    {
-      "day": 26,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.60",
-      "heTitle": "אורות, אורות התחיה ס",
-      "portion": ""
-    },
-    {
-      "day": 27,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.61",
-      "heTitle": "אורות, אורות התחיה סא",
-      "portion": ""
-    },
-    {
-      "day": 28,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.62-63",
-      "heTitle": "אורות, אורות התחיה סב–סג",
-      "portion": ""
-    },
-    {
-      "day": 29,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.64",
-      "heTitle": "אורות, אורות התחיה סד",
-      "portion": ""
-    }
-  ],
-  "Nissan": [
-    {
-      "day": 1,
       "book": "Reish Millin",
       "ref": "הנקודות_ו",
       "heTitle": "ריש מילין, הנקודות–'הצירה'–'השווא'",
@@ -1872,7 +1667,7 @@
       "portion": ""
     }
   ],
-  "Iyar": [
+  "Nissan": [
     {
       "day": 1,
       "book": "Orot",
@@ -2072,19 +1867,12 @@
     {
       "day": 29,
       "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Israel_and_its_Rebirth.13",
-      "heTitle": "אורות, ישראל ותחייתו יג",
-      "portion": "מ'ההכרה הזאת...' עד סוף הפסקה"
-    },
-    {
-      "day": 30,
-      "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Israel_and_its_Rebirth.14",
-      "heTitle": "אורות, ישראל ותחייתו יד",
-      "portion": ""
+      "ref": "Orot,_Lights_from_Darkness,_Israel_and_its_Rebirth.13-14",
+      "heTitle": "אורות, ישראל ותחייתו יג–יד",
+      "portion": "יג: מ'ההכרה הזאת...' עד סופה; ופרק יד"
     }
   ],
-  "Sivan": [
+  "Iyar": [
     {
       "day": 1,
       "book": "Orot",
@@ -2287,9 +2075,16 @@
       "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.5",
       "heTitle": "אורות, אורות התחיה ה",
       "portion": "עד '...בתחיתנו השלמה'"
+    },
+    {
+      "day": 30,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.5",
+      "heTitle": "אורות, אורות התחיה ה",
+      "portion": "סיום פסקה ה"
     }
   ],
-  "Tammuz": [
+  "Sivan": [
     {
       "day": 1,
       "book": "Orot",
@@ -2489,16 +2284,221 @@
     {
       "day": 29,
       "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.26-27",
-      "heTitle": "אורות, אורות התחיה כו–כז",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.26-28",
+      "heTitle": "אורות, אורות התחיה כו–כח",
+      "portion": ""
+    }
+  ],
+  "Tammuz": [
+    {
+      "day": 1,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.29",
+      "heTitle": "אורות, אורות התחיה כט",
+      "portion": ""
+    },
+    {
+      "day": 2,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.30",
+      "heTitle": "אורות, אורות התחיה ל",
+      "portion": ""
+    },
+    {
+      "day": 3,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.31",
+      "heTitle": "אורות, אורות התחיה לא",
+      "portion": ""
+    },
+    {
+      "day": 4,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.32-33",
+      "heTitle": "אורות, אורות התחיה לב–לג",
+      "portion": ""
+    },
+    {
+      "day": 5,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.34",
+      "heTitle": "אורות, אורות התחיה לד",
+      "portion": ""
+    },
+    {
+      "day": 6,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.35",
+      "heTitle": "אורות, אורות התחיה לה",
+      "portion": ""
+    },
+    {
+      "day": 7,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.36",
+      "heTitle": "אורות, אורות התחיה לו",
+      "portion": ""
+    },
+    {
+      "day": 8,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.37-38",
+      "heTitle": "אורות, אורות התחיה לז–לח",
+      "portion": ""
+    },
+    {
+      "day": 9,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.39-40",
+      "heTitle": "אורות, אורות התחיה לט–מ",
+      "portion": ""
+    },
+    {
+      "day": 10,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.41-42",
+      "heTitle": "אורות, אורות התחיה מא–מב",
+      "portion": ""
+    },
+    {
+      "day": 11,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.43",
+      "heTitle": "אורות, אורות התחיה מג",
+      "portion": ""
+    },
+    {
+      "day": 12,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.44",
+      "heTitle": "אורות, אורות התחיה מד",
+      "portion": ""
+    },
+    {
+      "day": 13,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.45",
+      "heTitle": "אורות, אורות התחיה מה",
+      "portion": ""
+    },
+    {
+      "day": 14,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.46",
+      "heTitle": "אורות, אורות התחיה מו",
+      "portion": ""
+    },
+    {
+      "day": 15,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.47-48",
+      "heTitle": "אורות, אורות התחיה מז–מח",
+      "portion": ""
+    },
+    {
+      "day": 16,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.49-50",
+      "heTitle": "אורות, אורות התחיה מט–נ",
+      "portion": ""
+    },
+    {
+      "day": 17,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.51",
+      "heTitle": "אורות, אורות התחיה נא",
+      "portion": ""
+    },
+    {
+      "day": 18,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.52",
+      "heTitle": "אורות, אורות התחיה נב",
+      "portion": ""
+    },
+    {
+      "day": 19,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.53",
+      "heTitle": "אורות, אורות התחיה נג",
+      "portion": ""
+    },
+    {
+      "day": 20,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.54",
+      "heTitle": "אורות, אורות התחיה נד",
+      "portion": ""
+    },
+    {
+      "day": 21,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.55",
+      "heTitle": "אורות, אורות התחיה נה",
+      "portion": ""
+    },
+    {
+      "day": 22,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.56",
+      "heTitle": "אורות, אורות התחיה נו",
+      "portion": ""
+    },
+    {
+      "day": 23,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.57",
+      "heTitle": "אורות, אורות התחיה נז",
+      "portion": ""
+    },
+    {
+      "day": 24,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.58",
+      "heTitle": "אורות, אורות התחיה נח",
+      "portion": ""
+    },
+    {
+      "day": 25,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.59",
+      "heTitle": "אורות, אורות התחיה נט",
+      "portion": ""
+    },
+    {
+      "day": 26,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.60",
+      "heTitle": "אורות, אורות התחיה ס",
+      "portion": ""
+    },
+    {
+      "day": 27,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.61",
+      "heTitle": "אורות, אורות התחיה סא",
+      "portion": ""
+    },
+    {
+      "day": 28,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.62-63",
+      "heTitle": "אורות, אורות התחיה סב–סג",
+      "portion": ""
+    },
+    {
+      "day": 29,
+      "book": "Orot",
+      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.64",
+      "heTitle": "אורות, אורות התחיה סד",
       "portion": ""
     },
     {
       "day": 30,
       "book": "Orot",
-      "ref": "Orot,_Lights_from_Darkness,_Lights_of_Rebirth.28",
-      "heTitle": "אורות, אורות התחיה כח",
-      "portion": ""
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_Unification_of_Ideals.1",
+      "heTitle": "אורות, למהלך האידיאות בישראל ו'",
+      "portion": "עד '...וכשנים קדמוניות'"
     }
   ],
   "Av": [
@@ -2619,7 +2619,7 @@
       "book": "Orot",
       "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_National_Ideal.3",
       "heTitle": "אורות, למהלך האידיאות בישראל ג",
-      "portion": "מ'אמנם האנושיות...' עד 'לגפן בוקק ישראל' (הושע)"
+      "portion": "מ'אמנם האנושיות...' עד 'לגפן בוקק ישראל'"
     },
     {
       "day": 18,
