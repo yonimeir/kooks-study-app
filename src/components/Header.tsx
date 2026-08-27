@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Calendar as CalendarIcon, Award, Sun, Moon } from 'lucide-react';
+import { BookOpen, Calendar as CalendarIcon, Award, Sun, Moon, Settings } from 'lucide-react';
 import type { HebrewDateInfo } from '../utils/dateUtils';
 
 interface HeaderProps {
@@ -8,6 +8,10 @@ interface HeaderProps {
   todayHebDate: HebrewDateInfo;
   darkMode: boolean;
   setDarkMode: (val: boolean) => void;
+  siteTitle: string;
+  siteSubtitle: string;
+  logoUrl: string;
+  onOpenAdmin: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -15,7 +19,11 @@ export const Header: React.FC<HeaderProps> = ({
   setCurrentTab,
   todayHebDate,
   darkMode,
-  setDarkMode
+  setDarkMode,
+  siteTitle,
+  siteSubtitle,
+  logoUrl,
+  onOpenAdmin
 }) => {
   return (
     <header className="bg-study-100 dark:bg-study-900 border-b border-study-200 dark:border-study-800 transition-colors duration-200">
@@ -23,16 +31,16 @@ export const Header: React.FC<HeaderProps> = ({
         {/* Title and Logo */}
         <div className="flex items-center gap-3.5">
           <img 
-            src="/logo.png" 
-            alt="עיקרי משנת הראי״ה" 
+            src={logoUrl || "/logo.png"} 
+            alt={siteTitle} 
             className="h-13 md:h-15 w-auto object-contain shrink-0" 
           />
           <div>
             <h1 className="text-xl md:text-2xl font-bold text-study-800 dark:text-study-200 font-serif leading-tight">
-              עיקרי משנת הראי"ה
+              {siteTitle}
             </h1>
             <p className="text-xs text-study-600 dark:text-study-400 mt-0.5">
-              תוכנית לימוד יומית תלת-שנתית בכתבי הרב קוק זצ"ל
+              {siteSubtitle}
             </p>
           </div>
         </div>
@@ -47,7 +55,7 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
           </div>
 
-          {/* Theme Selector & Year Selection */}
+          {/* Theme Selector, Year Selection & Admin Button */}
           <div className="flex items-center gap-2">
             <select 
               className="bg-white dark:bg-study-850 border border-study-200 dark:border-study-800 rounded-lg px-2.5 py-1.5 text-xs text-study-700 dark:text-study-300 font-semibold focus:outline-none focus:ring-1 focus:ring-study-400"
@@ -66,6 +74,15 @@ export const Header: React.FC<HeaderProps> = ({
               title={darkMode ? "עבור למצב יום" : "עבור למצב לילה"}
             >
               {darkMode ? <Sun className="w-4.5 h-4.5 text-amber-400" /> : <Moon className="w-4.5 h-4.5 text-study-700" />}
+            </button>
+
+            {/* Admin Settings Button */}
+            <button
+              onClick={onOpenAdmin}
+              className="p-2 bg-white dark:bg-study-850 border border-study-200 dark:border-study-800 rounded-lg text-study-600 dark:text-study-300 hover:bg-study-50 dark:hover:bg-study-800 transition shadow-sm"
+              title="ניהול ועריכת אתר"
+            >
+              <Settings className="w-4.5 h-4.5" />
             </button>
           </div>
         </div>

@@ -1,17 +1,35 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MessageCircle } from 'lucide-react';
+import { Phone, Mail, MessageCircle, Settings } from 'lucide-react';
 import { Header } from './components/Header';
 import { DedicationBanner } from './components/DedicationBanner';
 import { TodayView } from './components/TodayView';
 import { Calendar } from './components/Calendar';
 import { Progress } from './components/Progress';
+import { AdminDashboard } from './components/AdminDashboard';
 import { getTodayHebrewDate } from './utils/dateUtils';
 import type { HebrewDateInfo } from './utils/dateUtils';
+import initialSiteConfig from './data/siteConfig.json';
+import initialScheduleData from './data/schedule.json';
 
 export const App: React.FC = () => {
   const [currentTab, setCurrentTab] = useState<string>('today');
   const [todayHebDate] = useState<HebrewDateInfo>(getTodayHebrewDate());
   
+  // Site Configuration State (Hydrated from localStorage or JSON)
+  const [siteConfig, setSiteConfig] = useState<any>(() => {
+    const saved = localStorage.getItem('site_config_custom');
+    return saved ? JSON.parse(saved) : initialSiteConfig;
+  });
+
+  // Schedule Data State (Hydrated from localStorage or JSON)
+  const [scheduleData, setScheduleData] = useState<any>(() => {
+    const saved = localStorage.getItem('schedule_data_custom');
+    return saved ? JSON.parse(saved) : initialScheduleData;
+  });
+
+  // Admin Dashboard Modal State
+  const [isAdminOpen, setIsAdminOpen] = useState<boolean>(false);
+
   // Set default active month and day to today's Hebrew date (if it is listed in the schedule, else fallback to Elul 3)
   const [activeMonth, setActiveMonth] = useState<string>('Elul');
   const [activeDay, setActiveDay] = useState<number>(3);
@@ -50,6 +68,16 @@ export const App: React.FC = () => {
     }
   }, [darkMode]);
 
+  const handleSaveSiteConfig = (newConfig: any) => {
+    setSiteConfig(newConfig);
+    localStorage.setItem('site_config_custom', JSON.stringify(newConfig));
+  };
+
+  const handleSaveScheduleData = (newSchedule: any) => {
+    setScheduleData(newSchedule);
+    localStorage.setItem('schedule_data_custom', JSON.stringify(newSchedule));
+  };
+
   const toggleComplete = (month: string, day: number) => {
     const key = `${month}-${day}`;
     setCompletedPortions(prev => ({
@@ -75,10 +103,17 @@ export const App: React.FC = () => {
         todayHebDate={todayHebDate}
         darkMode={darkMode}
         setDarkMode={setDarkMode}
+        siteTitle={siteConfig.siteTitle || "עיקרי משנת הראי\"ה"}
+        siteSubtitle={siteConfig.siteSubtitle || "תוכנית לימוד יומית תלת-שנתית בכתבי הרב קוק זצ\"ל"}
+        logoUrl={siteConfig.logoUrl || "/logo.png"}
+        onOpenAdmin={() => setIsAdminOpen(true)}
       />
 
       {/* Dedication Banner for Refuah */}
-      <DedicationBanner />
+      <DedicationBanner 
+        names={siteConfig.refuahNames || []} 
+        suffix={siteConfig.refuahSuffix || "בתוך שאר חולי עמו ישראל"} 
+      />
       
       <main className="flex-1 w-full max-w-6xl mx-auto py-4">
         {currentTab === 'today' && (
@@ -107,50 +142,77 @@ export const App: React.FC = () => {
         )}
       </main>
 
+      {/* Admin Dashboard Modal */}
+      <AdminDashboard
+        isOpen={isAdminOpen}
+        onClose={() => setIsAdminOpen(false)}
+        siteConfig={siteConfig}
+        onSaveSiteConfig={handleSaveSiteConfig}
+        scheduleData={scheduleData}
+        onSaveScheduleData={handleSaveScheduleData}
+      />
+
       <footer className="py-8 border-t border-study-200 dark:border-study-800 bg-study-100/40 dark:bg-study-900/40 transition-colors">
         <div className="max-w-4xl mx-auto px-4 text-center space-y-4">
           <p className="text-xs text-study-700 dark:text-study-300 font-serif leading-relaxed max-w-2xl mx-auto">
-            "מטרת התוכנית היא ליצור היכרות רציפה עם עיקרי משנת הראי״ה, מתוך מפגש יומי עם לשונו ורעיונותיו. 
-            הלימוד מכוון להבנה פשוטה וישירה ככל האפשר, כפי כוחו של כל לומד, ולהתבסמות מאורם של הדברים."
+            {siteConfig.footerQuote || "\"מטרת התוכנית היא ליצור היכרות רציפה עם עיקרי משנת הראי״ה, מתוך מפגש יומי עם לשונו ורעיונותיו. הלימוד מכוון להבנה פשוטה וישירה ככל האפשר, כפי כוחו של כל לומד, ולהתבסמות מאורם של הדברים.\""}
           </p>
 
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3 text-xs text-study-600 dark:text-study-400">
-            <span className="font-medium">אפליקציית "עיקרי משנת הראי"ה"</span>
+            <span className="font-medium">{siteConfig.siteTitle || "אפליקציית \"עיקרי משנת הראי\"ה\""}</span>
             <span className="hidden sm:inline">•</span>
             
             {/* Contact Details */}
             <div className="flex flex-wrap items-center justify-center gap-3 bg-white dark:bg-study-850 px-4 py-2 rounded-xl border border-study-200 dark:border-study-800 shadow-xs">
-              <span className="font-bold text-study-800 dark:text-study-200">צור קשר: שי קלדרון</span>
+              <span className="font-bold text-study-800 dark:text-study-200">
+                צור קשר: {siteConfig.contact?.name || "שי קלדרון"}
+              </span>
               
-              <a 
-                href="tel:0586151547" 
-                className="inline-flex items-center gap-1 text-study-600 hover:text-study-900 dark:text-study-300 dark:hover:text-white transition-colors"
-                title="חייג"
-              >
-                <Phone className="w-3.5 h-3.5 text-study-500" />
-                <span dir="ltr">058-6151547</span>
-              </a>
+              {siteConfig.contact?.phone && (
+                <a 
+                  href={`tel:${siteConfig.contact.phoneRaw || siteConfig.contact.phone}`} 
+                  className="inline-flex items-center gap-1 text-study-600 hover:text-study-900 dark:text-study-300 dark:hover:text-white transition-colors"
+                  title="חייג"
+                >
+                  <Phone className="w-3.5 h-3.5 text-study-500" />
+                  <span dir="ltr">{siteConfig.contact.phone}</span>
+                </a>
+              )}
 
-              <a 
-                href="https://wa.me/972586151547" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="inline-flex items-center gap-1 text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 transition-colors"
-                title="שלח הודעת וואטסאפ"
-              >
-                <MessageCircle className="w-3.5 h-3.5" />
-                <span>וואטסאפ</span>
-              </a>
+              {siteConfig.contact?.whatsapp && (
+                <a 
+                  href={`https://wa.me/${siteConfig.contact.whatsapp}`} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center gap-1 text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 transition-colors"
+                  title="שלח הודעת וואטסאפ"
+                >
+                  <MessageCircle className="w-3.5 h-3.5" />
+                  <span>וואטסאפ</span>
+                </a>
+              )}
 
-              <a 
-                href="mailto:skalderon@yeshivatshefa.org.il" 
-                className="inline-flex items-center gap-1 text-study-600 hover:text-study-900 dark:text-study-300 dark:hover:text-white transition-colors"
-                title="שלח מייל"
-              >
-                <Mail className="w-3.5 h-3.5 text-study-500" />
-                <span>דוא״ל</span>
-              </a>
+              {siteConfig.contact?.email && (
+                <a 
+                  href={`mailto:${siteConfig.contact.email}`} 
+                  className="inline-flex items-center gap-1 text-study-600 hover:text-study-900 dark:text-study-300 dark:hover:text-white transition-colors"
+                  title="שלח מייל"
+                >
+                  <Mail className="w-3.5 h-3.5 text-study-500" />
+                  <span>דוא״ל</span>
+                </a>
+              )}
             </div>
+
+            {/* Discreet Admin Link */}
+            <span className="hidden sm:inline">•</span>
+            <button
+              onClick={() => setIsAdminOpen(true)}
+              className="inline-flex items-center gap-1 text-xs text-study-500 hover:text-study-800 dark:text-study-400 dark:hover:text-study-200 underline transition cursor-pointer"
+            >
+              <Settings className="w-3 h-3" />
+              <span>ניהול אתר</span>
+            </button>
           </div>
         </div>
       </footer>
