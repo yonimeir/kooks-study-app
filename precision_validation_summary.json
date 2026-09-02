@@ -1,0 +1,1259 @@
+[
+  {
+    "group": "למהלך האידיאות בישראל א",
+    "base_ref": "Orot, The Process of Ideals in Israel, The Godly and the National Ideal in the Individual",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Av-10",
+        "heTitle": "אורות, למהלך האידיאות בישראל א",
+        "portion": "עד '...בהוה ובנצח'",
+        "word_count": 218,
+        "start_token": 0,
+        "end_token": 218,
+        "first_words": "סגנון החיים וסגנון המחשבה של",
+        "last_words": "אל החיים המלאים, בלשד מקוריותם,"
+      },
+      {
+        "key": "Av-11",
+        "heTitle": "אורות, למהלך האידיאות בישראל א",
+        "portion": "מ'בלכתה...' עד '...דחיפות החיים'",
+        "word_count": 166,
+        "start_token": 220,
+        "end_token": 386,
+        "first_words": "בלכתה, ממעלה למטה וממטה למעלה,",
+        "last_words": "את העצמה היותר פנימית לכל"
+      },
+      {
+        "key": "Av-12",
+        "heTitle": "אורות, למהלך האידיאות בישראל א",
+        "portion": "מ'ויש אשר החיים...' עד סוף הפסקה",
+        "word_count": 321,
+        "start_token": 388,
+        "end_token": 709,
+        "first_words": "ויש אשר החיים המעשיים כבר",
+        "last_words": "וכסף וכל רוח אין בקרבו!\"."
+      }
+    ]
+  },
+  {
+    "group": "למהלך האידיאות בישראל ב",
+    "base_ref": "Orot, The Process of Ideals in Israel, The Godly and the National Ideal in Israel",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Av-13",
+        "heTitle": "אורות, למהלך האידיאות בישראל ב",
+        "portion": "עד '...נמוך ומגושם'",
+        "word_count": 226,
+        "start_token": 0,
+        "end_token": 226,
+        "first_words": "מתוך ההכנה לרעיון האלהי, מתוך",
+        "last_words": "הפרולטריון לכל פלגותיו, אפילו היותר"
+      },
+      {
+        "key": "Av-14",
+        "heTitle": "אורות, למהלך האידיאות בישראל ב",
+        "portion": "מ'אור האידיאה האלוקית...' עד סוף הפסקה",
+        "word_count": 262,
+        "start_token": 228,
+        "end_token": 490,
+        "first_words": "אור האידיאה האלהית, העולה ומזדקק",
+        "last_words": "מהצנור העליון של האידיאה האלהית."
+      }
+    ]
+  },
+  {
+    "group": "למהלך האידיאות בישראל ג",
+    "base_ref": "Orot, The Process of Ideals in Israel, Dissolution of Ideals",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Av-15",
+        "heTitle": "אורות, למהלך האידיאות בישראל ג",
+        "portion": "עד '...ושיר השירים קדש קדשים'",
+        "word_count": 297,
+        "start_token": 0,
+        "end_token": 297,
+        "first_words": "כבר היו שני המאורות הללו",
+        "last_words": "השירים לישראל, שכל הכתובים קדש"
+      },
+      {
+        "key": "Av-16",
+        "heTitle": "אורות, למהלך האידיאות בישראל ג",
+        "portion": "מ'אבל רק הרוח הלאומי...' עד 'משדי הרעיון האלוקי'",
+        "word_count": 164,
+        "start_token": 301,
+        "end_token": 465,
+        "first_words": "אבל רק הרוח הלאומי ביחושו",
+        "last_words": "הלאומי החל להפרד מיניקתו העזה"
+      },
+      {
+        "key": "Av-17",
+        "heTitle": "אורות, למהלך האידיאות בישראל ג",
+        "portion": "מ'אמנם האנושיות...' עד 'לגפן בוקק ישראל'",
+        "word_count": 273,
+        "start_token": 468,
+        "end_token": 741,
+        "first_words": "אמנם האנושיות בכללה לא הפרידה",
+        "last_words": "הלאומית חדלה תת פריה. ויהי"
+      },
+      {
+        "key": "Av-18",
+        "heTitle": "אורות, למהלך האידיאות בישראל ג",
+        "portion": "מ'עוונות אבותינו...' עד סוף הפסקה",
+        "word_count": 184,
+        "start_token": 744,
+        "end_token": 928,
+        "first_words": "עונות אבותינו הורידו כל כך",
+        "last_words": "לי באמונה וידעת את ד'\"."
+      }
+    ]
+  },
+  {
+    "group": "למהלך האידיאות בישראל ד",
+    "base_ref": "Orot, The Process of Ideals in Israel, The Situation in Exile",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Av-19",
+        "heTitle": "אורות, למהלך האידיאות בישראל ד",
+        "portion": "עד '...היותר ירוד וכהה'",
+        "word_count": 137,
+        "start_token": 0,
+        "end_token": 137,
+        "first_words": "כאשר סר רוח אלהים מעל",
+        "last_words": "את הרגש הלאומי, אפילו במצב"
+      },
+      {
+        "key": "Av-20",
+        "heTitle": "אורות, למהלך האידיאות בישראל ד",
+        "portion": "מ'באין מקום להשפעתה...' עד '...והקטנת המאורות'",
+        "word_count": 316,
+        "start_token": 140,
+        "end_token": 456,
+        "first_words": "באין מקום להשפעתה של האידיאה",
+        "last_words": "חמת ד' של פרוד הדבקים"
+      },
+      {
+        "key": "Av-21",
+        "heTitle": "אורות, למהלך האידיאות בישראל ד",
+        "portion": "מ'אמנם האידאה האלוקית...' עד סוף הפסקה",
+        "word_count": 190,
+        "start_token": 456,
+        "end_token": 646,
+        "first_words": "והקטנת המאורות. אמנם האידיאה האלהית,",
+        "last_words": "בארצו, בשוב ממלכת שדי לאיתנה."
+      }
+    ]
+  },
+  {
+    "group": "למהלך האידיאות בישראל ה",
+    "base_ref": "Orot, The Process of Ideals in Israel, The First and Second Temples; Religion",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Av-22",
+        "heTitle": "אורות, למהלך האידיאות בישראל ה",
+        "portion": "עד '...מצד נשמתה הלאומית'",
+        "word_count": 226,
+        "start_token": 0,
+        "end_token": 226,
+        "first_words": "מפני שלא הוכשרה עדיין הנשמה",
+        "last_words": "לישראל, בתור אומה המסוגלת לה"
+      },
+      {
+        "key": "Av-23",
+        "heTitle": "אורות, למהלך האידיאות בישראל ה",
+        "portion": "מ'המוסר האישי...' עד '...בחיי הכלל'",
+        "word_count": 187,
+        "start_token": 229,
+        "end_token": 416,
+        "first_words": "המוסר האישי הפרטי, הדאגה לחיי",
+        "last_words": "שהם חשים את התמלאותם כולם"
+      },
+      {
+        "key": "Av-24",
+        "heTitle": "אורות, למהלך האידיאות בישראל ה",
+        "portion": "מ'הדבר הגדול הכללי...' עד '...אוצרות החכמה העליונה'",
+        "word_count": 357,
+        "start_token": 418,
+        "end_token": 775,
+        "first_words": "הדבר הגדול הכללי של \"והתהלכתי",
+        "last_words": "אותן האמתיות הפרטיות הצפונות בגנזי"
+      },
+      {
+        "key": "Av-25",
+        "heTitle": "אורות, למהלך האידיאות בישראל ה",
+        "portion": "מ'אבל חשכת הלילה...' עד '...כעור ואינו מתקבל'",
+        "word_count": 288,
+        "start_token": 778,
+        "end_token": 1066,
+        "first_words": "אבל חשכת הלילה היא שגרמה",
+        "last_words": "גפן בענבי הסנה הוא דבר"
+      },
+      {
+        "key": "Av-26",
+        "heTitle": "אורות, למהלך האידיאות בישראל ה",
+        "portion": "מ'הנועם האלוקי...' עד '...התכונות הברבריות'",
+        "word_count": 225,
+        "start_token": 1066,
+        "end_token": 1291,
+        "first_words": "כעור ואינו מתקבל\". הנעם האלהי",
+        "last_words": "פנימה שום נגוד ומעצור לכל"
+      },
+      {
+        "key": "Av-27",
+        "heTitle": "אורות, למהלך האידיאות בישראל ה",
+        "portion": "מ'אבל אי אפשר...' עד '...טוהר אצילותה'",
+        "word_count": 158,
+        "start_token": 1293,
+        "end_token": 1451,
+        "first_words": "אבל אי אפשר לכלא את",
+        "last_words": "כפי עצם טבע המחשבה בעמק"
+      },
+      {
+        "key": "Av-28",
+        "heTitle": "אורות, למהלך האידיאות בישראל ה",
+        "portion": "מ'מאז החלה האנושיות...' עד '...חומריים ורוחניים'",
+        "word_count": 320,
+        "start_token": 1453,
+        "end_token": 1773,
+        "first_words": "מאז החלה האנושיות להיות צולעת",
+        "last_words": "קטנים, שיש בהם מיני מסחרים"
+      },
+      {
+        "key": "Av-29",
+        "heTitle": "אורות, למהלך האידיאות בישראל ה",
+        "portion": "מ'הנסיונות שנעשו...' עד סוף הפסקה",
+        "word_count": 254,
+        "start_token": 1775,
+        "end_token": 2029,
+        "first_words": "הנסיונות שנעשו בעת כשלון הרוח,",
+        "last_words": "חסנך לעולם, לדור ודור נזיריך\"."
+      }
+    ]
+  },
+  {
+    "group": "למהלך האידיאות בישראל ו",
+    "base_ref": "Orot, The Process of Ideals in Israel, Unification of Ideals",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Av-30",
+        "heTitle": "אורות, למהלך האידיאות בישראל ו'",
+        "portion": "עד '...וכשנים קדמוניות'",
+        "word_count": 354,
+        "start_token": 0,
+        "end_token": 354,
+        "first_words": "ההכשר של הרוח הלאומי של",
+        "last_words": "עליה בהדר גאונה כימי עולם"
+      },
+      {
+        "key": "Elul-1",
+        "heTitle": "אורות, למהלך האידיאות בישראל ו'",
+        "portion": "מהמילים 'עתה מכות הן הגלים...' עד '...והדרו על בנינו'",
+        "word_count": 601,
+        "start_token": 356,
+        "end_token": 957,
+        "first_words": "עתה מכות הן גלים, האידיאות",
+        "last_words": "דורים, להיות נועם ד' עלינו"
+      },
+      {
+        "key": "Elul-2",
+        "heTitle": "אורות, למהלך האידיאות בישראל ו'",
+        "portion": "מהמילים 'באוצר הרעיונות הגדולים...' עד סוף הפסקה",
+        "word_count": 195,
+        "start_token": 960,
+        "end_token": 1155,
+        "first_words": "באוצר הרעיונות הגדולים הכמוסים, שהיו",
+        "last_words": "אחרון ועם נברא יהלל יה\"."
+      }
+    ]
+  },
+  {
+    "group": "קריאה גדולה",
+    "base_ref": "Orot, Lights from Darkness, Great Calling",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Av-8",
+        "heTitle": "אורות, קריאה גדולה",
+        "portion": "עד '...מפלג אלוקים'",
+        "word_count": 571,
+        "start_token": 0,
+        "end_token": 571,
+        "first_words": "\"ההכרח\" הוא עכשיו הפתגם היותר",
+        "last_words": "בכל לב ונפש מים טהורים"
+      },
+      {
+        "key": "Av-9",
+        "heTitle": "אורות, קריאה גדולה",
+        "portion": "מ'הרוח התוקף...' עד סופה",
+        "word_count": 331,
+        "start_token": 573,
+        "end_token": 904,
+        "first_words": "הרוח התוקף את כל האנושיות",
+        "last_words": "לכו ונלכה באור ד' !"
+      }
+    ]
+  },
+  {
+    "group": "ישראל ותחייתו ב",
+    "base_ref": "Orot, Lights from Darkness, Israel and its Rebirth 2",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Nissan-14",
+        "heTitle": "אורות, ישראל ותחייתו ב",
+        "portion": "עד '...של ההבנה החוקית'",
+        "word_count": 144,
+        "start_token": 0,
+        "end_token": 144,
+        "first_words": "שתי הבנות כלליות הן, המקיפות",
+        "last_words": "השכלית לכל אותו הבנין הגדול"
+      },
+      {
+        "key": "Nissan-15",
+        "heTitle": "אורות, ישראל ותחייתו ב",
+        "portion": "מ'אבל בעת...' עד סוף הפסקה",
+        "word_count": 476,
+        "start_token": 147,
+        "end_token": 623,
+        "first_words": "אבל בעת אשר אנו עולים",
+        "last_words": "זורח, - אורו של משיח."
+      }
+    ]
+  },
+  {
+    "group": "ישראל ותחייתו יב",
+    "base_ref": "Orot, Lights from Darkness, Israel and its Rebirth 12",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Nissan-25",
+        "heTitle": "אורות, ישראל ותחייתו יב",
+        "portion": "עד '...בכל מלא חוסנו'",
+        "word_count": 378,
+        "start_token": 0,
+        "end_token": 378,
+        "first_words": "הסקירה הרואה את הכח האלהי",
+        "last_words": "תקופת הזרחת אור תחית המתים"
+      },
+      {
+        "key": "Nissan-26",
+        "heTitle": "אורות, ישראל ותחייתו יב",
+        "portion": "מ'אורות עולמים...' עד סוף הפסקה",
+        "word_count": 305,
+        "start_token": 381,
+        "end_token": 686,
+        "first_words": "אורות עולמים אלו כלולים הם",
+        "last_words": "ציץ ודבר אלהינו יקום לעולם."
+      }
+    ]
+  },
+  {
+    "group": "ישראל ותחייתו טו",
+    "base_ref": "Orot, Lights from Darkness, Israel and its Rebirth 15",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Iyar-1",
+        "heTitle": "אורות, ישראל ותחייתו טו",
+        "portion": "עד '...המפעל הקרחי בישראל'",
+        "word_count": 343,
+        "start_token": 0,
+        "end_token": 343,
+        "first_words": "יסוד הרשעה, שהיא מתפצלת לעבודה",
+        "last_words": "הקינות עשתה באדם את מעשה"
+      },
+      {
+        "key": "Iyar-2",
+        "heTitle": "אורות, ישראל ותחייתו טו",
+        "portion": "מ'הקריאה של \"כל העדה\"...' עד '...ולקדוש ישראל כי פארך'",
+        "word_count": 277,
+        "start_token": 346,
+        "end_token": 623,
+        "first_words": "הקריאה של \"כל העדה כולם",
+        "last_words": "אליך ירוצו, למען ד' אלהיך"
+      },
+      {
+        "key": "Iyar-3",
+        "heTitle": "אורות, ישראל ותחייתו טו",
+        "portion": "מ'החפץ של העמדת גוי...' עד סוף הפסקה",
+        "word_count": 276,
+        "start_token": 627,
+        "end_token": 903,
+        "first_words": "החפץ של העמדת גוי אחד",
+        "last_words": "את ד' כמים לים מכסים\"."
+      }
+    ]
+  },
+  {
+    "group": "ישראל ותחייתו יט",
+    "base_ref": "Orot, Lights from Darkness, Israel and its Rebirth 19",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Iyar-6",
+        "heTitle": "אורות, ישראל ותחייתו יט",
+        "portion": "עד '...נצחונה הפנימי'",
+        "word_count": 187,
+        "start_token": 0,
+        "end_token": 187,
+        "first_words": "נכבד הוא הרצון הטוב הפונה",
+        "last_words": "חיים; וכה הולכת היא בדרך"
+      },
+      {
+        "key": "Iyar-7",
+        "heTitle": "אורות, ישראל ותחייתו יט",
+        "portion": "מ'אמנם חלק העמים...' עד סוף הפסקה",
+        "word_count": 267,
+        "start_token": 189,
+        "end_token": 456,
+        "first_words": "אמנם חלק העמים לא יוכל",
+        "last_words": "יהיה ד' אחד ושמו אחד."
+      }
+    ]
+  },
+  {
+    "group": "ישראל ותחייתו כ",
+    "base_ref": "Orot, Lights from Darkness, Israel and its Rebirth 20",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Iyar-8",
+        "heTitle": "אורות, ישראל ותחייתו כ",
+        "portion": "עד '...נזיד עדשים'",
+        "word_count": 426,
+        "start_token": 0,
+        "end_token": 426,
+        "first_words": "כל נתיקה שבמערכי הלב מהקוים",
+        "last_words": "הוא דם ורצח ולעיטה של"
+      },
+      {
+        "key": "Iyar-9",
+        "heTitle": "אורות, ישראל ותחייתו כ",
+        "portion": "מ'אבל אורו של משיח...' עד סוף הפסקה",
+        "word_count": 430,
+        "start_token": 428,
+        "end_token": 858,
+        "first_words": "אבל אורו של משיח אחוז",
+        "last_words": "\"ויעבור מלכם לפניהם וד' בראשם\"."
+      }
+    ]
+  },
+  {
+    "group": "ישראל ותחייתו לא",
+    "base_ref": "Orot, Lights from Darkness, Israel and its Rebirth 31",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Iyar-17",
+        "heTitle": "אורות, ישראל ותחייתו לא",
+        "portion": "עד '...לא יעלו בידם'",
+        "word_count": 214,
+        "start_token": 0,
+        "end_token": 214,
+        "first_words": "טעות גדולה היא ביד אותם",
+        "last_words": "להפריד את האחדות הישראלית העליונה"
+      },
+      {
+        "key": "Iyar-18",
+        "heTitle": "אורות, ישראל ותחייתו לא",
+        "portion": "מהמילה 'וההסתגלות...' עד סוף הפסקה",
+        "word_count": 188,
+        "start_token": 217,
+        "end_token": 405,
+        "first_words": "וההסתגלות של שלמי המחשבה והרצון",
+        "last_words": "מתראים בו בכל מלא עזיזותם."
+      }
+    ]
+  },
+  {
+    "group": "אורות התחיה א",
+    "base_ref": "Orot, Lights from Darkness, Lights of Rebirth 1",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Iyar-20",
+        "heTitle": "אורות, אורות התחיה א",
+        "portion": "עד '...הלב הכללי של הקיבוצים'",
+        "word_count": 262,
+        "start_token": 0,
+        "end_token": 262,
+        "first_words": "הבינה היותר שלמה ומתוקה של",
+        "last_words": "המוסר הולכת ומתמסמסת ונעזבת מן"
+      },
+      {
+        "key": "Iyar-21",
+        "heTitle": "אורות, אורות התחיה א",
+        "portion": "מ'אבל מורשת פליטה...' עד סוף הפסקה",
+        "word_count": 260,
+        "start_token": 266,
+        "end_token": 526,
+        "first_words": "אבל מורשת פלטה יש לה",
+        "last_words": "ד' צבאות שמו קדוש ישראל."
+      }
+    ]
+  },
+  {
+    "group": "אורות התחיה ב",
+    "base_ref": "Orot, Lights from Darkness, Lights of Rebirth 2",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Iyar-22",
+        "heTitle": "אורות, אורות התחיה ב",
+        "portion": "עד '...ולישראל מחזיקיה'",
+        "word_count": 180,
+        "start_token": 0,
+        "end_token": 180,
+        "first_words": "הטבע מוצא את רדיתו בקבוץ",
+        "last_words": "נפשה, ותמלא שנאת מות ליהדות"
+      },
+      {
+        "key": "Iyar-23",
+        "heTitle": "אורות, אורות התחיה ב",
+        "portion": "מ'וכן הדבר הולך...' עד '...תעמוד על נפשה'",
+        "word_count": 390,
+        "start_token": 182,
+        "end_token": 572,
+        "first_words": "וכן הדבר הולך בכל השדרות",
+        "last_words": "לה, ובכל עז כחה הפנימי"
+      },
+      {
+        "key": "Iyar-24",
+        "heTitle": "אורות, אורות התחיה ב",
+        "portion": "מ'הטוב האלוקי...' עד סוף הפסקה",
+        "word_count": 299,
+        "start_token": 575,
+        "end_token": 874,
+        "first_words": "הטוב האלהי בקרבה ובעולם, שיגלה",
+        "last_words": "האומה והכרת אידיאליה, תחיתה ובנינה."
+      }
+    ]
+  },
+  {
+    "group": "אורות התחיה ג",
+    "base_ref": "Orot, Lights from Darkness, Lights of Rebirth 3",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Iyar-25",
+        "heTitle": "אורות, אורות התחיה ג",
+        "portion": "עד '...אשר לחזיון'",
+        "word_count": 330,
+        "start_token": 0,
+        "end_token": 330,
+        "first_words": "כשהחיים פורחים, כשיש להם גלויי",
+        "last_words": "אין לה כנפים מהירים כאלה"
+      },
+      {
+        "key": "Iyar-26",
+        "heTitle": "אורות, אורות התחיה ג",
+        "portion": "מ'התחיה צוברת...' עד סוף הפסקה",
+        "word_count": 202,
+        "start_token": 332,
+        "end_token": 534,
+        "first_words": "התחיה צוברת את כל אידיאלינו",
+        "last_words": "אז יגלה את עצמו וכחו."
+      }
+    ]
+  },
+  {
+    "group": "אורות התחיה ד",
+    "base_ref": "Orot, Lights from Darkness, Lights of Rebirth 4",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Iyar-27",
+        "heTitle": "אורות, אורות התחיה ד",
+        "portion": "עד '...תחיתו על אדמתו'",
+        "word_count": 332,
+        "start_token": 0,
+        "end_token": 332,
+        "first_words": "הסבלנות, הנדרשת מאד לקבוץ אורגני",
+        "last_words": "לשאוף אליו ולדאוג להקימו בתנועת"
+      },
+      {
+        "key": "Iyar-28",
+        "heTitle": "אורות, אורות התחיה ד",
+        "portion": "מ'הכהונה...' עד סוף הפסקה",
+        "word_count": 341,
+        "start_token": 335,
+        "end_token": 676,
+        "first_words": "הכהונה, האמצעות בין האדם לאלהים",
+        "last_words": "לתחיה מעשית ולישועה מורגשת קרובה."
+      }
+    ]
+  },
+  {
+    "group": "אורות התחיה ה",
+    "base_ref": "Orot, Lights from Darkness, Lights of Rebirth 5",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Sivan-1",
+        "heTitle": "אורות, אורות התחיה ה",
+        "portion": "מ'חיים וסואנים...' עד '...מהודנו היחידי'",
+        "word_count": 738,
+        "start_token": 0,
+        "end_token": 738,
+        "first_words": "דרכנו בחיים הלאומיים וצדודם כלפי",
+        "last_words": "והוד, מעדן שלנו, מגבורה שלנו,"
+      },
+      {
+        "key": "Sivan-2",
+        "heTitle": "אורות, אורות התחיה ה",
+        "portion": "מ'הצורה התמציתית...' עד '...אל חבל נחלתה'",
+        "word_count": 331,
+        "start_token": 740,
+        "end_token": 1071,
+        "first_words": "הצורה התמציתית של כל סדרי",
+        "last_words": "באיזו צורה שהיא אל מקומה,"
+      },
+      {
+        "key": "Sivan-3",
+        "heTitle": "אורות, אורות התחיה ה",
+        "portion": "מ'ההוד וההדר...' עד '...לעת חיה'",
+        "word_count": 239,
+        "start_token": 1071,
+        "end_token": 1310,
+        "first_words": "אל חבל נחלתה. ההוד וההרר",
+        "last_words": "תהיה לשלהבת הקדש מלאת החיים"
+      },
+      {
+        "key": "Sivan-4",
+        "heTitle": "אורות, אורות התחיה ה",
+        "portion": "מ'כשאנו מקימים...' עד '...כאוב מארץ קולה'",
+        "word_count": 379,
+        "start_token": 1312,
+        "end_token": 1691,
+        "first_words": "כשאנו מקימים עתה מצות תרומה",
+        "last_words": "אותה גם בימי שפלותה, בהיות"
+      },
+      {
+        "key": "Sivan-5",
+        "heTitle": "אורות, אורות התחיה ה",
+        "portion": "מ'המקדש...' עד סוף הפסקה",
+        "word_count": 254,
+        "start_token": 1694,
+        "end_token": 1948,
+        "first_words": "המקדש, זהו המכון של הקולטוס",
+        "last_words": "ומפזרם בישראל ועל אדם רב."
+      }
+    ]
+  },
+  {
+    "group": "אורות התחיה ט",
+    "base_ref": "Orot, Lights from Darkness, Lights of Rebirth 9",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Sivan-10",
+        "heTitle": "אורות, אורות התחיה ט",
+        "portion": "עד '...גבורת אלוקים'",
+        "word_count": 208,
+        "start_token": 0,
+        "end_token": 208,
+        "first_words": "הזוהמא הנשמתית כשם שהיא יכולה",
+        "last_words": "אמת רק גבורה של מעלה,"
+      },
+      {
+        "key": "Sivan-11",
+        "heTitle": "אורות, אורות התחיה ט",
+        "portion": "מ'ברית כרותה...' עד סוף הפסקה",
+        "word_count": 230,
+        "start_token": 210,
+        "end_token": 440,
+        "first_words": "ברית כרותה היא לכנסת ישראל",
+        "last_words": "מוזהרים בקדושה ובגבורה של מעלה."
+      }
+    ]
+  },
+  {
+    "group": "אורות התחיה טז",
+    "base_ref": "Orot, Lights from Darkness, Lights of Rebirth 16",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Sivan-17",
+        "heTitle": "אורות, אורות התחיה טז",
+        "portion": "עד '...אין קץ ותכלית'",
+        "word_count": 265,
+        "start_token": 0,
+        "end_token": 265,
+        "first_words": "דבר פשוט הוא שהצדיק עושה",
+        "last_words": "רצונם עושה רושם נמרץ עד"
+      },
+      {
+        "key": "Sivan-18",
+        "heTitle": "אורות, אורות התחיה טז",
+        "portion": "מ'ביחוד צריכים...' עד סוף הפסקה",
+        "word_count": 336,
+        "start_token": 268,
+        "end_token": 604,
+        "first_words": "ביחוד צריכים להפנות לזה את",
+        "last_words": "יצא והשקה את נחל השטים\"."
+      }
+    ]
+  },
+  {
+    "group": "אורות התחיה יז",
+    "base_ref": "Orot, Lights from Darkness, Lights of Rebirth 17",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Sivan-19",
+        "heTitle": "אורות, אורות התחיה יז",
+        "portion": "עד '...סתרי תורה'",
+        "word_count": 152,
+        "start_token": 0,
+        "end_token": 152,
+        "first_words": "האמונה והאהבה הן תמיד מחוברות",
+        "last_words": "והאהבה, וזאת היא מטרת גלוי"
+      },
+      {
+        "key": "Sivan-20",
+        "heTitle": "אורות, אורות התחיה יז",
+        "portion": "מ'התורה היא האהבה...' עד סוף הפסקה",
+        "word_count": 349,
+        "start_token": 154,
+        "end_token": 503,
+        "first_words": "התורה היא האהבה, והמצות -",
+        "last_words": "חיים הם אתם ועם קיומם."
+      }
+    ]
+  },
+  {
+    "group": "אורות התחיה יח",
+    "base_ref": "Orot, Lights from Darkness, Lights of Rebirth 18",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Sivan-21",
+        "heTitle": "אורות, אורות התחיה יח",
+        "portion": "עד '...עדרים עדרים'",
+        "word_count": 324,
+        "start_token": 0,
+        "end_token": 324,
+        "first_words": "שלשה כחות מתאבקים כעת במחנינו,",
+        "last_words": "הולכת ונעדרת, ע\"י מה שנעשית"
+      },
+      {
+        "key": "Sivan-22",
+        "heTitle": "אורות, אורות התחיה יח",
+        "portion": "מ'שלשת הסיעות...' עד '...שלא יחסר ולא יותיר'",
+        "word_count": 312,
+        "start_token": 326,
+        "end_token": 638,
+        "first_words": "שלשת הסיעות היותר רשמיות בחיי",
+        "last_words": "המיוחדת מעבודות הקשות שבמקדש, הקמיצה,"
+      },
+      {
+        "key": "Sivan-23",
+        "heTitle": "אורות, אורות התחיה יח",
+        "portion": "מ'וכן כשנסתכל...' עד סוף הפסקה",
+        "word_count": 230,
+        "start_token": 642,
+        "end_token": 872,
+        "first_words": "וכן כשנסתכל בשכל טוב בתסיסות,",
+        "last_words": "קראתי יה ענני במרחב יה\"."
+      }
+    ]
+  },
+  {
+    "group": "מוסר אביך א, א",
+    "base_ref": "Musar Avikha 1:1",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Kislev-17",
+        "heTitle": "מוסר אביך א, א",
+        "portion": "עד '...אף לטבען הראשון'",
+        "word_count": 435,
+        "start_token": 0,
+        "end_token": 435,
+        "first_words": "מצות יראת־ד' ולמודה א. פנימיות",
+        "last_words": "הראשון באמצעים שלא היו מספיקים"
+      },
+      {
+        "key": "Kislev-18",
+        "heTitle": "מוסר אביך א, א",
+        "portion": "מהמילים 'ביאור הדברים' עד הסוף",
+        "word_count": 301,
+        "start_token": 438,
+        "end_token": 739,
+        "first_words": "ביאור הדברים: הרינו רואים, שהמידות",
+        "last_words": "יט, שמונה פרקים להרמב\"ם פ\"ג."
+      }
+    ]
+  },
+  {
+    "group": "מוסר אביך א, ז",
+    "base_ref": "Musar Avikha 1:7",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Kislev-22",
+        "heTitle": "מוסר אביך א, ז",
+        "portion": "עד '...ואז יצליח'",
+        "word_count": 219,
+        "start_token": 0,
+        "end_token": 219,
+        "first_words": "ז. למוד היראה וקביעותה סיבת",
+        "last_words": "על האלהים ית' והשכלת טובו,"
+      },
+      {
+        "key": "Kislev-23",
+        "heTitle": "מוסר אביך א, ז",
+        "portion": "מהמילים 'ומפני שטבע כל לימוד...'",
+        "word_count": 330,
+        "start_token": 221,
+        "end_token": 551,
+        "first_words": "ומפני שטבע כל לימוד להסעיר",
+        "last_words": "הדעת, לבד הטובות הגדולות שבעצמותם."
+      }
+    ]
+  },
+  {
+    "group": "מוסר אביך ב, א",
+    "base_ref": "Musar Avikha 2:1",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": true,
+    "slices": [
+      {
+        "key": "Kislev-25",
+        "heTitle": "מוסר אביך ב, א",
+        "portion": "עד '...דעת השם ועוזו'",
+        "word_count": 369,
+        "start_token": 0,
+        "end_token": 369,
+        "first_words": "סדור כחות הנפש בדרכי עבודת",
+        "last_words": "ודרכי העולם, והכל יעשה למען"
+      },
+      {
+        "key": "Kislev-26",
+        "heTitle": "מוסר אביך ב, א",
+        "portion": "מהמילים 'והנה כוח הרצון...'",
+        "word_count": 761,
+        "start_token": 369,
+        "end_token": 1130,
+        "first_words": "דעת השם ועוזו. והנה, כח",
+        "last_words": "ח טז): \"צא מן התבה\"."
+      },
+      {
+        "key": "Kislev-27",
+        "heTitle": "מוסר אביך ב, א",
+        "portion": "מהמילים 'אבל יש אפשרות...'",
+        "word_count": 0,
+        "start_token": 1130,
+        "end_token": 1130,
+        "first_words": "",
+        "last_words": ""
+      }
+    ]
+  },
+  {
+    "group": "מוסר אביך ב, ג",
+    "base_ref": "Musar Avikha 2:3",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Kislev-29",
+        "heTitle": "מוסר אביך ב, ג",
+        "portion": "עד '...להמיטיב ברוך הוא'",
+        "word_count": 266,
+        "start_token": 0,
+        "end_token": 266,
+        "first_words": "ג. כח הכרת־הטובה ומעלות העבודה",
+        "last_words": "בדרך הטוב להשלים הכרת טובתו"
+      },
+      {
+        "key": "Kislev-30",
+        "heTitle": "מוסר אביך ב, ג",
+        "portion": "מהמילים 'והנה עוצם התנועות...'",
+        "word_count": 365,
+        "start_token": 269,
+        "end_token": 634,
+        "first_words": "והנה, עוצם התנועות החזקות, שראוי",
+        "last_words": "מצד שפע טובותיו וחסדו ית'."
+      }
+    ]
+  },
+  {
+    "group": "מוסר אביך ב, ד",
+    "base_ref": "Musar Avikha 2:4",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Tevet-1",
+        "heTitle": "מוסר אביך ב, ד",
+        "portion": "עד '...באי בסוד ד''",
+        "word_count": 403,
+        "start_token": 0,
+        "end_token": 403,
+        "first_words": "ד. שלמות העבודה מאהבה לרצון",
+        "last_words": "וכן האריכו בזה רבותינו המקובלים"
+      },
+      {
+        "key": "Tevet-2",
+        "heTitle": "מוסר אביך ב, ד",
+        "portion": "מ'אבל כאשר נתיישב מעט...'",
+        "word_count": 1069,
+        "start_token": 406,
+        "end_token": 1475,
+        "first_words": "אבל כאשר נתישב מעט, נראה",
+        "last_words": "ברוך ד' לעולם אמן ואמן."
+      },
+      {
+        "key": "Tevet-3",
+        "heTitle": "מוסר אביך ב, ד",
+        "portion": "מ'ועתה נבוא חשבון...'",
+        "word_count": 0,
+        "start_token": 1475,
+        "end_token": 1475,
+        "first_words": "",
+        "last_words": ""
+      },
+      {
+        "key": "Tevet-4",
+        "heTitle": "מוסר אביך ב, ד",
+        "portion": "מ'והנה כשם שצריכה החכמה...'",
+        "word_count": 0,
+        "start_token": 1475,
+        "end_token": 1475,
+        "first_words": "",
+        "last_words": ""
+      }
+    ]
+  },
+  {
+    "group": "מוסר אביך ב, ה",
+    "base_ref": "Musar Avikha 2:5",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Tevet-5",
+        "heTitle": "מוסר אביך ב, ה",
+        "portion": "עד '...רק לו יתעלה'",
+        "word_count": 279,
+        "start_token": 0,
+        "end_token": 279,
+        "first_words": "ה. המשך שלמות העבודה, בשבח",
+        "last_words": "הם מקרים מדומים בהם ושייכותם"
+      },
+      {
+        "key": "Tevet-6",
+        "heTitle": "מוסר אביך ב, ה",
+        "portion": "מ'וכאשר יתברר...'",
+        "word_count": 2359,
+        "start_token": 282,
+        "end_token": 2641,
+        "first_words": "וכאשר יתברר זה היטב לאדם,",
+        "last_words": "ט): \"נגילה ונשמחה בישועתו\". והבן."
+      },
+      {
+        "key": "Tevet-7",
+        "heTitle": "מוסר אביך ב, ה",
+        "portion": "מ'והנה אם היה...'",
+        "word_count": 0,
+        "start_token": 2641,
+        "end_token": 2641,
+        "first_words": "",
+        "last_words": ""
+      },
+      {
+        "key": "Tevet-8",
+        "heTitle": "מוסר אביך ב, ה",
+        "portion": "מ'ולפי זה יש לומר...'",
+        "word_count": 0,
+        "start_token": 2641,
+        "end_token": 2641,
+        "first_words": "",
+        "last_words": ""
+      },
+      {
+        "key": "Tevet-9",
+        "heTitle": "מוסר אביך ב, ה",
+        "portion": "מ'ואם יציל...'",
+        "word_count": 0,
+        "start_token": 2641,
+        "end_token": 2641,
+        "first_words": "",
+        "last_words": ""
+      },
+      {
+        "key": "Tevet-10",
+        "heTitle": "מוסר אביך ב, ה",
+        "portion": "מ'וזהו שאמרו חז\"ל...'",
+        "word_count": 0,
+        "start_token": 2641,
+        "end_token": 2641,
+        "first_words": "",
+        "last_words": ""
+      },
+      {
+        "key": "Tevet-11",
+        "heTitle": "מוסר אביך ב, ה",
+        "portion": "מ'אבל היודע...'",
+        "word_count": 0,
+        "start_token": 2641,
+        "end_token": 2641,
+        "first_words": "",
+        "last_words": ""
+      },
+      {
+        "key": "Tevet-12",
+        "heTitle": "מוסר אביך ב, ה",
+        "portion": "מ'אבל מצד האמת...'",
+        "word_count": 0,
+        "start_token": 2641,
+        "end_token": 2641,
+        "first_words": "",
+        "last_words": ""
+      },
+      {
+        "key": "Tevet-13",
+        "heTitle": "מוסר אביך ב, ה",
+        "portion": "מ'ולפי זה בעולם הזה...'",
+        "word_count": 0,
+        "start_token": 2641,
+        "end_token": 2641,
+        "first_words": "",
+        "last_words": ""
+      }
+    ]
+  },
+  {
+    "group": "מוסר אביך ג, א",
+    "base_ref": "Musar Avikha 3:1",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": true,
+    "slices": [
+      {
+        "key": "Tevet-14",
+        "heTitle": "מוסר אביך ג, א",
+        "portion": "עד 'שורש כללי'",
+        "word_count": 285,
+        "start_token": 0,
+        "end_token": 285,
+        "first_words": "בירורי מדות הנפש א. בירור",
+        "last_words": "הרבה דברים ראוי שיהיה בהם"
+      },
+      {
+        "key": "Tevet-15",
+        "heTitle": "מוסר אביך ג, א",
+        "portion": "מ'מכלל מידות הנפש...'",
+        "word_count": 698,
+        "start_token": 285,
+        "end_token": 983,
+        "first_words": "שורש כללי. מכלל מדות הנפש,",
+        "last_words": "כן להקנותו גדולות ונפלאות מאלה."
+      },
+      {
+        "key": "Tevet-16",
+        "heTitle": "מוסר אביך ג, א",
+        "portion": "מ'וכן גבורת הנפש...'",
+        "word_count": 0,
+        "start_token": 983,
+        "end_token": 983,
+        "first_words": "",
+        "last_words": ""
+      }
+    ]
+  },
+  {
+    "group": "מוסר אביך ג, ג",
+    "base_ref": "Musar Avikha 3:3",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Tevet-18",
+        "heTitle": "מוסר אביך ג, ג",
+        "portion": "עד '...המורגשים ולהשביחם'",
+        "word_count": 202,
+        "start_token": 0,
+        "end_token": 202,
+        "first_words": "ג. הגאוה והענוה ומעמק שרשן",
+        "last_words": "את ההשתדלות להעלות את הדברים"
+      },
+      {
+        "key": "Tevet-19",
+        "heTitle": "מוסר אביך ג, ג",
+        "portion": "מ'והנה את הנפש...'",
+        "word_count": 804,
+        "start_token": 204,
+        "end_token": 1008,
+        "first_words": "והנה, את הנפש המרגשת, בראה",
+        "last_words": "ארץ והתענגו על רב שלום\"."
+      },
+      {
+        "key": "Tevet-20",
+        "heTitle": "מוסר אביך ג, ג",
+        "portion": "מ'והסכל מקבל...'",
+        "word_count": 0,
+        "start_token": 1008,
+        "end_token": 1008,
+        "first_words": "",
+        "last_words": ""
+      }
+    ]
+  },
+  {
+    "group": "מוסר אביך ג, ד",
+    "base_ref": "Musar Avikha 3:4",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Tevet-21",
+        "heTitle": "מוסר אביך ג, ד",
+        "portion": "עד '...שדוחה אותו'",
+        "word_count": 353,
+        "start_token": 0,
+        "end_token": 353,
+        "first_words": "ד. פרטי מדת הגאוה והכבוד,",
+        "last_words": "והענף הותר בדיחוי ענף העשה"
+      },
+      {
+        "key": "Tevet-22",
+        "heTitle": "מוסר אביך ג, ד",
+        "portion": "מ'ובכלל איסורי הגאווה...'",
+        "word_count": 706,
+        "start_token": 355,
+        "end_token": 1061,
+        "first_words": "ובכלל איסורי הגאוה, שדיבור הגאוה",
+        "last_words": "שוה, כיון שאין תכונותיהן שוות."
+      },
+      {
+        "key": "Tevet-23",
+        "heTitle": "מוסר אביך ג, ד",
+        "portion": "מ'אמנם שמירת...'",
+        "word_count": 0,
+        "start_token": 1061,
+        "end_token": 1061,
+        "first_words": "",
+        "last_words": ""
+      }
+    ]
+  },
+  {
+    "group": "מוסר אביך ד, ג",
+    "base_ref": "Musar Avikha 4:3",
+    "status": "CHECK",
+    "coverage": "100.0%",
+    "zero_gap": false,
+    "slices": [
+      {
+        "key": "Tevet-27",
+        "heTitle": "מוסר אביך ד, ג",
+        "portion": "עד '...שתביאהו לדאגה'",
+        "word_count": 256,
+        "start_token": 0,
+        "end_token": 256,
+        "first_words": "ג. הערכת המדרגות בשלמות ובעבודה",
+        "last_words": "יהיה בלא עיונו למעלה ממנו,"
+      },
+      {
+        "key": "Tevet-28",
+        "heTitle": "מוסר אביך ד, ג",
+        "portion": "מ'הפרט הוא'",
+        "word_count": 419,
+        "start_token": 258,
+        "end_token": 677,
+        "first_words": "הפרט הוא, שלא יבקש משום",
+        "last_words": "לבקש האמת, וילך לבטח דרכו."
+      }
+    ]
+  },
+  {
+    "group": "מוסר אביך ד, ד",
+    "base_ref": "Musar Avikha 4:4",
+    "status": "PASS",
+    "coverage": "100.0%",
+    "zero_gap": true,
+    "slices": [
+      {
+        "key": "Tevet-29",
+        "heTitle": "מוסר אביך ד, ד",
+        "portion": "עד '...מק בעוונינו'",
+        "word_count": 321,
+        "start_token": 0,
+        "end_token": 321,
+        "first_words": "ד. פיתוח הכחות באדם ובאומה",
+        "last_words": "אדבר אחד מששים בנבואה וכן"
+      },
+      {
+        "key": "Shevat-1",
+        "heTitle": "מוסר אביך ד, ד",
+        "portion": "מ'על כן אנחנו...'",
+        "word_count": 321,
+        "start_token": 321,
+        "end_token": 642,
+        "first_words": "השינה בגלות אחד מששים בעוה\"ב,",
+        "last_words": "ט): \"ד' אחד ושמו אחד\"."
+      }
+    ]
+  }
+]

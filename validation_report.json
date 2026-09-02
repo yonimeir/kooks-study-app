@@ -1,0 +1,1960 @@
+{
+  "total_split_groups": 19,
+  "total_split_days_checked": 200,
+  "total_passed": 195,
+  "pass_rate": "97.5%",
+  "details": [
+    {
+      "group": "Orot:::Orot, The Process of Ideals in Israel, Unification of Ideals",
+      "days_count": 3,
+      "coverage_pct": 100.0,
+      "status": "PASS",
+      "slices": [
+        {
+          "key": "Elul-1",
+          "heTitle": "אורות, למהלך האידיאות בישראל ו'",
+          "portion": "מהמילים 'עתה מכות הן הגלים...' עד '...והדרו על בנינו'",
+          "start_idx": 0,
+          "end_idx": 5369,
+          "word_count": 960,
+          "sample": "ההכשר של הרוח הלאומי של כנסת ישראל להתנער ולקום לתחיה, תלוי ..."
+        },
+        {
+          "key": "Elul-2",
+          "heTitle": "אורות, למהלך האידיאות בישראל ו'",
+          "portion": "מהמילים 'באוצר הרעיונות הגדולים...' עד סוף הפסקה",
+          "start_idx": 5371,
+          "end_idx": 6497,
+          "word_count": 195,
+          "sample": "באוצר הרעיונות הגדולים הכמוסים, שהיו גנוזים בכנסת ישראל פנימ..."
+        },
+        {
+          "key": "Av-30",
+          "heTitle": "אורות, למהלך האידיאות בישראל ו'",
+          "portion": "עד '...וכשנים קדמוניות'",
+          "start_idx": 6497,
+          "end_idx": 6497,
+          "word_count": 0,
+          "sample": ""
+        }
+      ]
+    },
+    {
+      "group": "Orot HaTorah:::Orot_HaTorah.13",
+      "days_count": 5,
+      "coverage_pct": 100.0,
+      "status": "PASS",
+      "slices": [
+        {
+          "key": "Tishrei-8",
+          "heTitle": "אורות התורה יג, א–ב",
+          "portion": "",
+          "start_idx": 0,
+          "end_idx": 10321,
+          "word_count": 1844,
+          "sample": "תורת חוץ לארץ ותורת ארץ ישראל כשלומדים הרבה נסתר, אז כל מה ש..."
+        },
+        {
+          "key": "Tishrei-9",
+          "heTitle": "אורות התורה יג, ג–ה",
+          "portion": "",
+          "start_idx": 10321,
+          "end_idx": 10321,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tishrei-10",
+          "heTitle": "אורות התורה יג, ו–ז",
+          "portion": "",
+          "start_idx": 10321,
+          "end_idx": 10321,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tishrei-11",
+          "heTitle": "אורות התורה יג, ח",
+          "portion": "עד 'אור וחיים'",
+          "start_idx": 10321,
+          "end_idx": 10321,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tishrei-12",
+          "heTitle": "אורות התורה יג, ח",
+          "portion": "מ'ממין זה...'",
+          "start_idx": 10321,
+          "end_idx": 10321,
+          "word_count": 0,
+          "sample": ""
+        }
+      ]
+    },
+    {
+      "group": "Orot HaTorah:::Orot_HaTorah.14",
+      "days_count": 3,
+      "coverage_pct": 138.8,
+      "status": "CHECK",
+      "slices": [
+        {
+          "key": "Tishrei-13",
+          "heTitle": "לחיזוק דברי תורה",
+          "portion": "עד 'יותר מהמידה'",
+          "start_idx": 0,
+          "end_idx": 103,
+          "word_count": 20,
+          "sample": "לחיזוק דברי תורה מאת מרן הראי\"ה קוק זצ\"ל\n\nלחיזוק דברי תורה מ..."
+        },
+        {
+          "key": "Tishrei-14",
+          "heTitle": "לחיזוק דברי תורה",
+          "portion": "מ'החלק הרוחני שבתורה...'",
+          "start_idx": 103,
+          "end_idx": 103,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tishrei-15",
+          "heTitle": "לחיזוק דברי תורה",
+          "portion": "מ'מר\"ח אלול...'",
+          "start_idx": 63,
+          "end_idx": 103,
+          "word_count": 8,
+          "sample": "מרן הראי\"ה קוק זצ\"ל\n\nמרן הראי\"ה קוק זצ\"ל"
+        }
+      ]
+    },
+    {
+      "group": "Orot HaTeshuvah:::Orot_HaTeshuvah.1",
+      "days_count": 2,
+      "coverage_pct": 99.9,
+      "status": "PASS",
+      "slices": [
+        {
+          "key": "Tishrei-17",
+          "heTitle": "אורות התשובה א",
+          "portion": "עד 'נשען עליהם'",
+          "start_idx": 0,
+          "end_idx": 1338,
+          "word_count": 244,
+          "sample": "תשובה טבעית, אמונית, שכלית\n\nאת התשובה אנו מוצאים בשלש מערכות..."
+        },
+        {
+          "key": "Tishrei-18",
+          "heTitle": "אורות התשובה א",
+          "portion": "מ'אחרי התשובה הטבעית...'",
+          "start_idx": 1340,
+          "end_idx": 2247,
+          "word_count": 165,
+          "sample": "אחרי התשובה הטבעית באה האמונית, היא החיה בעולם ממקור המסורת ..."
+        }
+      ]
+    },
+    {
+      "group": "Orot HaTeshuvah:::Orot_HaTeshuvah.3",
+      "days_count": 2,
+      "coverage_pct": 99.4,
+      "status": "CHECK",
+      "slices": [
+        {
+          "key": "Tishrei-20",
+          "heTitle": "אורות התשובה ג",
+          "portion": "עד '...גמל עליכי'",
+          "start_idx": 0,
+          "end_idx": 1310,
+          "word_count": 244,
+          "sample": "תשובה פרטית מפורשת ותשובה סתמית כללית\n\nיש תשובה מכוונת נגד ח..."
+        },
+        {
+          "key": "Tishrei-21",
+          "heTitle": "אורות התשובה ג",
+          "portion": "מ'וישנה עוד הרגשת...'",
+          "start_idx": 1326,
+          "end_idx": 2826,
+          "word_count": 276,
+          "sample": "וישנה עוד הרגשת תשובה, סתמית כללית. אין חטא או חטאים של עבר ..."
+        }
+      ]
+    },
+    {
+      "group": "Orot HaTeshuvah:::Orot_HaTeshuvah.16",
+      "days_count": 5,
+      "coverage_pct": 100.0,
+      "status": "PASS",
+      "slices": [
+        {
+          "key": "Kislev-8",
+          "heTitle": "אורות התשובה טז, א–א*",
+          "portion": "עד '...המשיבת נפש'",
+          "start_idx": 0,
+          "end_idx": 2468,
+          "word_count": 255,
+          "sample": "יְסוֹד הַתְּשׁוּבָה מֻשְׁרָשׁ בַּעֲמָקִים שֶׁל הַהֲוָיָה, שֶ..."
+        },
+        {
+          "key": "Kislev-9",
+          "heTitle": "אורות התשובה טז, א*",
+          "portion": "מהמילים 'ואחרי הידיעה הבהירה...' + פסקה ב",
+          "start_idx": 2468,
+          "end_idx": 2468,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Kislev-10",
+          "heTitle": "אורות התשובה טז, ג–ו",
+          "portion": "",
+          "start_idx": 2468,
+          "end_idx": 2468,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Kislev-11",
+          "heTitle": "אורות התשובה טז, ז–יא",
+          "portion": "",
+          "start_idx": 2468,
+          "end_idx": 2468,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Kislev-12",
+          "heTitle": "אורות התשובה טז, יב",
+          "portion": "",
+          "start_idx": 2468,
+          "end_idx": 2468,
+          "word_count": 0,
+          "sample": ""
+        }
+      ]
+    },
+    {
+      "group": "Musar Avikha:::Musar_Avikha.0",
+      "days_count": 2,
+      "coverage_pct": 100.0,
+      "status": "PASS",
+      "slices": [
+        {
+          "key": "Kislev-15",
+          "heTitle": "מוסר אביך, מעין הקדמה",
+          "portion": "סעיפים א–ה",
+          "start_idx": 0,
+          "end_idx": 978,
+          "word_count": 192,
+          "sample": "שמע בני מוסר אביך וגו' (משלי ב ח)\nשמע בני מוסר אביך וגו'\nר' ..."
+        },
+        {
+          "key": "Kislev-16",
+          "heTitle": "מוסר אביך, מעין הקדמה",
+          "portion": "סעיף ג",
+          "start_idx": 978,
+          "end_idx": 978,
+          "word_count": 0,
+          "sample": ""
+        }
+      ]
+    },
+    {
+      "group": "Musar Avikha:::Musar_Avikha.1",
+      "days_count": 8,
+      "coverage_pct": 100.0,
+      "status": "PASS",
+      "slices": [
+        {
+          "key": "Kislev-17",
+          "heTitle": "מוסר אביך א, א",
+          "portion": "עד '...אף לטבען הראשון'",
+          "start_idx": 0,
+          "end_idx": 2427,
+          "word_count": 438,
+          "sample": "מצות יראת־ד' ולמודה\n\nא. פנימיות היראה וטבעיותה\n\nבהקדמה לספר ..."
+        },
+        {
+          "key": "Kislev-18",
+          "heTitle": "מוסר אביך א, א",
+          "portion": "מהמילים 'ביאור הדברים' עד הסוף",
+          "start_idx": 2429,
+          "end_idx": 4135,
+          "word_count": 301,
+          "sample": "ביאור הדברים: הרינו רואים, שהמידות הטבעיות באדם אינן נקבעות ..."
+        },
+        {
+          "key": "Kislev-19",
+          "heTitle": "מוסר אביך א, ב",
+          "portion": "",
+          "start_idx": 4135,
+          "end_idx": 4135,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Kislev-20",
+          "heTitle": "מוסר אביך א, ג–ד",
+          "portion": "",
+          "start_idx": 4135,
+          "end_idx": 4135,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Kislev-21",
+          "heTitle": "מוסר אביך א, ה–ו",
+          "portion": "",
+          "start_idx": 4135,
+          "end_idx": 4135,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Kislev-22",
+          "heTitle": "מוסר אביך א, ז",
+          "portion": "עד '...ואז יצליח'",
+          "start_idx": 4135,
+          "end_idx": 4135,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Kislev-23",
+          "heTitle": "מוסר אביך א, ז",
+          "portion": "מהמילים 'ומפני שטבע כל לימוד...'",
+          "start_idx": 4135,
+          "end_idx": 4135,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Kislev-24",
+          "heTitle": "מוסר אביך א, ח",
+          "portion": "",
+          "start_idx": 4135,
+          "end_idx": 4135,
+          "word_count": 0,
+          "sample": ""
+        }
+      ]
+    },
+    {
+      "group": "Musar Avikha:::Musar_Avikha.2",
+      "days_count": 19,
+      "coverage_pct": 100.0,
+      "status": "PASS",
+      "slices": [
+        {
+          "key": "Kislev-25",
+          "heTitle": "מוסר אביך ב, א",
+          "portion": "עד '...דעת השם ועוזו'",
+          "start_idx": 0,
+          "end_idx": 2078,
+          "word_count": 372,
+          "sample": "סדור כחות הנפש בדרכי עבודת ד'\n\nא. הדרכת השכל והרצון בפנים וב..."
+        },
+        {
+          "key": "Kislev-26",
+          "heTitle": "מוסר אביך ב, א",
+          "portion": "מהמילים 'והנה כוח הרצון...'",
+          "start_idx": 2078,
+          "end_idx": 6262,
+          "word_count": 758,
+          "sample": "והנה, כח הרצון המעשי מקבל הדרכתו מאת השכל. מכל מקום, אם יהיה..."
+        },
+        {
+          "key": "Kislev-27",
+          "heTitle": "מוסר אביך ב, א",
+          "portion": "מהמילים 'אבל יש אפשרות...'",
+          "start_idx": 6262,
+          "end_idx": 6262,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Kislev-28",
+          "heTitle": "מוסר אביך ב, ב",
+          "portion": "",
+          "start_idx": 6262,
+          "end_idx": 6262,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Kislev-29",
+          "heTitle": "מוסר אביך ב, ג",
+          "portion": "עד '...להמיטיב ברוך הוא'",
+          "start_idx": 6262,
+          "end_idx": 6262,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Kislev-30",
+          "heTitle": "מוסר אביך ב, ג",
+          "portion": "מהמילים 'והנה עוצם התנועות...'",
+          "start_idx": 6262,
+          "end_idx": 6262,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tevet-1",
+          "heTitle": "מוסר אביך ב, ד",
+          "portion": "עד '...באי בסוד ד''",
+          "start_idx": 6262,
+          "end_idx": 6262,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tevet-2",
+          "heTitle": "מוסר אביך ב, ד",
+          "portion": "מ'אבל כאשר נתיישב מעט...'",
+          "start_idx": 6262,
+          "end_idx": 6262,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tevet-3",
+          "heTitle": "מוסר אביך ב, ד",
+          "portion": "מ'ועתה נבוא חשבון...'",
+          "start_idx": 6262,
+          "end_idx": 6262,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tevet-4",
+          "heTitle": "מוסר אביך ב, ד",
+          "portion": "מ'והנה כשם שצריכה החכמה...'",
+          "start_idx": 6262,
+          "end_idx": 6262,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tevet-5",
+          "heTitle": "מוסר אביך ב, ה",
+          "portion": "עד '...רק לו יתעלה'",
+          "start_idx": 6262,
+          "end_idx": 6262,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tevet-6",
+          "heTitle": "מוסר אביך ב, ה",
+          "portion": "מ'וכאשר יתברר...'",
+          "start_idx": 6262,
+          "end_idx": 6262,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tevet-7",
+          "heTitle": "מוסר אביך ב, ה",
+          "portion": "מ'והנה אם היה...'",
+          "start_idx": 6262,
+          "end_idx": 6262,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tevet-8",
+          "heTitle": "מוסר אביך ב, ה",
+          "portion": "מ'ולפי זה יש לומר...'",
+          "start_idx": 6262,
+          "end_idx": 6262,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tevet-9",
+          "heTitle": "מוסר אביך ב, ה",
+          "portion": "מ'ואם יציל...'",
+          "start_idx": 6262,
+          "end_idx": 6262,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tevet-10",
+          "heTitle": "מוסר אביך ב, ה",
+          "portion": "מ'וזהו שאמרו חז\"ל...'",
+          "start_idx": 6262,
+          "end_idx": 6262,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tevet-11",
+          "heTitle": "מוסר אביך ב, ה",
+          "portion": "מ'אבל היודע...'",
+          "start_idx": 6262,
+          "end_idx": 6262,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tevet-12",
+          "heTitle": "מוסר אביך ב, ה",
+          "portion": "מ'אבל מצד האמת...'",
+          "start_idx": 6262,
+          "end_idx": 6262,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tevet-13",
+          "heTitle": "מוסר אביך ב, ה",
+          "portion": "מ'ולפי זה בעולם הזה...'",
+          "start_idx": 6262,
+          "end_idx": 6262,
+          "word_count": 0,
+          "sample": ""
+        }
+      ]
+    },
+    {
+      "group": "Musar Avikha:::Musar_Avikha.3",
+      "days_count": 11,
+      "coverage_pct": 100.0,
+      "status": "PASS",
+      "slices": [
+        {
+          "key": "Tevet-14",
+          "heTitle": "מוסר אביך ג, א",
+          "portion": "עד 'שורש כללי'",
+          "start_idx": 0,
+          "end_idx": 1632,
+          "word_count": 287,
+          "sample": "בירורי מדות הנפש\n\nא. בירור המדות ונסירתן\n\nבירור מדות הנפש יש..."
+        },
+        {
+          "key": "Tevet-15",
+          "heTitle": "מוסר אביך ג, א",
+          "portion": "מ'מכלל מידות הנפש...'",
+          "start_idx": 1632,
+          "end_idx": 5552,
+          "word_count": 696,
+          "sample": "מכלל מדות הנפש, המחויבות אל השלמות, היא גם־כן מידת הגבורה, ש..."
+        },
+        {
+          "key": "Tevet-16",
+          "heTitle": "מוסר אביך ג, א",
+          "portion": "מ'וכן גבורת הנפש...'",
+          "start_idx": 5552,
+          "end_idx": 5552,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tevet-17",
+          "heTitle": "מוסר אביך ג, ב",
+          "portion": "",
+          "start_idx": 5552,
+          "end_idx": 5552,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tevet-18",
+          "heTitle": "מוסר אביך ג, ג",
+          "portion": "עד '...המורגשים ולהשביחם'",
+          "start_idx": 5552,
+          "end_idx": 5552,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tevet-19",
+          "heTitle": "מוסר אביך ג, ג",
+          "portion": "מ'והנה את הנפש...'",
+          "start_idx": 5552,
+          "end_idx": 5552,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tevet-20",
+          "heTitle": "מוסר אביך ג, ג",
+          "portion": "מ'והסכל מקבל...'",
+          "start_idx": 5552,
+          "end_idx": 5552,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tevet-21",
+          "heTitle": "מוסר אביך ג, ד",
+          "portion": "עד '...שדוחה אותו'",
+          "start_idx": 5552,
+          "end_idx": 5552,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tevet-22",
+          "heTitle": "מוסר אביך ג, ד",
+          "portion": "מ'ובכלל איסורי הגאווה...'",
+          "start_idx": 5552,
+          "end_idx": 5552,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tevet-23",
+          "heTitle": "מוסר אביך ג, ד",
+          "portion": "מ'אמנם שמירת...'",
+          "start_idx": 5552,
+          "end_idx": 5552,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tevet-24",
+          "heTitle": "מוסר אביך ג, ה",
+          "portion": "",
+          "start_idx": 5552,
+          "end_idx": 5552,
+          "word_count": 0,
+          "sample": ""
+        }
+      ]
+    },
+    {
+      "group": "Musar Avikha:::Musar_Avikha.4",
+      "days_count": 6,
+      "coverage_pct": 100.0,
+      "status": "PASS",
+      "slices": [
+        {
+          "key": "Tevet-25",
+          "heTitle": "מוסר אביך ד, א",
+          "portion": "",
+          "start_idx": 0,
+          "end_idx": 2323,
+          "word_count": 424,
+          "sample": "חשבון הנפש בעבודת ה' והערכת מדרגותיה\n\nא. מהות חשבון הנפש\n\nמה..."
+        },
+        {
+          "key": "Tevet-26",
+          "heTitle": "מוסר אביך ד, ב",
+          "portion": "",
+          "start_idx": 2323,
+          "end_idx": 2323,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tevet-27",
+          "heTitle": "מוסר אביך ד, ג",
+          "portion": "עד '...שתביאהו לדאגה'",
+          "start_idx": 2323,
+          "end_idx": 2323,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tevet-28",
+          "heTitle": "מוסר אביך ד, ג",
+          "portion": "מ'הפרט הוא'",
+          "start_idx": 2323,
+          "end_idx": 2323,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tevet-29",
+          "heTitle": "מוסר אביך ד, ד",
+          "portion": "עד '...מק בעוונינו'",
+          "start_idx": 2323,
+          "end_idx": 2323,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Shevat-1",
+          "heTitle": "מוסר אביך ד, ד",
+          "portion": "מ'על כן אנחנו...'",
+          "start_idx": 2323,
+          "end_idx": 2323,
+          "word_count": 0,
+          "sample": ""
+        }
+      ]
+    },
+    {
+      "group": "Orot:::Orot,_Lights_from_Darkness,_Israel_and_its_Rebirth",
+      "days_count": 36,
+      "coverage_pct": 100.0,
+      "status": "PASS",
+      "slices": [
+        {
+          "key": "Nissan-13",
+          "heTitle": "אורות, ישראל ותחייתו א",
+          "portion": "",
+          "start_idx": 0,
+          "end_idx": 3091,
+          "word_count": 561,
+          "sample": "ישראל מספרים תהלת ד', כח גבורה העליונה, במלא תפארת מעשיו בכל..."
+        },
+        {
+          "key": "Nissan-14",
+          "heTitle": "אורות, ישראל ותחייתו ב",
+          "portion": "עד '...של ההבנה החוקית'",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Nissan-15",
+          "heTitle": "אורות, ישראל ותחייתו ב",
+          "portion": "מ'אבל בעת...' עד סוף הפסקה",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Nissan-16",
+          "heTitle": "אורות, ישראל ותחייתו ג",
+          "portion": "",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Nissan-17",
+          "heTitle": "אורות, ישראל ותחייתו ד",
+          "portion": "",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Nissan-18",
+          "heTitle": "אורות, ישראל ותחייתו ה",
+          "portion": "",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Nissan-19",
+          "heTitle": "אורות, ישראל ותחייתו ו",
+          "portion": "",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Nissan-20",
+          "heTitle": "אורות, ישראל ותחייתו ז",
+          "portion": "",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Nissan-21",
+          "heTitle": "אורות, ישראל ותחייתו ח",
+          "portion": "",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Nissan-22",
+          "heTitle": "אורות, ישראל ותחייתו ט",
+          "portion": "",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Nissan-23",
+          "heTitle": "אורות, ישראל ותחייתו י",
+          "portion": "",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Nissan-24",
+          "heTitle": "אורות, ישראל ותחייתו יא",
+          "portion": "",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Nissan-25",
+          "heTitle": "אורות, ישראל ותחייתו יב",
+          "portion": "עד '...בכל מלא חוסנו'",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Nissan-26",
+          "heTitle": "אורות, ישראל ותחייתו יב",
+          "portion": "מ'אורות עולמים...' עד סוף הפסקה",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Nissan-27",
+          "heTitle": "אורות, ישראל ותחייתו יג",
+          "portion": "עד '...ילכו ולא ייעפו'",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Nissan-28",
+          "heTitle": "אורות, ישראל ותחייתו יג",
+          "portion": "מ'בפרטיות מתגלה חזון העולמים...' עד '...בעזוז עינות תהום'",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Nissan-29",
+          "heTitle": "אורות, ישראל ותחייתו יג–יד",
+          "portion": "יג: מ'ההכרה הזאת...' עד סופה; ופרק יד",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Iyar-1",
+          "heTitle": "אורות, ישראל ותחייתו טו",
+          "portion": "עד '...המפעל הקרחי בישראל'",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Iyar-2",
+          "heTitle": "אורות, ישראל ותחייתו טו",
+          "portion": "מ'הקריאה של \"כל העדה\"...' עד '...ולקדוש ישראל כי פארך'",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Iyar-3",
+          "heTitle": "אורות, ישראל ותחייתו טו",
+          "portion": "מ'החפץ של העמדת גוי...' עד סוף הפסקה",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Iyar-4",
+          "heTitle": "אורות, ישראל ותחייתו טז–יז",
+          "portion": "",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Iyar-5",
+          "heTitle": "אורות, ישראל ותחייתו יח",
+          "portion": "",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Iyar-6",
+          "heTitle": "אורות, ישראל ותחייתו יט",
+          "portion": "עד '...נצחונה הפנימי'",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Iyar-7",
+          "heTitle": "אורות, ישראל ותחייתו יט",
+          "portion": "מ'אמנם חלק העמים...' עד סוף הפסקה",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Iyar-8",
+          "heTitle": "אורות, ישראל ותחייתו כ",
+          "portion": "עד '...נזיד עדשים'",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Iyar-9",
+          "heTitle": "אורות, ישראל ותחייתו כ",
+          "portion": "מ'אבל אורו של משיח...' עד סוף הפסקה",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Iyar-10",
+          "heTitle": "אורות, ישראל ותחייתו כא",
+          "portion": "",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Iyar-11",
+          "heTitle": "אורות, ישראל ותחייתו כב",
+          "portion": "",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Iyar-12",
+          "heTitle": "אורות, ישראל ותחייתו כג–כד",
+          "portion": "",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Iyar-13",
+          "heTitle": "אורות, ישראל ותחייתו כה",
+          "portion": "",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Iyar-14",
+          "heTitle": "אורות, ישראל ותחייתו כו",
+          "portion": "",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Iyar-15",
+          "heTitle": "אורות, ישראל ותחייתו כז–כח",
+          "portion": "",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Iyar-16",
+          "heTitle": "אורות, ישראל ותחייתו כט–ל",
+          "portion": "",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Iyar-17",
+          "heTitle": "אורות, ישראל ותחייתו לא",
+          "portion": "עד '...לא יעלו בידם'",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Iyar-18",
+          "heTitle": "אורות, ישראל ותחייתו לא",
+          "portion": "מהמילה 'וההסתגלות...' עד סוף הפסקה",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Iyar-19",
+          "heTitle": "אורות, ישראל ותחייתו לב",
+          "portion": "",
+          "start_idx": 3091,
+          "end_idx": 3091,
+          "word_count": 0,
+          "sample": ""
+        }
+      ]
+    },
+    {
+      "group": "Orot:::Orot,_Lights_from_Darkness,_Lights_of_Rebirth",
+      "days_count": 76,
+      "coverage_pct": 100.0,
+      "status": "PASS",
+      "slices": [
+        {
+          "key": "Iyar-20",
+          "heTitle": "אורות, אורות התחיה א",
+          "portion": "עד '...הלב הכללי של הקיבוצים'",
+          "start_idx": 0,
+          "end_idx": 2975,
+          "word_count": 526,
+          "sample": "הבינה היותר שלמה ומתוקה של דעת האלהות היא הכרת היחש האלהי אל..."
+        },
+        {
+          "key": "Iyar-21",
+          "heTitle": "אורות, אורות התחיה א",
+          "portion": "מ'אבל מורשת פליטה...' עד סוף הפסקה",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Iyar-22",
+          "heTitle": "אורות, אורות התחיה ב",
+          "portion": "עד '...ולישראל מחזיקיה'",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Iyar-23",
+          "heTitle": "אורות, אורות התחיה ב",
+          "portion": "מ'וכן הדבר הולך...' עד '...תעמוד על נפשה'",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Iyar-24",
+          "heTitle": "אורות, אורות התחיה ב",
+          "portion": "מ'הטוב האלוקי...' עד סוף הפסקה",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Iyar-25",
+          "heTitle": "אורות, אורות התחיה ג",
+          "portion": "עד '...אשר לחזיון'",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Iyar-26",
+          "heTitle": "אורות, אורות התחיה ג",
+          "portion": "מ'התחיה צוברת...' עד סוף הפסקה",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Iyar-27",
+          "heTitle": "אורות, אורות התחיה ד",
+          "portion": "עד '...תחיתו על אדמתו'",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Iyar-28",
+          "heTitle": "אורות, אורות התחיה ד",
+          "portion": "מ'הכהונה...' עד סוף הפסקה",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Iyar-29",
+          "heTitle": "אורות, אורות התחיה ה",
+          "portion": "עד '...בתחיתנו השלמה'",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Iyar-30",
+          "heTitle": "אורות, אורות התחיה ה",
+          "portion": "סיום פסקה ה",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-1",
+          "heTitle": "אורות, אורות התחיה ה",
+          "portion": "מ'חיים וסואנים...' עד '...מהודנו היחידי'",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-2",
+          "heTitle": "אורות, אורות התחיה ה",
+          "portion": "מ'הצורה התמציתית...' עד '...אל חבל נחלתה'",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-3",
+          "heTitle": "אורות, אורות התחיה ה",
+          "portion": "מ'ההוד וההדר...' עד '...לעת חיה'",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-4",
+          "heTitle": "אורות, אורות התחיה ה",
+          "portion": "מ'כשאנו מקימים...' עד '...כאוב מארץ קולה'",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-5",
+          "heTitle": "אורות, אורות התחיה ה",
+          "portion": "מ'המקדש...' עד סוף הפסקה",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-6",
+          "heTitle": "אורות, אורות התחיה ו",
+          "portion": "עד '...ההקלה המוכרחת'",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-7",
+          "heTitle": "אורות, אורות התחיה ז",
+          "portion": "מ'כשפוגמים את הרעיון...' עד סוף הפסקה",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-8",
+          "heTitle": "אורות, אורות התחיה ז",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-9",
+          "heTitle": "אורות, אורות התחיה ח",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-10",
+          "heTitle": "אורות, אורות התחיה ט",
+          "portion": "עד '...גבורת אלוקים'",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-11",
+          "heTitle": "אורות, אורות התחיה ט",
+          "portion": "מ'ברית כרותה...' עד סוף הפסקה",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-12",
+          "heTitle": "אורות, אורות התחיה י",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-13",
+          "heTitle": "אורות, אורות התחיה יא",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-14",
+          "heTitle": "אורות, אורות התחיה יב–יג",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-15",
+          "heTitle": "אורות, אורות התחיה יד",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-16",
+          "heTitle": "אורות, אורות התחיה טו",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-17",
+          "heTitle": "אורות, אורות התחיה טז",
+          "portion": "עד '...אין קץ ותכלית'",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-18",
+          "heTitle": "אורות, אורות התחיה טז",
+          "portion": "מ'ביחוד צריכים...' עד סוף הפסקה",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-19",
+          "heTitle": "אורות, אורות התחיה יז",
+          "portion": "עד '...סתרי תורה'",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-20",
+          "heTitle": "אורות, אורות התחיה יז",
+          "portion": "מ'התורה היא האהבה...' עד סוף הפסקה",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-21",
+          "heTitle": "אורות, אורות התחיה יח",
+          "portion": "עד '...עדרים עדרים'",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-22",
+          "heTitle": "אורות, אורות התחיה יח",
+          "portion": "מ'שלשת הסיעות...' עד '...שלא יחסר ולא יותיר'",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-23",
+          "heTitle": "אורות, אורות התחיה יח",
+          "portion": "מ'וכן כשנסתכל...' עד סוף הפסקה",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-24",
+          "heTitle": "אורות, אורות התחיה יט",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-25",
+          "heTitle": "אורות, אורות התחיה כ",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-26",
+          "heTitle": "אורות, אורות התחיה כא",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-27",
+          "heTitle": "אורות, אורות התחיה כב–כג",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-28",
+          "heTitle": "אורות, אורות התחיה כד–כה",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Sivan-29",
+          "heTitle": "אורות, אורות התחיה כו–כח",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-1",
+          "heTitle": "אורות, אורות התחיה כט",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-2",
+          "heTitle": "אורות, אורות התחיה ל",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-3",
+          "heTitle": "אורות, אורות התחיה לא",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-4",
+          "heTitle": "אורות, אורות התחיה לב–לג",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-5",
+          "heTitle": "אורות, אורות התחיה לד",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-6",
+          "heTitle": "אורות, אורות התחיה לה",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-7",
+          "heTitle": "אורות, אורות התחיה לו",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-8",
+          "heTitle": "אורות, אורות התחיה לז–לח",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-9",
+          "heTitle": "אורות, אורות התחיה לט–מ",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-10",
+          "heTitle": "אורות, אורות התחיה מא–מב",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-11",
+          "heTitle": "אורות, אורות התחיה מג",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-12",
+          "heTitle": "אורות, אורות התחיה מד",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-13",
+          "heTitle": "אורות, אורות התחיה מה",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-14",
+          "heTitle": "אורות, אורות התחיה מו",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-15",
+          "heTitle": "אורות, אורות התחיה מז–מח",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-16",
+          "heTitle": "אורות, אורות התחיה מט–נ",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-17",
+          "heTitle": "אורות, אורות התחיה נא",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-18",
+          "heTitle": "אורות, אורות התחיה נב",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-19",
+          "heTitle": "אורות, אורות התחיה נג",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-20",
+          "heTitle": "אורות, אורות התחיה נד",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-21",
+          "heTitle": "אורות, אורות התחיה נה",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-22",
+          "heTitle": "אורות, אורות התחיה נו",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-23",
+          "heTitle": "אורות, אורות התחיה נז",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-24",
+          "heTitle": "אורות, אורות התחיה נח",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-25",
+          "heTitle": "אורות, אורות התחיה נט",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-26",
+          "heTitle": "אורות, אורות התחיה ס",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-27",
+          "heTitle": "אורות, אורות התחיה סא",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-28",
+          "heTitle": "אורות, אורות התחיה סב–סג",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Tammuz-29",
+          "heTitle": "אורות, אורות התחיה סד",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Av-1",
+          "heTitle": "אורות, אורות התחיה סה",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Av-2",
+          "heTitle": "אורות, אורות התחיה סו",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Av-3",
+          "heTitle": "אורות, אורות התחיה סז–סח",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Av-4",
+          "heTitle": "אורות, אורות התחיה סט",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Av-5",
+          "heTitle": "אורות, אורות התחיה ע",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Av-6",
+          "heTitle": "אורות, אורות התחיה עא",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Av-7",
+          "heTitle": "אורות, אורות התחיה עב",
+          "portion": "",
+          "start_idx": 2975,
+          "end_idx": 2975,
+          "word_count": 0,
+          "sample": ""
+        }
+      ]
+    },
+    {
+      "group": "Orot:::Orot,_Lights_from_Darkness,_Great_Calling",
+      "days_count": 2,
+      "coverage_pct": 100.0,
+      "status": "PASS",
+      "slices": [
+        {
+          "key": "Av-8",
+          "heTitle": "אורות, קריאה גדולה",
+          "portion": "עד '...מפלג אלוקים'",
+          "start_idx": 0,
+          "end_idx": 4881,
+          "word_count": 904,
+          "sample": "\"ההכרח\" הוא עכשיו הפתגם היותר שגור בעולם, ודוקא קול המון זה ..."
+        },
+        {
+          "key": "Av-9",
+          "heTitle": "אורות, קריאה גדולה",
+          "portion": "מ'הרוח התוקף...' עד סופה",
+          "start_idx": 4881,
+          "end_idx": 4881,
+          "word_count": 0,
+          "sample": ""
+        }
+      ]
+    },
+    {
+      "group": "Orot:::Orot,_The_Process_of_Ideals_in_Israel,_The_Godly_and_the_National_Ideal_in_the_Individual",
+      "days_count": 3,
+      "coverage_pct": 99.9,
+      "status": "PASS",
+      "slices": [
+        {
+          "key": "Av-10",
+          "heTitle": "אורות, למהלך האידיאות בישראל א",
+          "portion": "עד '...בהוה ובנצח'",
+          "start_idx": 0,
+          "end_idx": 1386,
+          "word_count": 220,
+          "sample": "סגנון החיים וסגנון המחשבה של האדם, הכוללים את כל מהותו, מתבל..."
+        },
+        {
+          "key": "Av-11",
+          "heTitle": "אורות, למהלך האידיאות בישראל א",
+          "portion": "מ'בלכתה...' עד '...דחיפות החיים'",
+          "start_idx": 1388,
+          "end_idx": 2378,
+          "word_count": 168,
+          "sample": "בלכתה, ממעלה למטה וממטה למעלה, חוללה הכנה זו מכונות לאומיות ..."
+        },
+        {
+          "key": "Av-12",
+          "heTitle": "אורות, למהלך האידיאות בישראל א",
+          "portion": "מ'ויש אשר החיים...' עד סוף הפסקה",
+          "start_idx": 2380,
+          "end_idx": 4177,
+          "word_count": 321,
+          "sample": "ויש אשר החיים המעשיים כבר ישתכללו בהויתם, התכונות החברתיות, ..."
+        }
+      ]
+    },
+    {
+      "group": "Orot:::Orot, The Process of Ideals in Israel, The Godly and the National Ideal in Israel",
+      "days_count": 2,
+      "coverage_pct": 99.9,
+      "status": "PASS",
+      "slices": [
+        {
+          "key": "Av-13",
+          "heTitle": "אורות, למהלך האידיאות בישראל ב",
+          "portion": "עד '...נמוך ומגושם'",
+          "start_idx": 0,
+          "end_idx": 1359,
+          "word_count": 228,
+          "sample": "מתוך ההכנה לרעיון האלהי, מתוך הנטיה העצומה שלרוח האדם בכללו ..."
+        },
+        {
+          "key": "Av-14",
+          "heTitle": "אורות, למהלך האידיאות בישראל ב",
+          "portion": "מ'אור האידיאה האלוקית...' עד סוף הפסקה",
+          "start_idx": 1359,
+          "end_idx": 2919,
+          "word_count": 262,
+          "sample": "אור האידיאה האלהית, העולה ומזדקק בקרב עם כזה ומטביע בו את חי..."
+        }
+      ]
+    },
+    {
+      "group": "Orot:::Orot, The Process of Ideals in Israel, Dissolution of Ideals",
+      "days_count": 4,
+      "coverage_pct": 100.0,
+      "status": "PASS",
+      "slices": [
+        {
+          "key": "Av-15",
+          "heTitle": "אורות, למהלך האידיאות בישראל ג",
+          "portion": "עד '...ושיר השירים קדש קדשים'",
+          "start_idx": 0,
+          "end_idx": 1761,
+          "word_count": 301,
+          "sample": "כבר היו שני המאורות הללו \"משתמשים בכתר אחד\" בישראל, והאידיאה..."
+        },
+        {
+          "key": "Av-16",
+          "heTitle": "אורות, למהלך האידיאות בישראל ג",
+          "portion": "מ'אבל רק הרוח הלאומי...' עד 'משדי הרעיון האלוקי'",
+          "start_idx": 1763,
+          "end_idx": 5258,
+          "word_count": 627,
+          "sample": "אבל רק הרוח הלאומי ביחושו הכללי התרומם למדת גבהו בימים הטובי..."
+        },
+        {
+          "key": "Av-17",
+          "heTitle": "אורות, למהלך האידיאות בישראל ג",
+          "portion": "מ'אמנם האנושיות...' עד 'לגפן בוקק ישראל'",
+          "start_idx": 5258,
+          "end_idx": 5258,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Av-18",
+          "heTitle": "אורות, למהלך האידיאות בישראל ג",
+          "portion": "מ'עוונות אבותינו...' עד סוף הפסקה",
+          "start_idx": 5258,
+          "end_idx": 5258,
+          "word_count": 0,
+          "sample": ""
+        }
+      ]
+    },
+    {
+      "group": "Orot:::Orot, The Process of Ideals in Israel, The Situation in Exile",
+      "days_count": 3,
+      "coverage_pct": 99.9,
+      "status": "PASS",
+      "slices": [
+        {
+          "key": "Av-19",
+          "heTitle": "אורות, למהלך האידיאות בישראל ד",
+          "portion": "עד '...היותר ירוד וכהה'",
+          "start_idx": 0,
+          "end_idx": 794,
+          "word_count": 140,
+          "sample": "כאשר סר רוח אלהים מעל האומה, בהפרידה את תכונתה הלאומית ממקור..."
+        },
+        {
+          "key": "Av-20",
+          "heTitle": "אורות, למהלך האידיאות בישראל ד",
+          "portion": "מ'באין מקום להשפעתה...' עד '...והקטנת המאורות'",
+          "start_idx": 796,
+          "end_idx": 2631,
+          "word_count": 318,
+          "sample": "באין מקום להשפעתה של האידיאה האלהית על הלאומית, אחרי הטמא מר..."
+        },
+        {
+          "key": "Av-21",
+          "heTitle": "אורות, למהלך האידיאות בישראל ד",
+          "portion": "מ'אמנם האידאה האלוקית...' עד סוף הפסקה",
+          "start_idx": 2631,
+          "end_idx": 3726,
+          "word_count": 188,
+          "sample": "אמנם האידיאה האלהית, מאין לה מקום איתן בהרחבתה של האידיאה הל..."
+        }
+      ]
+    },
+    {
+      "group": "Orot:::Orot, The Process of Ideals in Israel, The First and Second Temples; Religion",
+      "days_count": 8,
+      "coverage_pct": 99.9,
+      "status": "PASS",
+      "slices": [
+        {
+          "key": "Av-22",
+          "heTitle": "אורות, למהלך האידיאות בישראל ה",
+          "portion": "עד '...מצד נשמתה הלאומית'",
+          "start_idx": 0,
+          "end_idx": 1306,
+          "word_count": 229,
+          "sample": "מפני שלא הוכשרה עדיין הנשמה הפרטית של היחידים לקבל את כל תקפ..."
+        },
+        {
+          "key": "Av-23",
+          "heTitle": "אורות, למהלך האידיאות בישראל ה",
+          "portion": "מ'המוסר האישי...' עד '...בחיי הכלל'",
+          "start_idx": 1307,
+          "end_idx": 2374,
+          "word_count": 189,
+          "sample": "המוסר האישי הפרטי, הדאגה לחיי הנצח האישיים הפרטיים, הדיוק הפ..."
+        },
+        {
+          "key": "Av-24",
+          "heTitle": "אורות, למהלך האידיאות בישראל ה",
+          "portion": "מ'הדבר הגדול הכללי...' עד '...אוצרות החכמה העליונה'",
+          "start_idx": 2375,
+          "end_idx": 4365,
+          "word_count": 360,
+          "sample": "הדבר הגדול הכללי של \"והתהלכתי בתוככם והייתי לכם לאלהים ואתם ..."
+        },
+        {
+          "key": "Av-25",
+          "heTitle": "אורות, למהלך האידיאות בישראל ה",
+          "portion": "מ'אבל חשכת הלילה...' עד '...כעור ואינו מתקבל'",
+          "start_idx": 4367,
+          "end_idx": 6011,
+          "word_count": 291,
+          "sample": "אבל חשכת הלילה היא שגרמה להרחיב את חוג הרעיון של האדם, בהעיפ..."
+        },
+        {
+          "key": "Av-26",
+          "heTitle": "אורות, למהלך האידיאות בישראל ה",
+          "portion": "מ'הנועם האלוקי...' עד '...התכונות הברבריות'",
+          "start_idx": 6011,
+          "end_idx": 7264,
+          "word_count": 224,
+          "sample": "הנעם האלהי של החיים, המתרומם בעליונותו המתפשט בהדר פשטותו וט..."
+        },
+        {
+          "key": "Av-27",
+          "heTitle": "אורות, למהלך האידיאות בישראל ה",
+          "portion": "מ'אבל אי אפשר...' עד '...טוהר אצילותה'",
+          "start_idx": 7265,
+          "end_idx": 11497,
+          "word_count": 736,
+          "sample": "אבל אי אפשר לכלא את הרוח לגמרי, והיופי הרוחני של האדם ומוסרו..."
+        },
+        {
+          "key": "Av-28",
+          "heTitle": "אורות, למהלך האידיאות בישראל ה",
+          "portion": "מ'מאז החלה האנושיות...' עד '...חומריים ורוחניים'",
+          "start_idx": 11497,
+          "end_idx": 11497,
+          "word_count": 0,
+          "sample": ""
+        },
+        {
+          "key": "Av-29",
+          "heTitle": "אורות, למהלך האידיאות בישראל ה",
+          "portion": "מ'הנסיונות שנעשו...' עד סוף הפסקה",
+          "start_idx": 11497,
+          "end_idx": 11497,
+          "word_count": 0,
+          "sample": ""
+        }
+      ]
+    }
+  ]
+}
