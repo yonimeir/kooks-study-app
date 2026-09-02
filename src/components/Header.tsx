@@ -26,42 +26,58 @@ export const Header: React.FC<HeaderProps> = ({
   siteSubtitle,
   logoUrl,
   logoSize = 60,
-  logoPosition = 'right',
+  logoPosition = 'left',
   onOpenAdmin
 }) => {
   const showLogo = logoPosition !== 'hide' && !!logoUrl;
+
+  const renderLogo = () => {
+    if (!showLogo) return null;
+    return (
+      <img 
+        src={logoUrl || "/logo_icon.png"} 
+        alt={siteTitle} 
+        style={{ height: `${logoSize}px`, width: 'auto' }}
+        className="object-contain shrink-0 transition-all duration-200 block" 
+      />
+    );
+  };
+
+  const renderTitle = () => (
+    <div className={logoPosition === 'top' ? 'text-center' : 'text-right'}>
+      <h1 className="text-xl md:text-2xl font-bold text-study-850 dark:text-study-150 font-serif leading-tight">
+        {siteTitle}
+      </h1>
+      {siteSubtitle && (
+        <p className="text-xs text-study-600 dark:text-study-400 mt-0.5 font-normal">
+          {siteSubtitle}
+        </p>
+      )}
+    </div>
+  );
 
   return (
     <header className="bg-study-100 dark:bg-study-900 border-b border-study-200 dark:border-study-800 transition-colors duration-200">
       <div className="max-w-4xl mx-auto px-4 py-3.5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         
         {/* Title and Logo Container */}
-        <div className={`flex items-center ${
-          logoPosition === 'top' 
-            ? 'flex-col justify-center text-center gap-2' 
-            : logoPosition === 'left'
-            ? 'flex-row-reverse justify-end items-center gap-3.5'
-            : 'flex-row justify-start items-center gap-3.5'
-        }`}>
-          {showLogo && (
-            <img 
-              src={logoUrl || "/logo_icon.png"} 
-              alt={siteTitle} 
-              style={{ height: `${logoSize}px`, width: 'auto' }}
-              className="object-contain shrink-0 transition-all duration-200 block" 
-            />
-          )}
-          <div className={logoPosition === 'top' ? 'text-center' : 'text-right'}>
-            <h1 className="text-xl md:text-2xl font-bold text-study-850 dark:text-study-150 font-serif leading-tight">
-              {siteTitle}
-            </h1>
-            {siteSubtitle && (
-              <p className="text-xs text-study-600 dark:text-study-400 mt-0.5 font-normal">
-                {siteSubtitle}
-              </p>
-            )}
+        {logoPosition === 'top' ? (
+          <div className="flex flex-col items-center justify-center text-center gap-2">
+            {renderLogo()}
+            {renderTitle()}
           </div>
-        </div>
+        ) : logoPosition === 'right' ? (
+          <div className="flex items-center gap-3.5">
+            {renderLogo()}
+            {renderTitle()}
+          </div>
+        ) : (
+          /* Default: logoPosition === 'left' -> Title is flush right (aligned with the cards below), Logo sits freely to the left! */
+          <div className="flex items-center gap-3.5">
+            {renderTitle()}
+            {renderLogo()}
+          </div>
+        )}
 
         {/* Date and Controls */}
         <div className="flex items-center justify-between md:justify-end gap-3">
