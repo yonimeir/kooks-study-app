@@ -12,7 +12,7 @@ interface HeaderProps {
   siteSubtitle: string;
   logoUrl: string;
   logoSize?: number;
-  logoPosition?: 'right' | 'left' | 'top' | 'hide' | 'far-left';
+  logoPosition?: 'right' | 'left' | 'top' | 'hide';
   onOpenAdmin: () => void;
 }
 
@@ -26,7 +26,7 @@ export const Header: React.FC<HeaderProps> = ({
   siteSubtitle,
   logoUrl,
   logoSize = 60,
-  logoPosition = 'left',
+  logoPosition = 'right',
   onOpenAdmin
 }) => {
   const showLogo = logoPosition !== 'hide' && !!logoUrl;
@@ -35,7 +35,7 @@ export const Header: React.FC<HeaderProps> = ({
     if (!showLogo) return null;
     return (
       <img 
-        src={logoUrl || "/logo_icon.png"} 
+        src={logoUrl || "/logo.png"} 
         alt={siteTitle} 
         style={{ height: `${logoSize}px`, width: 'auto' }}
         className="object-contain shrink-0 transition-all duration-200 block" 
@@ -60,16 +60,22 @@ export const Header: React.FC<HeaderProps> = ({
     <header className="bg-study-100 dark:bg-study-900 border-b border-study-200 dark:border-study-800 transition-colors duration-200">
       <div className="max-w-4xl mx-auto px-4 py-3.5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         
-        {/* Title and Logo Container - Title is ALWAYS flush right matching the card title below */}
+        {/* Title and Logo Container */}
         {logoPosition === 'top' ? (
           <div className="flex flex-col items-center justify-center text-center gap-2">
             {renderLogo()}
             {renderTitle()}
           </div>
-        ) : (
-          <div className="flex items-center gap-4">
+        ) : logoPosition === 'left' ? (
+          <div className="flex items-center gap-3.5">
             {renderTitle()}
             {renderLogo()}
+          </div>
+        ) : (
+          /* Default: logoPosition === 'right' -> Logo on the right, Title next to it */
+          <div className="flex items-center gap-3.5">
+            {renderLogo()}
+            {renderTitle()}
           </div>
         )}
 
