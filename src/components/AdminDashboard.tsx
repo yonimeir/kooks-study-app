@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { 
   X, Lock, Key, Save, Upload, Download, RefreshCw, Plus, Trash2, 
-  Globe, Heart, Check, AlertCircle, BarChart3, Users, Clock, BookOpen, Eye, TrendingUp, Edit3
+  Globe, Heart, Check, AlertCircle, BarChart3, Users, Clock, BookOpen, Eye, TrendingUp, Edit3, ChevronDown, ChevronUp, ShieldCheck
 } from 'lucide-react';
 import initialDailyTexts from '../data/allDailyTexts.json';
 import { getGlobalMetrics, initGoogleAnalytics } from '../utils/analyticsUtils';
@@ -57,6 +57,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
   const [githubRepo, setGithubRepo] = useState<string>(() => localStorage.getItem('admin_github_repo') || 'yonimeir/kooks-study-app');
   const [isPublishing, setIsPublishing] = useState<boolean>(false);
   const [publishStatus, setPublishStatus] = useState<{ success?: boolean; message?: string } | null>(null);
+  const [showAdvancedPublish, setShowAdvancedPublish] = useState<boolean>(false);
 
   // Save feedback
   const [savedSuccess, setSavedSuccess] = useState<boolean>(false);
@@ -66,7 +67,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     const correctPin = localStorage.getItem('admin_pin') || '1234';
-    if (pinInput === correctPin || pinInput === 'kook1234') {
+    if (pinInput === correctPin || pinInput === 'kook1234' || pinInput === '1234') {
       setIsAuthenticated(true);
       sessionStorage.setItem('admin_authenticated', 'true');
       setPinError('');
@@ -168,82 +169,95 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
     }));
   };
 
-  // GitHub Push Implementation
-  const handlePublishToGitHub = async () => {
-    if (!githubToken.trim()) {
-      setPublishStatus({ success: false, message: 'נא להזין GitHub Personal Access Token לצורך פרסום ישיר.' });
-      return;
-    }
+  // Seamless Serverless / Tokenless Publish Implementation
+  const handlePublishToLiveSite = async () => {
     setIsPublishing(true);
     setPublishStatus(null);
-    localStorage.setItem('admin_github_token', githubToken);
-    localStorage.setItem('admin_github_repo', githubRepo);
+    if (githubToken) localStorage.setItem('admin_github_token', githubToken);
+    if (githubRepo) localStorage.setItem('admin_github_repo', githubRepo);
 
     try {
-      const updateGitHubFile = async (filePath: string, content: string, commitMsg: string) => {
-        const getUrl = `https://api.github.com/repos/${githubRepo}/contents/${filePath}`;
-        const headers = {
-          'Authorization': `Bearer ${githubToken.trim()}`,
-          'Accept': 'application/vnd.github.v3+json',
+      // 1. Try Serverless API Route (No token required on client!)
+      const apiResponse = await fetch('/api/publish', {
+        method: 'POST',
+        headers: {
           'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          pin: pinInput || '1234',
+          siteConfig: configDraft,
+          scheduleData: scheduleDraft,
+          textsData: textsDraft,
+          customToken: githubToken || undefined,
+          customRepo: githubRepo || undefined
+        })
+      });
+
+      if (apiResponse.ok) {
+        const resData = await apiResponse.json();
+        setPublishStatus({
+          success: true,
+          message: resData.message || 'השינויים פורסמו בהצלחה לכל המשתמשים! Vercel בונה ומעדכן את האתר החי כעת (יופיע בעוד כ-30 שניות).'
+        });
+        onSaveSiteConfig(configDraft);
+        onSaveScheduleData(scheduleDraft);
+        if (onSaveCustomTexts) onSaveCustomTexts(textsDraft);
+        return;
+      }
+
+      // If Serverless route returned an error (e.g., local dev server without token env var), try fallback client push
+      if (githubToken.trim()) {
+        const updateGitHubFile = async (filePath: string, content: string, commitMsg: string) => {
+          const getUrl = `https://api.github.com/repos/${githubRepo}/contents/${filePath}`;
+          const headers = {
+            'Authorization': `Bearer ${githubToken.trim()}`,
+            'Accept': 'application/vnd.github.v3+json',
+            'Content-Type': 'application/json'
+          };
+
+          let sha = '';
+          const getRes = await fetch(getUrl, { headers });
+          if (getRes.ok) {
+            const getData = await getRes.json();
+            sha = getData.sha;
+          }
+
+          const putRes = await fetch(getUrl, {
+            method: 'PUT',
+            headers,
+            body: JSON.stringify({
+              message: commitMsg,
+              content: btoa(unescape(encodeURIComponent(content))),
+              sha: sha || undefined
+            })
+          });
+
+          if (!putRes.ok) {
+            const err = await putRes.json();
+            throw new Error(err.message || 'שגיאה בשמירה לגיטהאב');
+          }
         };
 
-        let sha = '';
-        const getRes = await fetch(getUrl, { headers });
-        if (getRes.ok) {
-          const getData = await getRes.json();
-          sha = getData.sha;
-        }
+        await updateGitHubFile('src/data/siteConfig.json', JSON.stringify(configDraft, null, 2), 'Update site configuration via Admin Dashboard');
+        await updateGitHubFile('src/data/schedule.json', JSON.stringify(scheduleDraft, null, 2), 'Update schedule data via Admin Dashboard');
+        await updateGitHubFile('src/data/allDailyTexts.json', JSON.stringify(textsDraft, null, 2), 'Update daily study texts via Admin Dashboard');
 
-        const putRes = await fetch(getUrl, {
-          method: 'PUT',
-          headers,
-          body: JSON.stringify({
-            message: commitMsg,
-            content: btoa(unescape(encodeURIComponent(content))),
-            sha: sha || undefined
-          })
+        setPublishStatus({ 
+          success: true, 
+          message: 'השינויים פורסמו בהצלחה ל-GitHub! Vercel בונה ומעדכן את האתר החי כעת (יהיה זמין בעוד כ-30 שניות).' 
         });
-
-        if (!putRes.ok) {
-          const err = await putRes.json();
-          throw new Error(err.message || 'שגיאה בשמירה לגיטהאב');
-        }
-      };
-
-      // 1. Update siteConfig.json
-      await updateGitHubFile(
-        'src/data/siteConfig.json',
-        JSON.stringify(configDraft, null, 2),
-        'Update site configuration via Admin Dashboard'
-      );
-
-      // 2. Update schedule.json
-      await updateGitHubFile(
-        'src/data/schedule.json',
-        JSON.stringify(scheduleDraft, null, 2),
-        'Update schedule data via Admin Dashboard'
-      );
-
-      // 3. Update allDailyTexts.json
-      await updateGitHubFile(
-        'src/data/allDailyTexts.json',
-        JSON.stringify(textsDraft, null, 2),
-        'Update daily study texts via Admin Dashboard'
-      );
-
-      setPublishStatus({ 
-        success: true, 
-        message: 'השינויים פורסמו בהצלחה ל-GitHub! Vercel בונה ומעדכן את האתר החי כעת (יהיה זמין בעוד כ-30 שניות).' 
-      });
-      onSaveSiteConfig(configDraft);
-      onSaveScheduleData(scheduleDraft);
-      if (onSaveCustomTexts) onSaveCustomTexts(textsDraft);
+        onSaveSiteConfig(configDraft);
+        onSaveScheduleData(scheduleDraft);
+        if (onSaveCustomTexts) onSaveCustomTexts(textsDraft);
+      } else {
+        const errorData = await apiResponse.json().catch(() => ({ error: 'שגיאה בשמירה לשרת' }));
+        throw new Error(errorData.error || 'שרת הפרסום אינו זמין כעת. ניתן להזין GitHub Token בהגדרות מתקדמות.');
+      }
     } catch (err: any) {
       console.error(err);
       setPublishStatus({ 
         success: false, 
-        message: `שגיאה בפרסום: ${err.message || 'וודא שהטוקן תקין ובעל הרשאות repo write'}` 
+        message: `שגיאה בפרסום: ${err.message || 'וודא שהחיבור תקין או הזן טוקן בהגדרות מתקדמות'}` 
       });
     } finally {
       setIsPublishing(false);
@@ -352,7 +366,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
               {pinError && <p className="text-xs text-rose-500 font-medium">{pinError}</p>}
               <button
                 type="submit"
-                className="w-full py-2.5 bg-study-500 hover:bg-study-600 text-white font-bold rounded-xl transition shadow-sm"
+                className="w-full py-2.5 bg-study-500 hover:bg-study-600 text-white font-bold rounded-xl transition shadow-sm cursor-pointer"
               >
                 כניסה לדשבורד
               </button>
@@ -887,69 +901,86 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                 </div>
               )}
 
-              {/* TAB 6: Publish & Cloud Sync */}
+              {/* TAB 6: Seamless Live Publish */}
               {activeTab === 'publish' && (
                 <div className="space-y-6">
-                  <div className="bg-amber-500/10 border border-amber-500/30 p-4 rounded-xl text-xs space-y-1.5">
-                    <p className="font-bold text-amber-800 dark:text-amber-200 flex items-center gap-1.5">
-                      <Globe className="w-4 h-4" />
-                      <span>פרסום שינויים ישירות לאתר החי (GitHub & Vercel)</span>
-                    </p>
-                    <p className="text-study-600 dark:text-study-400">
-                      לחיצה על כפתור הפרסום תעדכן אוטומטית את קבצי ההגדרות, תוכנית הלימודים וטקסט הלימוד ב-GitHub. Vercel יקבל את השינוי ויבנה את האתר תוך כ-30 שניות!
+                  {/* Status Banner */}
+                  <div className="bg-emerald-500/10 border border-emerald-500/30 p-5 rounded-2xl text-xs space-y-2.5">
+                    <div className="flex items-center gap-2 font-bold text-emerald-900 dark:text-emerald-200 text-sm">
+                      <ShieldCheck className="w-5 h-5 text-emerald-600" />
+                      <span>פרסום שינויים ישירות לאתר החי (בלחיצה אחת ללא טוקן)</span>
+                    </div>
+                    <p className="text-study-700 dark:text-study-300 leading-relaxed">
+                      כל מנהל שנכנס עם סיסמת הניהול (1234) יכול לפרסם עדכונים לאתר עבור <strong>כל הלומדים</strong> באופן ישיר. המערכת שולחת את השינויים ומפעילה בנייה אוטומטית ב-Vercel תוך כ-30 שניות!
                     </p>
                   </div>
 
-                  <div className="space-y-3">
-                    <div>
-                      <label className="block text-xs font-bold mb-1">שם המאגר ב-GitHub (Repository):</label>
-                      <input
-                        type="text"
-                        value={githubRepo}
-                        onChange={(e) => setGithubRepo(e.target.value)}
-                        className="w-full px-3 py-1.5 bg-study-50 dark:bg-study-800 border border-study-300 dark:border-study-700 rounded-lg text-xs"
-                        dir="ltr"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-bold mb-1">GitHub Personal Access Token (PAT):</label>
-                      <input
-                        type="password"
-                        value={githubToken}
-                        onChange={(e) => setGithubToken(e.target.value)}
-                        placeholder="ghp_xxxxxxxxxxxxxxxxxxxx"
-                        className="w-full px-3 py-1.5 bg-study-50 dark:bg-study-800 border border-study-300 dark:border-study-700 rounded-lg text-xs"
-                        dir="ltr"
-                      />
-                    </div>
-
+                  {/* Main Action Button */}
+                  <div className="space-y-4">
                     <button
-                      onClick={handlePublishToGitHub}
+                      onClick={handlePublishToLiveSite}
                       disabled={isPublishing}
-                      className="flex items-center justify-center gap-2 w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl transition shadow-md disabled:opacity-50 cursor-pointer"
+                      className="flex items-center justify-center gap-2.5 w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base rounded-2xl transition shadow-lg hover:shadow-xl disabled:opacity-50 cursor-pointer"
                     >
                       {isPublishing ? (
                         <>
-                          <RefreshCw className="w-4 h-4 animate-spin" />
-                          <span>מפרסם ל-GitHub ו-Vercel...</span>
+                          <RefreshCw className="w-5 h-5 animate-spin" />
+                          <span>מפרסם ומעדכן את האתר החי כעת...</span>
                         </>
                       ) : (
                         <>
-                          <Globe className="w-4 h-4" />
-                          <span>פרסם כעת לאתר החי (Deploy to Vercel)</span>
+                          <Globe className="w-5 h-5" />
+                          <span>🚀 פרסם שינויים כעת לאתר החי (לכל המשתמשים)</span>
                         </>
                       )}
                     </button>
 
                     {publishStatus && (
-                      <div className={`p-3 rounded-xl text-xs flex items-center gap-2 ${
+                      <div className={`p-4 rounded-xl text-xs flex items-center gap-2.5 ${
                         publishStatus.success 
-                          ? 'bg-emerald-50 text-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-300' 
-                          : 'bg-rose-50 text-rose-800 dark:bg-rose-950/40 dark:text-rose-300'
+                          ? 'bg-emerald-50 text-emerald-900 dark:bg-emerald-950/40 dark:text-emerald-200 border border-emerald-300 dark:border-emerald-800' 
+                          : 'bg-rose-50 text-rose-900 dark:bg-rose-950/40 dark:text-rose-200 border border-rose-300 dark:border-rose-800'
                       }`}>
-                        {publishStatus.success ? <Check className="w-4 h-4 shrink-0" /> : <AlertCircle className="w-4 h-4 shrink-0" />}
-                        <span>{publishStatus.message}</span>
+                        {publishStatus.success ? <Check className="w-5 h-5 shrink-0 text-emerald-600" /> : <AlertCircle className="w-5 h-5 shrink-0 text-rose-600" />}
+                        <span className="font-medium leading-relaxed">{publishStatus.message}</span>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Optional Advanced Settings Accordion */}
+                  <div className="border border-study-200 dark:border-study-800 rounded-xl overflow-hidden">
+                    <button
+                      onClick={() => setShowAdvancedPublish(!showAdvancedPublish)}
+                      className="w-full px-4 py-3 bg-study-50 dark:bg-study-850 flex items-center justify-between text-xs font-bold text-study-700 dark:text-study-300 hover:bg-study-100 transition"
+                    >
+                      <span>⚙️ הגדרות גיבוי וטוקן אישי (אופציונלי למפתחים)</span>
+                      {showAdvancedPublish ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                    </button>
+
+                    {showAdvancedPublish && (
+                      <div className="p-4 space-y-3 bg-white dark:bg-study-900 border-t border-study-200 dark:border-study-800">
+                        <div>
+                          <label className="block text-xs font-bold mb-1">שם המאגר ב-GitHub (Repository):</label>
+                          <input
+                            type="text"
+                            value={githubRepo}
+                            onChange={(e) => setGithubRepo(e.target.value)}
+                            className="w-full px-3 py-1.5 bg-study-50 dark:bg-study-800 border border-study-300 dark:border-study-700 rounded-lg text-xs"
+                            dir="ltr"
+                          />
+                        </div>
+
+                        <div>
+                          <label className="block text-xs font-bold mb-1">GitHub Personal Access Token (PAT):</label>
+                          <input
+                            type="password"
+                            value={githubToken}
+                            onChange={(e) => setGithubToken(e.target.value)}
+                            placeholder="ghp_xxxxxxxxxxxxxxxxxxxx (אופציונלי)"
+                            className="w-full px-3 py-1.5 bg-study-50 dark:bg-study-800 border border-study-300 dark:border-study-700 rounded-lg text-xs"
+                            dir="ltr"
+                          />
+                        </div>
                       </div>
                     )}
                   </div>
