@@ -12,7 +12,7 @@ interface HeaderProps {
   siteSubtitle: string;
   logoUrl: string;
   logoSize?: number;
-  logoPosition?: 'right' | 'left' | 'top' | 'hide';
+  logoPosition?: 'right' | 'left' | 'top' | 'hide' | 'far-left';
   onOpenAdmin: () => void;
 }
 
@@ -60,20 +60,14 @@ export const Header: React.FC<HeaderProps> = ({
     <header className="bg-study-100 dark:bg-study-900 border-b border-study-200 dark:border-study-800 transition-colors duration-200">
       <div className="max-w-4xl mx-auto px-4 py-3.5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         
-        {/* Title and Logo Container */}
+        {/* Title and Logo Container - Title is ALWAYS flush right matching the card title below */}
         {logoPosition === 'top' ? (
           <div className="flex flex-col items-center justify-center text-center gap-2">
             {renderLogo()}
             {renderTitle()}
           </div>
-        ) : logoPosition === 'right' ? (
-          <div className="flex items-center gap-3.5">
-            {renderLogo()}
-            {renderTitle()}
-          </div>
         ) : (
-          /* Default: logoPosition === 'left' -> Title is flush right (aligned with the cards below), Logo sits freely to the left! */
-          <div className="flex items-center gap-3.5">
+          <div className="flex items-center gap-4">
             {renderTitle()}
             {renderLogo()}
           </div>
