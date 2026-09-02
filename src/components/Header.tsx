@@ -33,7 +33,7 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="bg-study-100 dark:bg-study-900 border-b border-study-200 dark:border-study-800 transition-colors duration-200">
-      <div className="max-w-6xl mx-auto px-4 py-3.5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div className="max-w-4xl mx-auto px-4 py-3.5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         
         {/* Title and Logo Container */}
         <div className={`flex items-center ${
@@ -108,7 +108,7 @@ export const Header: React.FC<HeaderProps> = ({
       </div>
 
       {/* Main Navigation Tabs Bar */}
-      <div className="max-w-6xl mx-auto px-4 flex items-center justify-start gap-2 border-t border-study-200/60 dark:border-study-800/80 pt-1">
+      <div className="max-w-4xl mx-auto px-4 flex items-center justify-start gap-2 border-t border-study-200/60 dark:border-study-800/80 pt-1">
         <button
           onClick={() => setCurrentTab('today')}
           className={`flex items-center gap-2 py-3 px-4 font-bold text-sm border-b-2 transition cursor-pointer ${

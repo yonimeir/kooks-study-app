@@ -124,7 +124,7 @@ export const App: React.FC = () => {
         suffix={siteConfig.refuahSuffix || "בתוך שאר חולי עמו ישראל"} 
       />
       
-      <main className="flex-1 w-full max-w-6xl mx-auto py-4">
+      <main className="flex-1 w-full max-w-4xl mx-auto py-4">
         {currentTab === 'today' && (
           <TodayView
             activeMonth={activeMonth}
