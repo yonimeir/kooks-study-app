@@ -3,14 +3,14 @@
     {
       "day": 1,
       "book": "Orot",
-      "ref": "Orot, The Process of Ideals in Israel, Unification of Ideals",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_Unification_of_Ideals.1",
       "heTitle": "אורות, למהלך האידיאות בישראל ו'",
       "portion": "מהמילים 'עתה מכות הן הגלים...' עד '...והדרו על בנינו'"
     },
     {
       "day": 2,
       "book": "Orot",
-      "ref": "Orot, The Process of Ideals in Israel, Unification of Ideals",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_Unification_of_Ideals.1",
       "heTitle": "אורות, למהלך האידיאות בישראל ו'",
       "portion": "מהמילים 'באוצר הרעיונות הגדולים...' עד סוף הפסקה"
     },
@@ -1154,49 +1154,49 @@
     {
       "day": 17,
       "book": "Middot HaRa'ayah",
-      "ref": "Middot_HaRa'ayah,_Raising_the_Sparks.1-5",
+      "ref": "Middot_HaRa'ayah,_Elevation_of_Sparks.1-5",
       "heTitle": "מידות הראי\"ה, העלאת ניצוצות א–ה",
       "portion": ""
     },
     {
       "day": 18,
       "book": "Middot HaRa'ayah",
-      "ref": "Middot_HaRa'ayah,_Raising_the_Sparks.6-7",
+      "ref": "Middot_HaRa'ayah,_Elevation_of_Sparks.6-7",
       "heTitle": "מידות הראי\"ה, העלאת ניצוצות ו–ז",
       "portion": ""
     },
     {
       "day": 19,
       "book": "Middot HaRa'ayah",
-      "ref": "Middot_HaRa'ayah,_Awe.1-2",
+      "ref": "Middot_HaRa'ayah,_Fear.1-2",
       "heTitle": "מידות הראי\"ה, חופש, יראה א–ב",
       "portion": ""
     },
     {
       "day": 20,
       "book": "Middot HaRa'ayah",
-      "ref": "Middot_HaRa'ayah,_Awe.3-4",
+      "ref": "Middot_HaRa'ayah,_Fear.3-4",
       "heTitle": "מידות הראי\"ה, יראה ג–ד",
       "portion": ""
     },
     {
       "day": 21,
       "book": "Middot HaRa'ayah",
-      "ref": "Middot_HaRa'ayah,_Awe.5-7",
+      "ref": "Middot_HaRa'ayah,_Fear.5-7",
       "heTitle": "מידות הראי\"ה, יראה ה–ז",
       "portion": ""
     },
     {
       "day": 22,
       "book": "Middot HaRa'ayah",
-      "ref": "Middot_HaRa'ayah,_Awe.8-14",
+      "ref": "Middot_HaRa'ayah,_Fear.8-14",
       "heTitle": "מידות הראי\"ה, יראה ח–יד",
       "portion": ""
     },
     {
       "day": 23,
       "book": "Middot HaRa'ayah",
-      "ref": "Middot_HaRa'ayah,_Awe.15-19",
+      "ref": "Middot_HaRa'ayah,_Fear.15-19",
       "heTitle": "מידות הראי\"ה, יראה טו–יט",
       "portion": ""
     },
@@ -1231,7 +1231,7 @@
     {
       "day": 28,
       "book": "Middot HaRa'ayah",
-      "ref": "Middot_HaRa'ayah,_Cowardice.1-4",
+      "ref": "Middot_HaRa'ayah,_Fearfulness.1-4",
       "heTitle": "מידות הראי\"ה, פחדנות א–ד",
       "portion": ""
     },
@@ -1245,7 +1245,7 @@
     {
       "day": 30,
       "book": "Middot HaRa'ayah",
-      "ref": "Middot_HaRa'ayah,_Desire.4",
+      "ref": "Middot_HaRa'ayah,_Will.4",
       "heTitle": "מידות הראי\"ה, רצון ד, תוכחה, תיקון א–ב",
       "portion": ""
     }
@@ -1671,7 +1671,7 @@
     {
       "day": 1,
       "book": "Orot",
-      "ref": "לדגל ירושלים",
+      "ref": "Orot",
       "heTitle": "אורות, לדגל ירושלים",
       "portion": ""
     },
@@ -2589,126 +2589,126 @@
     {
       "day": 13,
       "book": "Orot",
-      "ref": "Orot, The Process of Ideals in Israel, The Godly and the National Ideal in Israel",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_Godly_Ideal_in_the_Public_Life_of_Israel.1",
       "heTitle": "אורות, למהלך האידיאות בישראל ב",
       "portion": "עד '...נמוך ומגושם'"
     },
     {
       "day": 14,
       "book": "Orot",
-      "ref": "Orot, The Process of Ideals in Israel, The Godly and the National Ideal in Israel",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_Godly_Ideal_in_the_Public_Life_of_Israel.2",
       "heTitle": "אורות, למהלך האידיאות בישראל ב",
       "portion": "מ'אור האידיאה האלוקית...' עד סוף הפסקה"
     },
     {
       "day": 15,
       "book": "Orot",
-      "ref": "Orot, The Process of Ideals in Israel, Dissolution of Ideals",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_National_Ideal.1",
       "heTitle": "אורות, למהלך האידיאות בישראל ג",
       "portion": "עד '...ושיר השירים קדש קדשים'"
     },
     {
       "day": 16,
       "book": "Orot",
-      "ref": "Orot, The Process of Ideals in Israel, Dissolution of Ideals",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_National_Ideal.2",
       "heTitle": "אורות, למהלך האידיאות בישראל ג",
       "portion": "מ'אבל רק הרוח הלאומי...' עד 'משדי הרעיון האלוקי'"
     },
     {
       "day": 17,
       "book": "Orot",
-      "ref": "Orot, The Process of Ideals in Israel, Dissolution of Ideals",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_National_Ideal.3",
       "heTitle": "אורות, למהלך האידיאות בישראל ג",
       "portion": "מ'אמנם האנושיות...' עד 'לגפן בוקק ישראל'"
     },
     {
       "day": 18,
       "book": "Orot",
-      "ref": "Orot, The Process of Ideals in Israel, Dissolution of Ideals",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_National_Ideal.4",
       "heTitle": "אורות, למהלך האידיאות בישראל ג",
       "portion": "מ'עוונות אבותינו...' עד סוף הפסקה"
     },
     {
       "day": 19,
       "book": "Orot",
-      "ref": "Orot, The Process of Ideals in Israel, The Situation in Exile",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_Individual_Godly_Ideal.1",
       "heTitle": "אורות, למהלך האידיאות בישראל ד",
       "portion": "עד '...היותר ירוד וכהה'"
     },
     {
       "day": 20,
       "book": "Orot",
-      "ref": "Orot, The Process of Ideals in Israel, The Situation in Exile",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_Individual_Godly_Ideal.2",
       "heTitle": "אורות, למהלך האידיאות בישראל ד",
       "portion": "מ'באין מקום להשפעתה...' עד '...והקטנת המאורות'"
     },
     {
       "day": 21,
       "book": "Orot",
-      "ref": "Orot, The Process of Ideals in Israel, The Situation in Exile",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_Individual_Godly_Ideal.3",
       "heTitle": "אורות, למהלך האידיאות בישראל ד",
       "portion": "מ'אמנם האידאה האלוקית...' עד סוף הפסקה"
     },
     {
       "day": 22,
       "book": "Orot",
-      "ref": "Orot, The Process of Ideals in Israel, The First and Second Temples; Religion",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_Modern_Search_for_Ideals.1",
       "heTitle": "אורות, למהלך האידיאות בישראל ה",
       "portion": "עד '...מצד נשמתה הלאומית'"
     },
     {
       "day": 23,
       "book": "Orot",
-      "ref": "Orot, The Process of Ideals in Israel, The First and Second Temples; Religion",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_Modern_Search_for_Ideals.2",
       "heTitle": "אורות, למהלך האידיאות בישראל ה",
       "portion": "מ'המוסר האישי...' עד '...בחיי הכלל'"
     },
     {
       "day": 24,
       "book": "Orot",
-      "ref": "Orot, The Process of Ideals in Israel, The First and Second Temples; Religion",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_Modern_Search_for_Ideals.3",
       "heTitle": "אורות, למהלך האידיאות בישראל ה",
       "portion": "מ'הדבר הגדול הכללי...' עד '...אוצרות החכמה העליונה'"
     },
     {
       "day": 25,
       "book": "Orot",
-      "ref": "Orot, The Process of Ideals in Israel, The First and Second Temples; Religion",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_Modern_Search_for_Ideals.4",
       "heTitle": "אורות, למהלך האידיאות בישראל ה",
       "portion": "מ'אבל חשכת הלילה...' עד '...כעור ואינו מתקבל'"
     },
     {
       "day": 26,
       "book": "Orot",
-      "ref": "Orot, The Process of Ideals in Israel, The First and Second Temples; Religion",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_Modern_Search_for_Ideals.5",
       "heTitle": "אורות, למהלך האידיאות בישראל ה",
       "portion": "מ'הנועם האלוקי...' עד '...התכונות הברבריות'"
     },
     {
       "day": 27,
       "book": "Orot",
-      "ref": "Orot, The Process of Ideals in Israel, The First and Second Temples; Religion",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_Modern_Search_for_Ideals.6",
       "heTitle": "אורות, למהלך האידיאות בישראל ה",
       "portion": "מ'אבל אי אפשר...' עד '...טוהר אצילותה'"
     },
     {
       "day": 28,
       "book": "Orot",
-      "ref": "Orot, The Process of Ideals in Israel, The First and Second Temples; Religion",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_Modern_Search_for_Ideals.7",
       "heTitle": "אורות, למהלך האידיאות בישראל ה",
       "portion": "מ'מאז החלה האנושיות...' עד '...חומריים ורוחניים'"
     },
     {
       "day": 29,
       "book": "Orot",
-      "ref": "Orot, The Process of Ideals in Israel, The First and Second Temples; Religion",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_The_Modern_Search_for_Ideals.8",
       "heTitle": "אורות, למהלך האידיאות בישראל ה",
       "portion": "מ'הנסיונות שנעשו...' עד סוף הפסקה"
     },
     {
       "day": 30,
       "book": "Orot",
-      "ref": "Orot, The Process of Ideals in Israel, Unification of Ideals",
+      "ref": "Orot,_The_Process_of_Ideals_in_Israel,_Unification_of_Ideals.1",
       "heTitle": "אורות, למהלך האידיאות בישראל ו'",
       "portion": "עד '...וכשנים קדמוניות'"
     }
