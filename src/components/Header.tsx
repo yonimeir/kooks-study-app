@@ -25,20 +25,20 @@ export const Header: React.FC<HeaderProps> = ({
   siteTitle,
   siteSubtitle,
   logoUrl,
-  logoSize = 60,
+  logoSize = 65,
   logoPosition = 'right',
   onOpenAdmin
 }) => {
   const showLogo = logoPosition !== 'hide' && !!logoUrl;
 
-  const renderLogo = () => {
+  const renderLogoImage = () => {
     if (!showLogo) return null;
     return (
       <img 
         src={logoUrl || "/logo.png"} 
         alt={siteTitle} 
         style={{ height: `${logoSize}px`, width: 'auto' }}
-        className="object-contain shrink-0 transition-all duration-200 block" 
+        className="object-contain shrink-0 transition-all duration-200 block drop-shadow-xs" 
       />
     );
   };
@@ -57,25 +57,37 @@ export const Header: React.FC<HeaderProps> = ({
   );
 
   return (
-    <header className="bg-study-100 dark:bg-study-900 border-b border-study-200 dark:border-study-800 transition-colors duration-200">
-      <div className="max-w-4xl mx-auto px-4 py-3.5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+    <header className="bg-study-100 dark:bg-study-900 border-b border-study-200 dark:border-study-800 transition-colors duration-200 relative overflow-visible">
+      <div className="max-w-4xl mx-auto px-4 py-3.5 flex flex-col md:flex-row md:items-center md:justify-between gap-4 relative overflow-visible">
         
-        {/* Title and Logo Container */}
+        {/* Title and Gutter-Aligned Logo Container */}
         {logoPosition === 'top' ? (
           <div className="flex flex-col items-center justify-center text-center gap-2">
-            {renderLogo()}
+            {renderLogoImage()}
             {renderTitle()}
-          </div>
-        ) : logoPosition === 'left' ? (
-          <div className="flex items-center gap-3.5">
-            {renderTitle()}
-            {renderLogo()}
           </div>
         ) : (
-          /* Default: logoPosition === 'right' -> Logo on the right, Title next to it */
-          <div className="flex items-center gap-3.5">
-            {renderLogo()}
+          /* Title locked strictly to the Blue Line (right edge), Logo floating in the right gutter */
+          <div className="relative flex items-center">
+            {/* Locked Title */}
             {renderTitle()}
+
+            {/* Desktop / Wide screen: Logo floats in the right margin (outside the blue line) */}
+            {showLogo && (
+              <div 
+                className="hidden lg:flex absolute top-1/2 -translate-y-1/2 items-center transition-all duration-200"
+                style={{ right: `-${logoSize + 20}px` }}
+              >
+                {renderLogoImage()}
+              </div>
+            )}
+
+            {/* Mobile / Tablet fallback: Logo sits gracefully next to title */}
+            {showLogo && (
+              <div className="flex lg:hidden mr-3">
+                {renderLogoImage()}
+              </div>
+            )}
           </div>
         )}
 
